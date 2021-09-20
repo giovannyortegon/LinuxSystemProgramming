@@ -3,7 +3,7 @@
 int main(void)
 {
 	// A C99 comment
-	printf("hello, world\n");
+	printf("Hello, world\n");
 
 	return (0);
 }
