@@ -1,28 +1,28 @@
 package main
 
 import "net/http"
-import "chitchat/"
+import "chitchat"
+
+func generateHTML(w http.ResponseWriter, data interface{}, fn ...string) {
+	var files [] string
+
+	for _, file := range fn {
+		files = append(files, fmt.Sprintf("templates/%s.html", file))
+	}
+	template := template.Must(template.ParseFiles(files...))
+	template.ExcuteTemplate(writer, "layout", data)
+}
 
 func index(w http.ResponseWriter, r * http.Request) {
 	threads, err := data.Threads(); if err == nil {
 		_, err := session(w, r)
-		public_tmpl_files := []string{"templates/layout.html",
-									  "templates/navbar.html",
-									  "templates/index.html",}
-		private_tmpl_files := []string{"templates/layout.html",
-									  "templates/navbar.html",
-									  "templates/index.html",}
-
-		var templates * template.Template
-
 		if err != nil {
-			templates := template.Must(
-						template.ParseFiles(private_tmpl_files...))
+			generateHTML(writer, threads,
+						"layout", "public.navbar", "index")
 		} else {
-			templates := template.Must(
-						template.ParseFiles(public_tmpl_files...))
+			generateHTML(writer, threads, "layout",
+					"private.navbar", "index")
 		}
-		templates.ExecuteTemplate(w, "layout", threads)
 	}
 }
 
