@@ -18,6 +18,7 @@ func main() {
 
 	for {
 		conn, err := listener.Accept()
+		fmt.Println("Connected Client: "conn.RemoteAddr().String())
 		if err != nil {
 			continue
 		}
