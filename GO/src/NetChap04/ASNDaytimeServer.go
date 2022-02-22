@@ -10,10 +10,10 @@ import (
 
 func main() {
 	service := ":1200"
-	tcpAddr, err := net.RosolveTCPAddr("tcp", service)
+	tcpAddr, err := net.ResolveTCPAddr("tcp", service)
 	checkError(err)
 
-	listener, err := net.ListenerTCP("tcp", tcpAddr)
+	listener, err := net.ListenTCP("tcp", tcpAddr)
 	checkError(err)
 
 	for {

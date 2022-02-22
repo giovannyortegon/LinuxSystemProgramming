@@ -1,7 +1,7 @@
 package main
 
 import (
-	"byte"
+	"bytes"
 	"encoding/asn1"
 	"fmt"
 	"io"
@@ -55,5 +55,5 @@ func readFull(conn net.Conn) ([]byte, error) {
 			return nil, err
 		}
 	}
-	return result.Byte(), nil
+	return result.Bytes(), nil
 }
