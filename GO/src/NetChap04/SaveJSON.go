@@ -27,8 +27,9 @@ func main() {
 		Name: Name{Family: "Newmarch", Personal: "Jan"},
 		Email: []Email{
 				Email{Kind: "home", Address: "jan@newmarch.name"},
-				Email{Kind: "work", Address: "j.newmarch@boxhill.edu.au"}
-	}}
+				Email{Kind: "work", Address: "j.newmarch@boxhill.edu.au"},
+		},
+	}
 	saveJSON("person.json", person)
 }
 
