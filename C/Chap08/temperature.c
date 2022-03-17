@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include"convert.h"
+#include<convert.h>
 
 void printUsage(FILE *stream, char progname[]);
 
