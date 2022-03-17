@@ -4,7 +4,7 @@
 
 int main() {
 	std::filesystem::create_directories("test/src/config");
-	std::ofstream("test/src/file.txt") <<"This is an example!";
+	stt::ofstream("test/src/file.txt") <<"This is an example!";
 
 	return (0);
 }
