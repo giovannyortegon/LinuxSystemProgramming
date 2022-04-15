@@ -10,8 +10,8 @@ int main(int argc, char * argv[])
 		fprintf(stderr, "Supply exactly one argument\n");
 		return (1);
 	}
-	strncat(buf, argv[1], sizeof(buf) - 1);
 
+	strncat(buf, argv[1], sizeof(buf) -1);
 	printf("Text: %s\n", buf);
 
 	return (0);

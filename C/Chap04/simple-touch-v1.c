@@ -13,7 +13,7 @@ int main(int argc, char * argv[])
 		return (1);
 	}
 
-	strncpy(filename, argv[1], PATH_MAX);
+	strncpy(filename, argv[1], PATH_MAX-1);
 	creat(filename, 00644);
 
 	return (0);

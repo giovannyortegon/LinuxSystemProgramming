@@ -1,10 +1,9 @@
 #include<stdio.h>
 #include<math.h>
 
-int main()
+int main(void)
 {
 	int number = 9999;
-
 	double answer;
 
 	if ((answer = pow(number, number)) == HUGE_VAL)
@@ -14,8 +13,8 @@ int main()
 	}
 	else
 	{
-		printf("%1f\n", answer);
+		printf("%lf\n", answer);
 	}
 
-	return (0);
+	return (1);
 }

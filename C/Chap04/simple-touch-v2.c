@@ -13,12 +13,11 @@ int main(int argc, char * argv[])
 		return (1);
 	}
 
-	strncpy(filename, argv[1], PATH_MAX);
-
+	strncpy(filename, argv[1], PATH_MAX-1);
 	if (creat(filename, 00644) == -1)
 	{
 		fprintf(stderr, "Can't create file %s\n", filename);
-		return (1);
+		return (-1);
 	}
 
 	return (0);
