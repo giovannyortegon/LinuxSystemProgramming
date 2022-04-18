@@ -1,0 +1,6 @@
+# github.com/mariomac/analizador v1.0.0
+## explicit; go 1.14
+github.com/mariomac/analizador
+# github.com/mariomac/sumadormapa v1.0.0
+## explicit; go 1.14
+github.com/mariomac/sumadormapa/sumador
