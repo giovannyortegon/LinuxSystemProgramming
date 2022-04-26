@@ -1,0 +1,2 @@
+Usage: /tmp/go-build595833420/b001/exe/ResolveIp [hostname]
+exit status 1
