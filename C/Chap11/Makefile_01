@@ -1,0 +1,11 @@
+
+CC=gcc
+CFLAGS=-Wall -Wextra -pedantic -std=c99
+LIBS=-lpthread
+OBJS=first-threaded.o
+
+first-threaded: $(OBJS)
+	$(CC) -o first-threaded $(OBJS) $(LIBS)
+
+clean:
+	rm first-threaded $(OBJS)
