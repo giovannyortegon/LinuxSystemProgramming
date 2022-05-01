@@ -1,4 +1,7 @@
-/* SaveJSON.go */
+/*
+ * SaveJSON
+ */
+
 package main
 
 import (
@@ -8,36 +11,37 @@ import (
 )
 
 type Person struct {
-	Name Name
-	Email [] Email
+	Name  Name
+	Email []Email
 }
 
 type Name struct {
-	Family string
+	Family   string
 	Personal string
 }
 
 type Email struct {
-	Kind string
+	Kind    string
 	Address string
 }
 
 func main() {
-	person := Person {
+	person := Person{
 		Name: Name{Family: "Newmarch", Personal: "Jan"},
-		Email: []Email{
-				Email{Kind: "home", Address: "jan@newmarch.name"},
-				Email{Kind: "work", Address: "j.newmarch@boxhill.edu.au"},
-		},
+		Email: []Email{Email{Kind: "home", Address: "jan@newmarch.name"},
+			Email{Kind: "work", Address: "j.newmarch@boxhill.edu.au"}},
 	}
-	saveJSON("person.json", person)
+
+	SaveJSON("person.json", person)
 }
 
-func saveJSON(fileName string, key interface{}) {
+func SaveJSON(fileName string, key interface{}) {
 	outFile, err := os.Create(fileName)
 	checkError(err)
+
 	encoder := json.NewEncoder(outFile)
 	err = encoder.Encode(key)
+
 	checkError(err)
 	outFile.Close()
 }

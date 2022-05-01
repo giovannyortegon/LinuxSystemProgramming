@@ -1,4 +1,6 @@
-/* LoadJSON */
+/*
+ * LoadJSON
+ */
 package main
 
 import (
@@ -8,17 +10,17 @@ import (
 )
 
 type Person struct {
-	Name Name
-	Email [] Email
+	Name  Name
+	Email []Email
 }
 
 type Name struct {
-	Family string
+	Family   string
 	Personal string
 }
 
 type Email struct {
-	Kind string
+	Kind    string
 	Address string
 }
 
@@ -34,18 +36,19 @@ func (p Person) String() string {
 
 func main() {
 	var person Person
-	loadJSON("person.json", &person)
+	LoadJSON("person.json", &person)
 
-	fmt.Println("Person", person.String())
+	fmt.Println("Person: ", person.String())
 }
 
-func loadJSON(filename string, key interface{}) {
-	inFile, err := os.Open(filename)
+func LoadJSON(fileName string, key interface{}) {
+	inFile, err := os.Open(fileName)
 	checkError(err)
 
 	decoder := json.NewDecoder(inFile)
 	err = decoder.Decode(key)
 	checkError(err)
+
 	inFile.Close()
 }
 
