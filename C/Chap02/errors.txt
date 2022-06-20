@@ -1,0 +1,3 @@
+Found non-numeric value
+Found non-numeric value
+Found non-numeric value

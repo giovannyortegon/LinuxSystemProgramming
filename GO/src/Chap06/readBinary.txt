@@ -1,0 +1,1 @@
+[GoFile.txt]: Using fmt.Fprintf in GoFile.txt
