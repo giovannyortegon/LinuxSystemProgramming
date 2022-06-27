@@ -3,10 +3,12 @@
 
 using namespace boost;
 
-int main() {
+int main(int argc, char * argv[]) {
     // name and host
-    std::string host = "samplehost.com";
-    std::string port_num = "3333";
+    // std::string host = "samplehost.com";
+    std::string host = argv[1];
+    // std::string port_num = "3333";
+    std::string port_num = argv[2];
 
     asio::io_service ios;
     asio::ip::tcp::resolver::query resolver_query(host, port_num,
@@ -22,6 +24,14 @@ int main() {
                   <<". Message = " <<ec.message();
 
         return (ec.value());
+    }
+
+    asio::ip::tcp::resolver::iterator it_end;
+
+    for (; it != it_end; ++it) {
+        asio::ip::tcp::endpoint ep = it->endpoint();
+        std::cout <<ep.address() <<std::endl;
+        std::cout <<ep.port() <<std::endl;
     }
 
     return (0);
