@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1022.19" height="97.546" viewBox="0 0 1022.19 97.546">
+  <g id="Grupo_10547" data-name="Grupo 10547" transform="translate(1303.788 -3226.97)">
+    <rect id="Rectángulo_4402" data-name="Rectángulo 4402" width="1022.19" height="5.122" transform="translate(-1303.788 3226.97)" fill="#a9c4e9"/>
+    <rect id="Rectángulo_4403" data-name="Rectángulo 4403" width="1022.19" height="86.366" transform="translate(-1303.788 3232.092)" fill="#4d4d4d"/>
+    <text id="Tipo_Nombre_cantidadFilas_cantidadColumnas_Fila0_Col1_Col2_ColN_Fila1_Col1_Col2_ColN_" data-name="Tipo Nombre [cantidadFilas] [cantidadColumnas] =	{      {Fila0… Col1, Col2, ColN},
+                                                                                                    {Fila1… Col1, Col2, ColN},
+                                              " transform="translate(-1279.167 3240.516)" fill="#fff" font-size="18" font-family="OpenSans-Regular, Open Sans"><tspan x="0" y="19" xml:space="preserve">Tipo Nombre [cantidadFilas] [cantidadColumnas] =	{      {Fila0… Col1, Col2, ColN},</tspan><tspan x="0" y="40.6" xml:space="preserve">                                                                                                    {Fila1… Col1, Col2, ColN},</tspan><tspan x="0" y="62.2" xml:space="preserve">                                                                                                    {FilaN…Col1, Col2, ColN}      };</tspan></text>
+  </g>
+</svg>

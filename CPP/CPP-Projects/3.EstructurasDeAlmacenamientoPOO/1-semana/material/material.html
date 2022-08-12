@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Conceptos de programación orientada a objetos</title>
+        <meta meta name="description" content="Módulos, estructura de almacenamiento y POO utilizando el lenguaje de programación C++ (Nivel II)">
+        <link rel="icon" type="image/svg+xml" href="assets/images/logos/senaLogo.svg">
+        <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.css">
+        <link href="assets/css/fancybox.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="theme-dark page-header-textura" id="page-home">
+        <header class="curso-presentacion page-header" id="CursoPresentacion">
+            <div class="page-textura">
+                <div class="container">
+                    <div class="curso-topbar justify-content-center justify-content-md-between"><a class="curso-topbar__logo"><svg xmlns="http://www.w3.org/2000/svg" width="168.273" height="164.177" viewBox="0 0 168.273 164.177">
+                                <path id="SENA_LOGO" data-name="SENA LOGO" d="M85.349,1a18.09,18.09,0,1,0,18.09,18.09h0A18.1,18.1,0,0,0,85.349,1ZM25.617,42.983a33.722,33.722,0,0,0-9.386,1.024,11.156,11.156,0,0,0-5.12,2.56A5.346,5.346,0,0,0,10.086,52.2c.683,1.707,2.56,2.9,4.608,3.584,4.437,1.536,9.386,1.877,13.994,2.731a5.1,5.1,0,0,1,2.389,1.024,1.369,1.369,0,0,1-.683,2.048,9.146,9.146,0,0,1-5.291.683A8.354,8.354,0,0,1,20.5,61.244a1.962,1.962,0,0,1-.853-2.389H9.233A7.663,7.663,0,0,0,10.6,63.463a7.59,7.59,0,0,0,4.267,2.389A28.541,28.541,0,0,0,23.4,66.876,52.426,52.426,0,0,0,35,66.023a11.043,11.043,0,0,0,5.8-2.9,5.358,5.358,0,0,0-1.365-8.533,21.267,21.267,0,0,0-5.8-2.048c-3.072-.683-5.973-1.024-9.045-1.536a9.114,9.114,0,0,1-3.072-.853,1.226,1.226,0,0,1,0-2.219,9.369,9.369,0,0,1,4.437-.683,10.554,10.554,0,0,1,4.608.853A1.877,1.877,0,0,1,31.59,49.81h9.9a5.669,5.669,0,0,0-1.195-3.584A8.875,8.875,0,0,0,35.515,43.5c-3.584-.341-6.827-.512-9.9-.512Zm21.333.683V67.217H75.792V62.1H57.531V57.489H73.744V52.54H57.531V48.786H75.109v-5.12Zm47.615,0H81.253V67.217H91.322V51.346l13.824,15.872h13.824V43.666H108.9v15.7Zm42.495,0L120.676,67.217h10.581l2.56-4.267H150.2l2.389,4.267h11.776l-15.53-23.551ZM142.35,49.3l5.12,8.533h-10.41ZM.7,74.044l.171,12.8L49,86.673c2.389.512,3.925,2.048,3.413,5.8l-29.7,51.711,9.557,9.045L78.01,74.044Zm91.646,0L137.4,152.89l9.9-8.874L117.433,92.3c-.512-3.584.853-5.291,3.413-5.8l48.127.171V74.044ZM84.837,87.185,42.512,159.546l11.264,5.461,28.159-47.615a4.283,4.283,0,0,1,2.9-1.195,4.681,4.681,0,0,1,3.072,1.195l28.159,47.786,11.605-5.973Z" transform="translate(-0.7 -1)" fill="#FF6B00" />
+                            </svg>
+                        </a><a class="curso-topbar__menubar collapsed btn-menu-responsive d-none" data-toggle="collapse" href="#curso-topbar__nav" aria-expanded="false"><span></span><span></span><span></span></a>
+                        <nav class="curso-topbar__nav collapse show d-none d-md-block" id="curso-topbar__nav">
+                            <ul class="curso-topbar__list">
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#ResultadosAprendizaje"><span class="text-white">Resultados de aprendizaje</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#IndiceTematico"><span class="text-white">Índice temático</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#Creditos"><span class="text-white">Créditos</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="curso-portada">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <h3 class="curso-subtitulo" id="curso-titulo-componente">Módulos, estructura de almacenamiento y POO utilizando el lenguaje de programación C++ (Nivel II)</h3>
+                                <h1 class="curso-titulo" id="curso-titulo-tema">Conceptos de programación orientada a objetos</h1>
+                                <div class="brand-line-primary"></div>
+                            </div>
+                            <div class="col-12 col-lg-6 text-center">
+                                <div class="d-none d-lg-block"><img class="curso-imagen" src="assets/images/header/header_media.svg" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="curso-resultados section bg-base-light" id="ResultadosAprendizaje">
+            <div class="container">
+                <h2> Resultados de <br>aprendizaje</h2>
+                <div class="brand-line-primary"></div>
+                <div class="card resultado-item">
+                    <div class="card-body">
+                        <ul class="bg-color-dark">
+                            <li> <span>Comprender los conceptos de objeto, su estructura y comunicación, en el marco de la definición de atributos y métodos de una clase.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curso-indice-tematico section" id="IndiceTematico">
+            <div class="container">
+                <h2>Desarrollo de <br>contenidos</h2>
+                <div class="brand-line-primary"></div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-10">
+                        <div class="card wow flipInX" data-wow-delay=".4s">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush list my-n3 nav-temas">
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-file-text-o"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#introduccion">Introducción</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#introduccion">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">1</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-1">Programación orientada a objetos</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-1">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">2</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-2">Identificación de requerimientos</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-2">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-question"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#evaluacion">Actividad didáctica</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#evaluacion">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-sort-alpha-asc"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#glosario">Glosario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#glosario">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-folder-open"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#anexos">Material complementario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#anexos">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-book"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#referencias">Referencias bibliográficas</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#referencias">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mainContent">
+            <div id="introduccion">
+                <div class="container" id="introduccion">
+                    <div class="header-ecored">
+                        <h1>Introducción</h1>
+                    </div>
+                    <div class="row mx-0">
+                        <div class="card"><img class="img-fluid" src="assets/images/pages/img1.png">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <div class="row mx-0">
+                                        <div class="col-12">
+                                            <p>El lenguaje de programación C++ es en realidad una mejora que se efectuó al lenguaje denominado C; como es de conocimiento común en programación, el operador “+” escrito dos veces “++” corresponde a un operador de incremento, lo cual permite inferir que el lenguaje procede de un “incremento” realizado al C, que fue mejorado y adaptado para trabajar bajo el paradigma orientado a objetos, entre otras mejoras efectuadas.</p><br>
+                                            <p>En este material de formación se abordan en términos generales los conceptos de la programación orientada a objetos, éste es un paradigma aplicable a varios lenguajes; es decir, los conceptos aquí tratados no corresponden de forma específica al lenguaje C++, sino que son de aplicabilidad compartida con cualquier lenguaje que funcione bajo este mismo paradigma.</p><br>
+                                            <p>Adicionalmente, en el material de formación de esta primera actividad de aprendizaje, se abordarán de manera general las temáticas relacionadas con el proceso de identificación de los requerimientos de una aplicación de software, los pasos básicos que permiten la identificación de éstos y el proceso mínimo requerido que le facilita a un programador empezar con el desarrollo de una solución informática.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-1">
+                <div class="container" id="programacion">
+                    <div class="header-ecored">
+                        <h1>1. Programación orientada a objetos</h1>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>La programación orientada a objetos consiste básicamente en la forma en que se piensa para efectuar el proceso de escritura de las diferentes secuencias de código que componen un programa o desarrollo de <i>software.</i></p>
+                            <p class="m-0">A lo largo del tiempo se había venido programando de forma secuencial y podría decirse, muy mecánica, sin tener un pensamiento un poco más realista que aporte diferentes beneficios a los códigos escritos; lo que se busca con el paradigma orientado a objetos es que los programas sean pensados de un modo que sus componentes puedan ser utilizados en diferentes soluciones, ya que muchas veces hay varias aplicaciones que comparten características entre sí y de este modo podría optimizarse tiempo y recursos en el ejercicio de la programación.</p>
+                        </div>
+                        <div class="col-12 py-5"><img class="img-fluid" src="assets/images/pages/img1.svg" style="max-width: 100%"></div>
+                        <div class="col-12">
+                            <p>En el proceso de programar bajo el paradigma orientado a objetos, se trata de pensar cada componente de una aplicación como un elemento independiente; dichos elementos serían los denominados clases, que constituyen el esquema general de almacenamiento de la estructura básica de esos componentes, y cuando se realiza la definición específica de cada componente, éste se denomina objeto, que es el que contiene diferentes atributos, representados en las variables que almacenan información de cada objeto y diferentes procedimientos que los objetos pueden realizar dentro del sistema.</p>
+                            <p class="m-0">Una vez definida la clase donde se mencionan los diferentes métodos y atributos que la componen, basándose en ella, se comienza la creación de los objetos y este proceso es el que se conoce como <b>instanciación de una clase</b>, donde se usa el esquema definido para crear un objeto a partir de este.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro2 align-items-center">
+                        <div class="col-2 text-center"><img class="img-fluid" src="assets/images/pages/img2.svg" style="max-width: 100%"></div>
+                        <div class="col-10">
+                            <p class="m-0">Es importante tener en cuenta que la conceptualización y teorización sobre el paradigma orientado a objetos es una temática bastante amplia, sobre la cual se puede encontrar mucha información que profundiza en cada una de las definiciones propias de esta forma de programar; sin embargo, en este material de formación se aborda de un modo resumido para contextualizar al aprendiz respecto al tema, de manera que pueda dar inicio satisfactorio al proceso de formación en curso.</p>
+                        </div>
+                    </div><br id="conceptos">
+                    <div class="header-ecored">
+                        <h2>1.1 Conceptos básicos</h2>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Como se vio en la introducción, al hablar del paradigma orientado a objetos surgen cinco (5) conceptos específicos sobre los cuales es necesario tener claridad para que el proceso de programación sea satisfactorio. Estos conceptos pueden observarse en la siguiente figura.</p>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p><b>Conceptos básicos de la programación orientada a objetos</b></p><img class="img-fluid" src="assets/images/pages/img3.png" style="max-width: 50%">
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon clase">
+                            <p class="m-0 text-icon"><b>Clase</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Una clase consiste en una especie de plantilla donde se definen los atributos o características, los métodos o comportamientos que van a compartir cierto conjunto de elementos similares; con base en esto, en el paradigma de programación orientada a objetos pueden existir muchos elementos relacionados con la misma clase, que comparten métodos y atributos o tienen los suyos propios. Para ilustrarlo con un ejemplo, se puede pensar en la clase <i>VEHÍCULO</i>, donde es posible definir muchos vehículos que conservan atributos compartidos como por ejemplo modelo y marca y otros que sean diferentes como número de motor y de placa y así mismo pueden compartir métodos como avanzar, frenar, cambiar de velocidad, etc.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon instancia">
+                            <p class="m-0 text-icon"><b>Instancia</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Consiste en el procedimiento efectuado cuando se crea un objeto a partir de una clase; es decir, cuando en el código del programa se diligencia la información según la plantilla establecida por la clase. Es importante tener en cuenta que dentro de un programa puede haber varias instancias de la misma clase; para continuar con el ejemplo de la clase <i>VEHÍCULO</i>, se supone que se tenga una instancia con un vehículo motor MC21 de marca Renault, otra instancia con un vehículo motor AB147 de marca Mazda y otra instancia de vehículo motor XA41B marca Daewoo; la clase para todos es igual y todos comparten los métodos avanzar, frenar y cambiar de velocidad, pero son instancias diferentes.</p>
+                            <p>Para establecer claridad en el concepto, surge una analogía interesante que puede hacerlo más entendible, y se trata de que la clase se observe como una receta de cocina (ingredientes para hacer galletas, procedimiento para fabricarlas, tiempo de cocción, etc.) y la instancia como el producto terminado (galletas listas); es decir, la clase indica cómo debe definirse y la instancia es la definición en sí.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon objeto">
+                            <p class="m-0 text-icon"><b>Objeto</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>El objeto es cada uno de los elementos creados a partir de las clases; un objeto entonces pertenece a una clase y por tal razón dispone de las características y los comportamientos de esta, conocidos en el paradigma orientado a objetos como atributos y métodos.</p>
+                            <p>Recordando nuevamente la analogía mencionada en el concepto de instancia, los objetos podrían ser <i>galleta de mantequilla, galleta de chips, galleta integral </i>y llevándolo al ejemplo de la clase <i>VEHÍCULO </i>podrían tenerse diferentes objetos tal como se ilustra en la siguiente figura, donde los cuatro objetos creados tienen diferentes atributos pero comparten los mismos métodos.</p>
+                        </div>
+                        <div class="col-12 text-center"><img class="img-fluid" src="assets/images/pages/img2.png" style="max-width: 60%"></div>
+                    </div><br>
+                    <div class="row mx-0 recuadro3 justify-content-center">
+                        <div class="col-12">
+                            <p>En el siguiente ejemplo se observa la creación de una clase, con sus atributos y métodos en C++; así como también la instanciación de la misma a través de la creación de dos objetos a partir de ella. Se recomienda digitar el código en un editor de texto para continuar con la práctica del lenguaje.</p>
+                        </div>
+                        <div class="col-4">
+                            <div class="card mt-3"><a class="btn media-link" href="media/documentos/MF1_Ejemplo1_Clase_y_objetos.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img35.svg" alt="">
+                                    <div class="media-link-title">
+                                        <p><strong>Ejemplo 1</strong>. Clase y objetos</p>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div><br id="caracteristicas">
+                    <div class="header-ecored">
+                        <h2>1.2 Características</h2>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Para que un lenguaje pueda estar incluido dentro del paradigma orientado a objetos, debe reunir las características que se observan en la siguiente figura.</p>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p><b>Características del paradigma orientado a objetos</b></p><img class="img-fluid" src="assets/images/pages/img4.png" style="max-width: 40%">
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon abstraccion">
+                            <p class="m-0 text-icon"><b>Abstracción</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Es el proceso que se realiza para identificar los componentes y comportamientos de una clase, donde el objetivo principal es descartar lo que no es importante y asegurar que se tiene en cuenta lo esencial para que la clase pueda ser funcional.</p>
+                            <p>En la programación, esta característica permite que el código sea más portable; es decir, que pueda reutilizarse con mayor facilidad. La clave para que la abstracción sea satisfactoria está en definir los datos y comportamientos comunes a un conjunto de elementos para crear con ellos cada clase.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon herencia">
+                            <p class="m-0 text-icon"><b>Herencia</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Consiste en el proceso por medio del cual se crea una clase a partir de otra que ya existe. Este concepto puede entenderse de forma muy similar al concepto de herencia en un ámbito familiar, un padre hereda ciertas características a sus hijos, así mismo, la clase original o clase padre, también llamada súper clase, hereda a otras clases llamadas subclases o clases hijas, sus métodos y atributos.</p>
+                            <p>Esta característica permite definir métodos y atributos nuevos en las clases hijas y aplicarlos a los que fueron heredados.</p>
+                        </div>
+                        <div class="row mx-0 recuadro2 align-items-center">
+                            <div class="col-2 text-center"><img class="img-fluid" src="assets/images/pages/img11.svg" style="max-width: 100%"></div>
+                            <div class="col-10">
+                                <p class="m-0">Particularmente algunos lenguajes, entre ellos el C++, permiten la implementación de la herencia múltiple, que significa que la clase hija hereda los atributos de dos clases padre, esto con el fin de reunir en una sola varios atributos existentes en diferentes clases.</p>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro3 justify-content-center">
+                        <div class="col-12">
+                            <p>En la siguiente ejemplo se observa la aplicación de la herencia en C++ a través de la creación de un programa con una superclase llamada Persona, que tiene una clase hija llamada Empleado. Se debe digitar el código en el Dev-C++ para continuar con la práctica del lenguaje.</p>
+                        </div>
+                        <div class="col-4">
+                            <div class="card mt-3"><a class="btn media-link" href="media/documentos/MF1_Ejemplo2_Herencia.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img35.svg" alt="">
+                                    <div class="media-link-title">
+                                        <p><strong>Ejemplo 2</strong>. Herencia</p>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon encapsulacion">
+                            <p class="m-0 text-icon"><b>Encapsulación</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Es el mecanismo que garantiza protección de la información contenida en una clase, puede verse como un sistema de permisos con el cual se configura qué o quiénes pueden acceder a determinados datos y de qué manera.</p>
+                            <p>Dentro de este mecanismo se establecen tres niveles que son: privado, protegido y público, los cuales definen las restricciones de acceso a los métodos de la misma clase, a las funciones de la misma clase padre y la clase hijo y a los datos y métodos de todas las clases, respectivamente. En la siguiente figura se ilustra lo anterior.</p>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p><b>Niveles de encapsulación</b></p><img class="img-fluid" src="assets/images/pages/img5.png" style="max-width: 60%">
+                        </div>
+                        <div class="row mx-0 recuadro2 align-items-center mt-4">
+                            <div class="col-2 text-center"><img class="img-fluid" src="assets/images/pages/img14.svg" style="max-width: 100%"></div>
+                            <div class="col-10">
+                                <p class="m-0">Finalmente, en el encapsulamiento lo que se obtiene es que quien utilice el objeto solo tenga relación con la interfaz, sin tener que entenderse con la forma en que esta fue implementada.</p>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon polimorfismo">
+                            <p class="m-0 text-icon"><b>Polimorfismo</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Se trata de la característica que tienen los objetos para reaccionar de forma diferente a un mismo mensaje; es decir, aunque se trate de la misma acción, cada objeto responde de acuerdo con los parámetros que hayan sido enviados al invocar la respectiva función.</p>
+                            <p>Una de las cosas principales que se pretende con el polimorfismo es reducir el mantenimiento de las soluciones informáticas; para aplicarlo es importante tener en cuenta que los objetos cumplan con el requisito de saber responder al mensaje enviado.</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img16.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mt-3">
+                            <p>El polimorfismo es un concepto de la programación orientada a objetos que está estrechamente relacionado con la herencia, ya que una clase padre hereda a sus clases hijas atributos y métodos, pero cada una de esas clases hijas realiza las acciones a su manera. Continuando con la ejemplificación a través de la clase <i>VEHÍCULO</i>, se puede suponer que dicha clase tiene un método llamado <i>parquear() </i>y que a través de la herencia se crean clases hijas llamadas carro, moto y camión, es el polimorfismo el que permite que únicamente sea necesario tener un método llamado <i>parquear()</i>, ya que al declararlo se le configura para que reciba como parámetro cualquier objeto de la clase <i>VEHÍCULO.</i></p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro3 justify-content-center">
+                        <div class="col-12">
+                            <p>En el siguiente ejemplo se observa la aplicación de herencia con polimorfismo en C++ a través de la creación de un programa con una superclase llamada Persona, que tiene dos clases hijas llamadas Empleado y Socio y que aplica polimorfismo que se hace evidente en el método ver(). Digitar el código en el Dev-C++ para continuar con la práctica del lenguaje.</p>
+                        </div>
+                        <div class="col-4">
+                            <div class="card mt-3"><a class="btn media-link" href="media/documentos/MF1_Ejemplo3_Polimorfismo.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img35.svg" alt="">
+                                    <div class="media-link-title">
+                                        <p><strong>Ejemplo 3</strong>. Polimorfismo</p>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-2">
+                <div class="container" id="identificacion">
+                    <div class="header-ecored">
+                        <h1>2. Identificación de requerimientos</h1>
+                    </div>
+                    <div class="row mx-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <div class="row mx-0">
+                                        <div class="col-12 mb-4">
+                                            <p>La identificación de requerimientos es el proceso mediante el cual el cliente y el equipo de desarrolladores analizan el sistema que se desea crear, con el fin de determinar con claridad lo que se espera obtener; esto con miras a que en el momento en que el software sea puesto en ejecución, presente la menor cantidad posible de problemas y proporcione el rendimiento y la eficiencia esperados por todos.</p>
+                                        </div>
+                                    </div>
+                                </div><img class="img-fluid" src="assets/images/pages/img17.svg" style="max-width: 100%">
+                            </div>
+                        </div>
+                    </div><br id="tipos">
+                    <div class="header-ecored">
+                        <h2>2.1 Tipos de Requerimientos</h2>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>En general, los requerimientos para una solución informática pueden ser de dos tipos: funcionales y no funcionales.</p>
+                        </div>
+                        <div class="col-12 icon funcionales">
+                            <p class="m-0 text-icon"><b>Funcionales</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Los requerimientos funcionales consisten en la descripción detallada de las funciones que el sistema debe cumplir. Es importante ser muy precisos en dicha descripción, ya que de una definición bien detallada y específica depende que este proceso sea satisfactorio y proporcione en realidad los resultados que se esperan.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon nofuncionales">
+                            <p class="m-0 text-icon"><b>No funcionales</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Los requerimientos no funcionales son aquellos que no están relacionados de manera directa con las funciones que desarrollará el sistema sino con otras consideraciones que son importantes a la hora de implementarlo.</p>
+                            <p>Entre estos requerimientos se pueden mencionar las necesidades específicas de <i>hardware</i>, la velocidad de respuesta, la capacidad de almacenamiento, las restricciones presupuestales, las políticas de privacidad y la interacción con otras soluciones informáticas existentes en la empresa, etc.</p>
+                        </div>
+                        <div class="col-12 text-center"><img class="img-fluid" src="assets/images/pages/img20.svg" style="max-width: 100%"></div>
+                        <div class="row mx-0 recuadro2 align-items-center mt-4">
+                            <div class="col-2 text-center"><img class="img-fluid" src="assets/images/pages/img21.svg" style="max-width: 100%"></div>
+                            <div class="col-10">
+                                <p class="m-0">Los requerimientos no funcionales pueden verse agrupados de acuerdo con el mismo sistema, con las políticas de la compañía para la cual se desarrolla y con otros factores externos a estos.</p>
+                            </div>
+                        </div>
+                    </div><br id="algunas">
+                    <div class="header-ecored">
+                        <h2>2.2 Algunas técnicas</h2>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Existen diferentes formas que pueden ser utilizadas para efectuar el proceso de levantamiento de requerimientos cuando se va a iniciar la creación de una aplicación informática; la selección de la técnica a aplicar depende en la mayoría de casos de las preferencias del equipo desarrollador, lo que si debe tenerse muy en cuenta es la importancia de la participación del cliente y los usuarios finales en la aplicación de cualquiera que sea la técnica que se elija.</p>
+                            <p>A continuación se observan algunas de las técnicas existentes para llevar a cabo el proceso en cuestión.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon observacion">
+                            <p class="m-0 text-icon"><b>Observación</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Esta técnica consiste en analizar la forma en que se realiza el proceso que desea ser sistematizado; como su nombre lo indica, el personal encargado del levantamiento de requisitos se dedica a observar y tomar nota de las acciones realizadas, intentando detallarlas lo mejor posible para no pasar por alto ningún elemento que pueda ser relevante para la solución informática que va a desarrollarse; cosas como datos que servirán de insumo al <i>software </i>para operar, las salidas que se generarán, la forma de interacción con otros sistemas y sus actores, y así, cualquier detalle que pueda intervenir en las distintas funciones que deben ser programadas.</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img23.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mt-3">
+                            <p>A través de la técnica de observación, los clientes y usuarios finales del <i>software </i>pueden interactuar con el personal de desarrollo resolviendo y haciendo preguntas que van a ser de suma utilidad para que la aplicación finalmente cumpla con todo lo que se requiere, y de este modo no haya lugar a demasiados mantenimientos ni ajustes que tengan que realizarse posterior a su entrega.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon escenarios">
+                            <p class="m-0 text-icon"><b>Escenarios</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Según Guerra (s.f.), profesor investigador de la Universidad Politécnica de San Luis Potosí, los escenarios <i>“se utilizan para documentar el comportamiento del sistema cuando se le presentan eventos específicos. Cada evento de interacción distinto, o la selección de un servicio del sistema, se documentan como un escenario de eventos distinto. Los escenarios de eventos incluyen una descripción del flujo de datos y las acciones del sistema, y documenta las excepciones que puedan surgir” </i>(Sin página).</p>
+                            <p>De acuerdo con la definición anterior, en esta técnica se realizan una especie de suposiciones para analizar el comportamiento del sistema en diferentes situaciones y de este modo se va documentando el proceso para llegar al estado ideal deseado de la aplicación que se creará.</p>
+                        </div>
+                        <div class="row mx-0 recuadro2 align-items-center">
+                            <div class="col-2 text-center"><img class="img-fluid" src="assets/images/pages/img25.svg" style="max-width: 100%"></div>
+                            <div class="col-10">
+                                <p class="m-0">En su texto, el profesor Guerra también hace énfasis en que la técnica de escenarios es la que se utiliza como base para la aplicación de la técnica de casos de uso en la obtención de requerimientos; dicha técnica será estudiada en el siguiente apartado de este material de formación.</p>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon uso">
+                            <p class="m-0 text-icon"><b>Casos de uso</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>La técnica de casos de uso es una manera muy interesante de brindar al usuario final una clara perspectiva de lo que se realizará en el <i>software </i>solicitado, para que de esta forma él tenga la oportunidad de identificar si lo planteado se trata en realidad de lo que él requiere.</p>
+                            <p>Partiendo de lo anterior, surge entonces el siguiente interrogante: ¿Cómo presentar algo que aún no está hecho? Para ello existen sistemas que permiten representar las funcionalidades de un <i>software </i>siguiendo ciertas instrucciones; entre esos sistemas, el más conocido es el UML <i>(Unified Modeling Language) </i>o Lenguaje Unificado de Modelado, que a través de múltiples componentes gráficos y diferentes tipos de diagramas, permite mostrar la manera en que el sistema va a comportarse.</p>
+                        </div>
+                        <div class="col-12 text-center"><img class="img-fluid" src="assets/images/pages/img27.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mt-3">
+                            <p>Entre los diferentes diagramas que se realizan bajo el sistema UML está el diagrama de caso de uso, que proporciona la posibilidad de observar qué podrá hacer el sistema sin especificar cómo va a funcionar; es por ello que se utilizan en la etapa de levantamiento de requerimientos, dado que aquí lo que se busca finalmente es dejar clara cada una de las funciones que la aplicación debe realizar.</p>
+                            <p>El diagrama de casos de uso está conformado por varios elementos, cada uno con su propio símbolo. La descripción de estos elementos se puede observar en la siguiente tabla 1.</p>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p><b>Tabla 1. Componentes del diagrama de casos de uso</b></p><img class="img-fluid" src="assets/images/pages/img6.png" style="max-width: 60%">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Las relaciones entre los diferentes elementos del diagrama de casos de uso pueden ser de tipos diferentes y se representan también con un símbolo específico. La descripción de estas se observa en la tabla 2.</p>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p><b>Tabla 2. Tipos de relaciones y ejemplos</b></p><img class="img-fluid" src="assets/images/pages/img7.png" style="max-width: 80%">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>En el ejemplo visto en la tabla 2 para la relación de extensión, se puede determinar lo siguiente:</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img8.png" style="max-width: 90%"></div>
+                        <div class="col-12 mt-3">
+                            <p>En el ejemplo visto en la tabla 2 para la relación de inclusión, se puede determinar lo siguiente:</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img9.png" style="max-width: 90%"></div>
+                        <div class="col-12 mt-3">
+                            <p>En la siguiente figura se puede observar de forma completa el diagrama de casos de uso abordado en la tabla 2.</p>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p><b>Diagrama de casos de uso "Venta de Productos"</b></p><img class="img-fluid" src="assets/images/pages/img10.png" style="max-width: 60%">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>Para complementar esta técnica de casos de uso, es necesario contar con un formato de especificación de los mismos donde se describa su comportamiento; en este aspecto no hay un estándar definido, el formato presentado depende de cada grupo de trabajo; sin embargo, es importante que en este pueda recogerse información básica como:</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img11.png" style="max-width: 90%"></div>
+                        <div class="col-12 mt-3">
+                            <p>En la siguiente figura se observa un modelo de formato de especificación de casos de uso.</p>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p><b>Modelo formato de especificación de casos de uso</b></p><img class="img-fluid" src="assets/images/pages/img12.png" style="max-width: 60%">
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro3 justify-content-center">
+                        <div class="col-12">
+                            <p>Hasta este momento se ha visto, en términos generales y de un modo muy resumido, el proceso que debe llevarse a cabo en la aplicación de la técnica de casos de uso para la identificación de requerimientos del <i>software</i>; a continuación se realiza un ejemplo completo con el fin de que el tema pueda tener una mejor comprensión al ser aplicado en un caso específico.</p>
+                        </div>
+                        <div class="col-4">
+                            <div class="card mt-3"><a class="btn media-link" href="media/documentos/MF1_Ejemplo4_Casos_de_uso.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img35.svg" alt="">
+                                    <div class="media-link-title">
+                                        <p><strong>Ejemplo 4</strong>. Casos de uso</p>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="evaluacion">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Actividad didáctica</h1>
+                    </div>
+                    <div class="row align-items-center justify-content-center my-5">
+                        <div class="col-8 col-md-5 col-xl-4 mb-5">
+                            <figure><img src="assets/images/pages/actividad/img_actividad.svg" alt=""></figure>
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <hr class="line-100 bg-orange">
+                            <div class="text-center p-2">
+                                <h2>¡Pon a prueba tu conocimiento! </h2>
+                                <p>La siguiente actividad tiene como propósito validar los conocimientos relacionados con el tema <strong>Conceptos de programación orientada a objetos</strong>.</p><a class="btn btn-colour-Orange" href="media/actividad-1/story.html" target="_blank">Iniciar </a>
+                            </div>
+                            <hr class="line-100 bg-orange">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="glosario">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Glosario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <p><strong class="mr-2">Abstracción:</strong>proceso realizado con el fin de identificar lo esencial para que una clase sea funcional.</p>
+                        <p><strong class="mr-2">Asociación:</strong>línea de comunicación entre dos casos de uso.</p>
+                        <p> <strong class="mr-2">Atributo:</strong>cada una de las características de un objeto.</p>
+                        <p> <strong class="mr-2">Clase:</strong>plantilla donde se definen métodos y atributos.</p>
+                        <p><strong class="mr-2">Extensión:</strong>relación entre casos de uso que genera la ejecución de uno cuando en el otro se cumple cierta concisión.</p>
+                        <p><strong class="mr-2">Herencia:</strong>característica de la programación orientada a objetos que permite crear una clase a partir de otra.</p>
+                        <p> <strong class="mr-2">Inclusión:</strong>relación entre casos de uno que implica la realización de uno para que pueda ejecutarse el otro.</p>
+                        <p> <strong class="mr-2">Método:</strong>cada una de las funcionalidades o acciones que puede llevar a cabo un objeto.</p>
+                        <p><strong class="mr-2">Objeto:</strong>elemento creado a partir de una clase.</p>
+                        <p><strong class="mr-2">Paradigma:</strong>forma utilizada para ejecutar el proceso de programación de una aplicación.</p>
+                        <p> <strong class="mr-2">UML:</strong>sigla en inglés de <i>Unified Modeling Language</i>o Lenguaje Unificado de Modelado, en español. </p>
+                    </div>
+                </div>
+            </div>
+            <div id="anexos">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Material complementario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center">Autor, (año del documento o material), Nombre del documento o material.</th>
+                                    <th class="text-center">Tipo de material ( Video, capítulo de libro, articulo, otro) </th>
+                                    <th class="text-center">Enlace del Recurso o Archivo del documento o material</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Herramienta para Implementar LEL y Escenarios</td>
+                                    <td>PDF</td>
+                                    <td> <a href="media/documentos/MC_AA1_Herramienta_para _implementar_LEL_y_escenarios.pdf" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Técnicas efectivas para la toma de requerimientos</td>
+                                    <td>PDF</td>
+                                    <td> <a href="media/documentos/MC_AA1_Tecnicas_efectivas_para_la_toma_de_requerimientos.pdf" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar </a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="referencias">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Referencias bibliográficas</h1>
+                    </div>
+                    <div class="jumbotron bg-white referencias">
+                        <p>Guerra, C. (Sin fecha). Obtención de requerimientos. Técnicas y estrategia. Recuperado de:<a class="ml-2" href="https://sg.com.mx/revista/17/obtencion-requerimientos-tecnicas-y-estrategia" target="_blank">https://sg.com.mx/revista/17/obtencion-requerimientos-tecnicas-y-estrategia</a></p>
+                        <hr>
+                        <p>Joyanes, L. Sánchez, L. (2006). Programación en C++ un enfoque práctico. España: Mc Graw Hill.</p>
+                        <hr>
+                        <p>Metodología Gestión de Requerimientos. (Sin fecha). Técnicas para identificar requisitos funcionales y no funcionales. Recuperado de:<a class="ml-2" href="https://sites.google.com/site/metodologiareq/capitulo-ii/tecnicas-para-identificar-requisitos-funcionales-y-no-funcionales" target="_blank">https://sites.google.com/site/metodologiareq/capitulo-ii/tecnicas-para-identificar-requisitos-funcionales-y-no-funcionales</a></p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="Creditos">
+            <div class="container">
+                <h1>Créditos </h1>
+                <div class="brand-line-primary"></div>
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <h3 class="footer-subtitulo mb-4">ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES </h3>
+                        <p class="footer-texto mb-2"><strong>Ingry Dayanna Bonilla Monzón </strong><br /> <span class="text-small">Líder del equipo</span></p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Contenido Instruccional
+                        </h4>
+                        <p class="footer-texto mb-2"><strong>Gloria Matilde Lee Mejía </strong><br /> <span class="text-small">Responsable del equipo</span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Comercio y Servicios</span><br><span class="text-small">Regional Tolima</span></p>
+                        <p class="footer-texto mb-2"><strong>Rafael Nelftalí Lizcano Reyes</strong><br /> <span class="text-small">Asesor pedagógico<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander </span></p>
+                        <p class="footer-texto mb-2"><strong>Lucero Montes Arenas</strong><br /><span class="text-small">Gestora de desarrollo de programas<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro para la Formación Cafetera - Regional Caldas</span></p>
+                        <p class="footer-texto mb-2"><strong>Julio Alexander Rodríguez del Castillo</strong><br /><span class="text-small">E-Pedagogo instruccional<br /></span><br><strong>Sandra Milena Henao Melchor</strong><br /> <span class="text-small">Evaluadora de contenidos<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Atención Sector Agropecuario – Regional Risaralda</span></p>
+                        <p class="footer-texto mb-2"><strong>Érika Alejandra Beltrán Cuesta</strong><br /> <span class="text-small">Evaluadora de calidad instruccional<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Atención Sector Agropecuario – Regional Risaralda</span></p>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Diseño y desarrollo de recursos educativos digitales
+                        </h4>
+                        <p class="footer-texto"><strong>Francisco José Lizcano Reyes </strong><br /> <span class="text-small">Responsable del equipo<br /></span></p>
+                        <p class="footer-texto"><strong>Leyson Fabián Castaño Pérez</strong><br /> <span class="text-small">Integración de recursos y pruebas<br /></span></p>
+                        <p class="footer-texto"> <strong>Eulises Orduz</strong><br />
+                            <strong>Luis Gabriel Urueta Alvarez</strong><br /><span class="text-small">Diseño Web & Producción Audiovisual<br /></span></p>
+                        <p class="footer-texto"><strong>Jhon Jairo Urueta Alvarez</strong><br> <span class="text-small">Desarrollo Front-End<br /></span></p>
+                        <p class="footer-texto"><strong>Luis Gabriel Urueta Álvarez</strong><br> <span class="text-small">Desarrollo de actividades didácticas<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander </span></p>
+                        <h4 class="footer-subtitulo-2 mt-5">
+                            <div class="fa fa-caret-right mr-2"></div>Gestores de repositorio
+                        </h4>
+                        <p class="footer-texto"><strong>Kely Alejandra Quiros Duarte </strong><br /> <span class="text-small">Administrador repositorio de contenidos y gestores de repositorio.<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de comercio y servicios </span><br><span class="text-small">Regional Tolima</span></p>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <div class="d-flex flex-column justify-content-center"><img src="assets/images/logos/senaLogo.svg" style="max-width:100px"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <section id="cc">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row"><span class="pr-3"><i class="icon cc"></i></span><span>Este material puede ser distribuido, copiado y exhibido por terceros si se muestra en los créditos. No se puede obtener ningún beneficio comercial y las obras derivadas tienen que estar bajo los mismos términos de la licencia que el trabajo original.</span></div>
+            </div>
+        </section><a class="scroll-to-top-btn">
+            <div class="fa fa-angle-up fa-2x"></div>
+        </a>
+        <script src="assets/js/vendor.js"></script>
+        <script src="js/local.js"></script>
+    </body>
+</html>

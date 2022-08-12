@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1022.19" height="123.546" viewBox="0 0 1022.19 123.546">
+  <g id="Grupo_11548" data-name="Grupo 11548" transform="translate(-208.905 -4231.824)">
+    <rect id="Rectángulo_4202" data-name="Rectángulo 4202" width="1022.19" height="5.122" transform="translate(208.905 4231.824)" fill="#a9c4e9"/>
+    <rect id="Rectángulo_4203" data-name="Rectángulo 4203" width="1022.19" height="113.072" transform="translate(208.905 4236.946)" fill="#4d4d4d"/>
+    <text id="Tipo_Nombre_Tipo_parametro1_Tipo_parametro2_Instrucciones_de_función_" data-name="Tipo Nombre [Tipo parametro1, Tipo parametro2…]
+{
+      Instrucciones de función
+}
+" transform="translate(233.525 4245.371)" fill="#fff" font-size="18" font-family="OpenSans-Regular, Open Sans"><tspan x="0" y="19">Tipo Nombre [Tipo parametro1, Tipo parametro2…]</tspan><tspan x="0" y="40.6">{</tspan><tspan x="0" y="62.2" xml:space="preserve" letter-spacing="0.02em">      </tspan><tspan y="62.2">Instrucciones de función</tspan><tspan x="0" y="83.8">}</tspan></text>
+  </g>
+</svg>

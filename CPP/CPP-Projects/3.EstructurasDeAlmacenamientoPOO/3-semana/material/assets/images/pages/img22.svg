@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1022.19" height="141.546" viewBox="0 0 1022.19 141.546">
+  <g id="Grupo_11843" data-name="Grupo 11843" transform="translate(1322.295 -4051.33)">
+    <rect id="Rectángulo_4417" data-name="Rectángulo 4417" width="1022.19" height="5.122" transform="translate(-1322.295 4051.33)" fill="#a9c4e9"/>
+    <rect id="Rectángulo_4418" data-name="Rectángulo 4418" width="1022.19" height="135.526" transform="translate(-1322.295 4056.452)" fill="#4d4d4d"/>
+    <text id="void_funcion1_int_val1_instrucciones_de_la_función_1_" data-name="void funcion1()
+{
+           int val1;
+            //instrucciones de la función 1
+}
+" transform="translate(-1297.675 4064.876)" fill="#fff" font-size="18" font-family="OpenSans-Regular, Open Sans"><tspan x="0" y="19">void funcion1()</tspan><tspan x="0" y="40.6">{</tspan><tspan x="0" y="62.2" xml:space="preserve">           int val1;</tspan><tspan x="0" y="83.8" xml:space="preserve">            //instrucciones de la función 1</tspan><tspan x="0" y="105.4">}</tspan></text>
+  </g>
+</svg>

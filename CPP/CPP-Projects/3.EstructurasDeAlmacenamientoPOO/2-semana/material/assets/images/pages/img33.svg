@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1022.19" height="121.546" viewBox="0 0 1022.19 121.546">
+  <g id="Grupo_10444" data-name="Grupo 10444" transform="translate(-219.21 -6355.04)">
+    <rect id="Rectángulo_4306" data-name="Rectángulo 4306" width="1022.19" height="5.122" transform="translate(219.21 6355.04)" fill="#a9c4e9"/>
+    <rect id="Rectángulo_4307" data-name="Rectángulo 4307" width="1022.19" height="107.515" transform="translate(219.21 6360.162)" fill="#4d4d4d"/>
+    <text id="for_int_i_0_i_3_i_cout_valor_valor_i_valor_i_endl_" data-name="for ( int i = 0; i &lt; 3 ; i++ )
+{
+    cout &lt;&lt; &quot;valor&quot;  &lt;&lt; &quot;[&quot; &lt;&lt; valor[ i ] &lt;&lt; &quot;]&quot; &lt;&lt; &quot;=&quot; &lt;&lt; valor[ i ] &lt;&lt; endl;	
+}
+" transform="translate(243.831 6368.586)" fill="#fff" font-size="18" font-family="OpenSans-Regular, Open Sans"><tspan x="0" y="19">for ( int i = 0; i &lt; 3 ; i++ )</tspan><tspan x="0" y="40.6">{</tspan><tspan x="0" y="62.2" xml:space="preserve">    cout &lt;&lt; &quot;valor&quot;  &lt;&lt; &quot;[&quot; &lt;&lt; valor[ i ] &lt;&lt; &quot;]&quot; &lt;&lt; &quot;=&quot; &lt;&lt; valor[ i ] &lt;&lt; endl;	</tspan><tspan x="0" y="83.8">}</tspan></text>
+  </g>
+</svg>

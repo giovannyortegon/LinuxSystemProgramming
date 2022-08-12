@@ -1,0 +1,12 @@
+Text in file
+
+Next line for reading
+
+Adding a line
+More lines
+
+Adding a line
+More lines
+
+Adding a line
+More lines

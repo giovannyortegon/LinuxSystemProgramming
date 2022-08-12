@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Arreglos en C++</title>
+        <meta meta name="description" content="Módulos, estructura de almacenamiento y POO utilizando el lenguaje de programación C++ (Nivel II)">
+        <link rel="icon" type="image/svg+xml" href="assets/images/logos/senaLogo.svg">
+        <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.css">
+        <link href="assets/css/fancybox.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="theme-dark page-header-textura" id="page-home">
+        <header class="curso-presentacion page-header" id="CursoPresentacion">
+            <div class="page-textura">
+                <div class="container">
+                    <div class="curso-topbar justify-content-center justify-content-md-between"><a class="curso-topbar__logo"><svg xmlns="http://www.w3.org/2000/svg" width="168.273" height="164.177" viewBox="0 0 168.273 164.177">
+                                <path id="SENA_LOGO" data-name="SENA LOGO" d="M85.349,1a18.09,18.09,0,1,0,18.09,18.09h0A18.1,18.1,0,0,0,85.349,1ZM25.617,42.983a33.722,33.722,0,0,0-9.386,1.024,11.156,11.156,0,0,0-5.12,2.56A5.346,5.346,0,0,0,10.086,52.2c.683,1.707,2.56,2.9,4.608,3.584,4.437,1.536,9.386,1.877,13.994,2.731a5.1,5.1,0,0,1,2.389,1.024,1.369,1.369,0,0,1-.683,2.048,9.146,9.146,0,0,1-5.291.683A8.354,8.354,0,0,1,20.5,61.244a1.962,1.962,0,0,1-.853-2.389H9.233A7.663,7.663,0,0,0,10.6,63.463a7.59,7.59,0,0,0,4.267,2.389A28.541,28.541,0,0,0,23.4,66.876,52.426,52.426,0,0,0,35,66.023a11.043,11.043,0,0,0,5.8-2.9,5.358,5.358,0,0,0-1.365-8.533,21.267,21.267,0,0,0-5.8-2.048c-3.072-.683-5.973-1.024-9.045-1.536a9.114,9.114,0,0,1-3.072-.853,1.226,1.226,0,0,1,0-2.219,9.369,9.369,0,0,1,4.437-.683,10.554,10.554,0,0,1,4.608.853A1.877,1.877,0,0,1,31.59,49.81h9.9a5.669,5.669,0,0,0-1.195-3.584A8.875,8.875,0,0,0,35.515,43.5c-3.584-.341-6.827-.512-9.9-.512Zm21.333.683V67.217H75.792V62.1H57.531V57.489H73.744V52.54H57.531V48.786H75.109v-5.12Zm47.615,0H81.253V67.217H91.322V51.346l13.824,15.872h13.824V43.666H108.9v15.7Zm42.495,0L120.676,67.217h10.581l2.56-4.267H150.2l2.389,4.267h11.776l-15.53-23.551ZM142.35,49.3l5.12,8.533h-10.41ZM.7,74.044l.171,12.8L49,86.673c2.389.512,3.925,2.048,3.413,5.8l-29.7,51.711,9.557,9.045L78.01,74.044Zm91.646,0L137.4,152.89l9.9-8.874L117.433,92.3c-.512-3.584.853-5.291,3.413-5.8l48.127.171V74.044ZM84.837,87.185,42.512,159.546l11.264,5.461,28.159-47.615a4.283,4.283,0,0,1,2.9-1.195,4.681,4.681,0,0,1,3.072,1.195l28.159,47.786,11.605-5.973Z" transform="translate(-0.7 -1)" fill="#FF6B00" />
+                            </svg>
+                        </a><a class="curso-topbar__menubar collapsed btn-menu-responsive d-none" data-toggle="collapse" href="#curso-topbar__nav" aria-expanded="false"><span></span><span></span><span></span></a>
+                        <nav class="curso-topbar__nav collapse show d-none d-md-block" id="curso-topbar__nav">
+                            <ul class="curso-topbar__list">
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#ResultadosAprendizaje"><span class="text-white">Resultados de aprendizaje</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#IndiceTematico"><span class="text-white">Índice temático</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#Creditos"><span class="text-white">Créditos</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="curso-portada">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <h3 class="curso-subtitulo" id="curso-titulo-componente">Módulos, estructura de almacenamiento y POO utilizando el lenguaje de programación C++ (Nivel II)</h3>
+                                <h1 class="curso-titulo" id="curso-titulo-tema">Arreglos en C++</h1>
+                                <div class="brand-line-primary"></div>
+                            </div>
+                            <div class="col-12 col-lg-6 text-center">
+                                <div class="d-none d-lg-block"><img class="curso-imagen" src="assets/images/header/header_media.svg" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="curso-resultados section bg-base-light" id="ResultadosAprendizaje">
+            <div class="container">
+                <h2> Resultados de <br>aprendizaje</h2>
+                <div class="brand-line-primary"></div>
+                <div class="card resultado-item">
+                    <div class="card-body">
+                        <ul class="bg-color-dark">
+                            <li> <span>Comprender el manejo de arreglos, teniendo en cuenta su funcionamiento y utilización para dar solución a problemas computacionales.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curso-indice-tematico section" id="IndiceTematico">
+            <div class="container">
+                <h2>Desarrollo de <br>contenidos</h2>
+                <div class="brand-line-primary"></div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-10">
+                        <div class="card wow flipInX" data-wow-delay=".4s">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush list my-n3 nav-temas">
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-file-text-o"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#introduccion">Introducción</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#introduccion">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">1</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-1">Arreglos</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-1">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">2</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-2">Tipos</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-2">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-question"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#evaluacion">Actividad didáctica</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#evaluacion">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-sort-alpha-asc"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#glosario">Glosario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#glosario">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-folder-open"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#anexos">Material complementario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#anexos">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-book"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#referencias">Referencias bibliográficas</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#referencias">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mainContent">
+            <div id="introduccion">
+                <div class="container" id="introduccion">
+                    <div class="header-ecored">
+                        <h1>Introducción</h1>
+                    </div>
+                    <div class="row mx-0">
+                        <div class="card"><img class="img-fluid" src="assets/images/pages/img1.png">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <div class="row mx-0">
+                                        <div class="col-12">
+                                            <p>En este material de formación se aborda la sintaxis de arreglos o vectores en el lenguaje de programación C++, su declaración, inicialización y uso según las necesidades del usuario.</p><br>
+                                            <p>Según la clase de aplicación que se esté programando, en muchas ocasiones se necesita un tipo de dato que almacene una gran cantidad de información, de manera que no sea necesario usar una alta cantidad de variables, sino que esto pueda realizarse de un modo más funcional, para ello se emplean los arreglos, dado que su estructura permite el almacenamiento de múltiples datos.</p><br>
+                                            <p>En la utilización de arreglos o vectores es de gran importancia la aplicación de ciclos de repetición, ya que por lo general es a través de estos que se recorre dicho tipo de variables, con el fin de acceder a la información que contienen.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-1">
+                <div class="container" id="arreglos">
+                    <div class="header-ecored">
+                        <h1>1. Arreglos</h1>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p class="m-0">Los arreglos son variables que permiten almacenar varios datos del mismo tipo en posiciones consecutivas de memoria; cada posición del arreglo guarda un dato diferente y se accede a este a través de su índice, que está definido por números en orden ascendente, comenzando desde el cero hasta la cantidad de elementos totales <i>(n) </i>menos uno <i>(n-1).</i></p>
+                        </div>
+                        <div class="col-12 text-center"><img class="mt-5 img-fluid" src="assets/images/pages/img1.svg" style="max-width: 80%"></div>
+                    </div><br>
+                    <div class="row mx-0 recuadro2 align-items-center">
+                        <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img2.svg" style="max-width: 100%"></div>
+                        <div class="col-10 p-2">
+                            <p class="m-0">Al momento de trabajar con arreglos es importante definir con claridad qué tipo de estos se debe emplear, porque cada uno de ellos es aplicable a ciertas funcionalidades que el programador requiere, y para que el código sea funcional no es muy recomendable usar los tipos más complejos, cuando el tipo simple sirve para dar solución al caso que lo necesite.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-2">
+                <div class="container" id="tipos">
+                    <div class="header-ecored">
+                        <h1>2. Tipos</h1>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p class="m-0">Existen dos tipos de arreglos: unidimensional y multidimensional. El más sencillo es el arreglo unidimensional o también denominado vector, que puede estar compuesto por <i>n </i>elementos del mismo tipo, organizados de forma secuencial; le sigue en complejidad el arreglo multidimensional, que puede tener dos o más dimensiones.</p>
+                        </div>
+                        <div class="col-12 text-center"><img class="mt-5 img-fluid" src="assets/images/pages/img3.svg" style="max-width: 80%"></div>
+                    </div><br>
+                    <div class="row mx-0 recuadro2 align-items-center">
+                        <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img4.svg" style="max-width: 100%"></div>
+                        <div class="col-10 p-2">
+                            <p class="m-0">A continuación, se detalla y ejemplifica cada uno de los tipos de arreglos, teniendo en cuenta su definición, inicialización, operaciones, y demás que sean necesarios para su aplicabilidad en las soluciones informáticas bajo el lenguaje de programación C++.</p>
+                        </div>
+                    </div>
+                </div><br id="unidimensionales">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h2>2.1 Unidimensionales</h2>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Tal como su nombre lo indica, los arreglos unidimensionales tienen una única dimensión y también son conocidos como vectores.</p>
+                            <p>Están compuestos por un conjunto ordenado de datos del mismo tipo; es decir, un arreglo puede tener <i>n </i>elementos de tipo entero <i>(int)</i>, <i>n </i>elementos de tipo carácter <i>(char)</i>, <i>n </i>elementos de tipo cadena de texto <i>(string)</i>, etc.</p>
+                            <p class="m-0">Cada elemento de un arreglo puede identificarse teniendo en cuenta su respectivo índice, que va desde el número 0 hasta la cantidad de elementos menos 1. En la siguiente figura se puede observar la representación gráfica de un vector, donde los números del 0 al 6 corresponden a los índices de cada una de las 7 posiciones del vector.</p>
+                        </div>
+                        <div class="col-12 text-center">
+                            <p class="mt-3"><b>Representación gráfica de un arreglo unidimensional</b></p><img class="img-fluid" src="assets/images/pages/img2.png" style="max-width: 40%">
+                        </div>
+                        <div class="col-12">
+                            <p>De esta forma se puede identificar, que si el vector es por ejemplo de 15 posiciones, los índices irán del 0 al 14, cumpliendo con lo indicado respecto a que la cantidad de posiciones es igual a <b> <i>n </i></b>y los índices van desde 0 hasta <i>n-1</i>, entonces 15 – 1 = 14, se tendrían índices del 0 al 14.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 align-items-center recuadro3">
+                        <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img6.svg" style="max-width: 100%"></div>
+                        <div class="col-10">
+                            <p class="m-0" style="color: #FFFFFF">Una de las ventajas en la utilización de vectores consiste en que se pueden tener muchos datos en una sola variable y que además pueden usarse de forma independiente como si estos fueran variables diferentes; esto sucede debido a que cada elemento del vector está ocupando una posición de memoria diferente.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon definicion">
+                            <p class="m-0 text-icon"><b>Definición</b></p>
+                        </div>
+                        <div class="col-12"><br>
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1"><img class="img-fluid" src="assets/images/pages/img8.svg" style="max-width: 100%"></div>
+                                <div class="col-11">
+                                    <p class="m-0">La sintaxis básica para definir los vectores en el lenguaje de programación C++ es la siguiente:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1"></div>
+                                <div class="col-11"><img class="img-fluid" src="assets/images/pages/img13.svg" style="max-width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="col-12"><br>
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1"><img class="img-fluid" src="assets/images/pages/img9.svg" style="max-width: 100%"></div>
+                                <div class="col-11">
+                                    <p class="m-0">De este modo, al declarar el arreglo visto a continuación se estaría guardando espacio en memoria para almacenar siete datos de tipo entero:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row mx-0 align-items-center mt-2">
+                                <div class="col-1"></div>
+                                <div class="col-11"><img class="img-fluid" src="assets/images/pages/img14.svg" style="max-width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="col-12"><br>
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1"><img class="img-fluid" src="assets/images/pages/img10.svg" style="max-width: 100%"></div>
+                                <div class="col-11">
+                                    <p class="m-0">Dichos datos pueden accederse de forma independiente a través de cada uno de sus índices de la siguiente forma:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1"></div>
+                                <div class="col-11"><img class="img-fluid" src="assets/images/pages/img15.svg" style="max-width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="col-12"><br>
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1"><img class="img-fluid" src="assets/images/pages/img11.svg" style="max-width: 100%"></div>
+                                <div class="col-11">
+                                    <p class="m-0">Del mismo modo explicado anteriormente, se pueden definir arreglos de todos los tipos existentes, por ejemplo, en el caso de cadenas de texto sería de la siguiente manera:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row mx-0 align-items-center mt-2">
+                                <div class="col-1"></div>
+                                <div class="col-11"><img class="img-fluid" src="assets/images/pages/img16.svg" style="max-width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row mx-0 align-items-center mt-2">
+                                <div class="col-1"><img class="img-fluid" src="assets/images/pages/img12.svg" style="max-width: 100%"></div>
+                                <div class="col-11">
+                                    <p class="m-0">Lo anterior sería un arreglo de tipo string llamado materias, con un total de tres elementos. Algunos valores posibles de los elementos serían:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row mx-0 align-items-center mt-2">
+                                <div class="col-1"></div>
+                                <div class="col-11 mb-2"><img class="img-fluid" src="assets/images/pages/img17.svg" style="max-width: 100%"></div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Otra posibilidad que se tiene con los arreglos consiste en definir tipos de datos propios a partir de estos; es decir, se elige el tipo de dato que deben manejar los arreglos, el nombre y el tamaño, y a partir de ello se pueden definir tantos arreglos como se desee, que conservarán el mismo tamaño y tipo de dato del tipo personalizado que se ha definido. Para una mejor comprensión al respecto, se realiza el proceso a continuación:</p>
+                        </div>
+                        <div class="col-12"><br>
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1"><img class="img-fluid" src="assets/images/pages/img8.svg" style="max-width: 100%"></div>
+                                <div class="col-11">
+                                    <p class="m-0">Se declara el tipo de dato personalizado llamado valores, que contendrá un arreglo que almacena tres datos de tipo entero:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1"></div>
+                                <div class="col-11 mb-2"><img class="img-fluid" src="assets/images/pages/img13.svg" style="max-width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="col-12"><br>
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1"><img class="img-fluid" src="assets/images/pages/img9.svg" style="max-width: 100%"></div>
+                                <div class="col-11">
+                                    <p class="m-0">Se definen dos arreglos del tipo <b> <i>valores</i></b>, llamados <b><i>pesos </i></b>y <b><i>edades</i></b>:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1"></div>
+                                <div class="col-11 mb-2"><img class="img-fluid" src="assets/images/pages/img18.svg" style="max-width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-4"><br>
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1"><img class="img-fluid" src="assets/images/pages/img10.svg" style="max-width: 100%"></div>
+                                <div class="col-11">
+                                    <p class="m-0">La definición anterior quiere decir que los arreglos pesos y edades contendrán cada uno tres elementos de tipo entero <b><i>(int)</i></b>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row mx-0 recuadro2 align-items-center">
+                                <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img19.svg" style="max-width: 100%"></div>
+                                <div class="col-10 p-2">
+                                    <p class="m-0">De este modo, cada vez que se requiera la utilización de un arreglo que almacene tres datos de tipo entero, no será necesario definir como tal el arreglo y su tamaño, sino que puede efectuarse la definición como si fuera una variable normal, mencionando solamente el tipo (valores, en este caso) y el nombre que se dará al nuevo arreglo que se desea definir.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon inicializacion">
+                            <p class="m-0 text-icon"><b>Inicialización</b></p>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p>La inicialización de los arreglos en el lenguaje de programación C++ puede efectuarse de diferentes maneras, de acuerdo con la preferencia del programador o en otros casos con las necesidades del sistema a desarrollar.</p>
+                            <p>Los arreglos se pueden inicializar al momento de su declaración, lo cual posibilitará configurar un valor específico para cada elemento en una sola línea de código, o bien, inicializar de manera posterior cada uno de sus elementos en líneas de código independientes.</p>
+                            <p>A continuación se observa la inicialización de un arreglo en el momento de su definición:</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img21.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mt-3">
+                            <p>La línea de código anterior indica que se define el arreglo de tipo entero, nombre edades, con los tres datos que son: 17, 22 y 34. En los corchetes que hay posterior a su nombre, no se indica un tamaño, ya que si el arreglo se inicializa en el momento que se define, al ingresar los valores iniciales, el programa ya identifica cuántos elementos lo componen.</p>
+                        </div>
+                        <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img22.svg" style="max-width: 100%"></div>
+                        <div class="col-12">
+                            <p>Otra forma de inicialización puede darse cuando el programador sólo desea indicar un valor inicial para algunos de los elementos del arreglo; en este caso sí es necesario mencionar entre los corchetes cuál será el tamaño final del arreglo:</p>
+                        </div>
+                        <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img23.svg" style="max-width: 100%"></div>
+                        <div class="col-12">
+                            <p>En la definición anterior se está indicando que cuando sea un arreglo de tipo <i>double </i>llamado <i>notas </i>y que contenga cinco elementos, la inicialización únicamente se realiza para los tres primeros elementos y los dos restantes quedarán con el valor 0.0.</p>
+                            <p>También existe la posibilidad de que, al definir el arreglo, este no se haya inicializado; es decir, que se definió del siguiente modo:</p>
+                        </div>
+                        <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img24.svg" style="max-width: 100%"></div>
+                        <div class="col-12">
+                            <p>En algún momento será necesario indicar qué valores contendrá dicho arreglo, se puede entonces inicializar asignando un valor, con el operador de asignación (=) a cada uno de sus elementos por separado, así:</p>
+                        </div>
+                        <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img25.svg" style="max-width: 100%"></div>
+                        <div class="col-12">
+                            <p>Otra forma de inicialización que falta abordar es la siguiente:</p>
+                        </div>
+                        <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img77.svg" style="max-width: 100%"></div>
+                        <div class="col-12">
+                            <p>Se define un arreglo de tipo carácter, llamado vocales de tamaño cinco, y a su vez se inicializan los cinco elementos que contiene; al inicializarlos todos, el tamaño podría omitirse, sin embargo, si no se omite no significa que ello sea considerado como un error.</p>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row mx-0 recuadro2 align-items-center">
+                                <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img26.svg" style="max-width: 100%"></div>
+                                <div class="col-10 p-2">
+                                    <p class="m-0">En el tema de inicialización de los valores de los arreglos, es importante tener en cuenta que cuando se están inicializando arreglos de tipo <i>int, float </i>o <i>double</i>, los valores simplemente deben ir separados por comas; sin embargo, si lo que se está inicializando son arreglos de tipo <i>char </i>o <i>string</i>, los valores, además de ir separados por comas, deben ir encerrados en comillas simples o comillas dobles, respectivamente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon operaciones">
+                            <p class="m-0 text-icon"><b>Operaciones</b></p>
+                        </div>
+                        <div class="col-12 py-3">
+                            <p>Durante el proceso de programación de soluciones informáticas es posible efectuar diferentes operaciones con las variables de tipo arreglo, dichas operaciones son:</p>
+                        </div>
+                        <div class="col-12">
+                            <div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne" style="background-color: #33BDB0">
+                                        <p style="margin-top: 1rem"><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <p class="mb-0" style="color: #FFFFFF; font-size: 20px">Asignación</p>
+                                            </button></p>
+                                    </div>
+                                    <div class="collapse show" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" style="background-color: #FFFFFF">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <p>La asignación de valores a los componentes de un vector, puede realizarse a sus elementos de uno en uno, o bien utilizando estructuras repetitivas cuando se desea asignar el mismo valor a todos ellos:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img28.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Las líneas anteriores asignan al vector de nombre <i>valor </i>los datos enteros 30, 45 y 60 en las posiciones 0, 1 y 2. El resultado devuelto por el programa al mostrar el contenido del vector sería:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img29.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Con una estructura repetitiva, el proceso se muestra a continuación:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img31.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>En este caso se utiliza la estructura repetitiva <i>for </i>para asignar al vector de nombre <i>valor </i>el dato entero 45 en todas sus posiciones. De este modo, si se pidiera al programa que muestre en pantalla el contenido del vector <i>valor</i>, el resultado devuelto sería el siguiente:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img30.svg" style="max-width: 100%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo" style="background-color: #33BDB0">
+                                        <p style="margin-top: 1rem"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <p class="mb-0" style="color: #FFFFFF; font-size: 20px">Lectura-escritura</p>
+                                            </button></p>
+                                    </div>
+                                    <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample" style="background-color: #FFFFFF">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <p>Como su nombre lo indica, esta operación consiste en el proceso de leer y/o escribir la información contenida en un vector, usualmente se realiza a través de estructuras repetitivas; en el caso de la escritura se trata de algo prácticamente igual a la asignación, y en el caso de la lectura se hace referencia al momento en que se solicita al programa que le muestre al usuario el contenido de los vectores, ya sea en su totalidad o de algún elemento específico deseado.</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img32.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Con la instrucción anterior se está leyendo la información del arreglo llamado <i>valor</i>, sin utilizar una estructura repetitiva, porque en este caso solamente se desea leer el contenido del tercer elemento del vector.</p>
+                                                    <p class="mt-2">La estructura repetitiva se hace necesaria si se desea conocer todo el contenido del vector, y la instrucción sería así:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img33.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Dicha instrucción devolvería en pantalla lo siguiente:</p>
+                                                </div>
+                                                <div class="col-12 mb-4"><img class="img-fluid" src="assets/images/pages/img34.svg" style="max-width: 100%"></div>
+                                                <div class="col-12">
+                                                    <div class="row mx-0 recuadro2 align-items-center">
+                                                        <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img35.svg" style="max-width: 100%"></div>
+                                                        <div class="col-10 p-2">
+                                                            <p class="m-0">Lo anterior corresponde al contenido completo del arreglo; a simple vista no parece de mucha utilidad, dado que únicamente se está viendo el ejemplo con un arreglo de tres posiciones, pero si se piensa en información mucho más amplia, mostrar el contenido de un arreglo de cien posiciones con unas cuantas líneas, ya evidencia una mayor utilidad.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree" style="background-color: #33BDB0">
+                                        <p style="margin-top: 1rem"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <p class="mb-0" style="color: #FFFFFF; font-size: 20px">Recorrido</p>
+                                            </button></p>
+                                    </div>
+                                    <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample" style="background-color: #FFFFFF">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img3.png" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Los arreglos se recorren entonces con estructuras repetitivas de acuerdo con la necesidad del programador, y se recorren, ya sea para acceder a la información que contienen o para insertarles la misma.</p><br>
+                                                    <p>Dichos recorridos dejan ver su especial utilidad en los casos donde los arreglos contienen una buena cantidad de elementos, ya que con solo unas cuantas líneas de código es posible acceder a todos los datos contenidos en los vectores, o bien, insertar cada uno en sus respectivas posiciones.</p><br>
+                                                    <p>La operación de recorrido es de suma utilidad para rellenar el vector a través del teclado; es decir, solicitar al usuario del sistema que ingrese los valores que contendrá la variable de tipo vector:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img37.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>En el código anterior se declara un arreglo de tipo entero llamado edades, con cinco elementos, posteriormente se utiliza la estructura repetitiva <i>for </i>para pedir al usuario las edades de los estudiantes, y finalmente, usando también un <i>for</i>, se muestra el contenido del arreglo que devolvería una lista con las edades ingresadas por el usuario, una en cada línea.</p><br>
+                                                    <p>Lo más común es la utilización del <i>for</i>, dado que desde el comienzo se conoce el tamaño del arreglo, y por ende el límite de la estructura repetitiva.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingFour" style="background-color: #33BDB0">
+                                        <p style="margin-top: 1rem"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                <p class="mb-0" style="color: #FFFFFF; font-size: 20px">Actualización</p>
+                                            </button></p>
+                                    </div>
+                                    <div class="collapse" id="collapseFour" aria-labelledby="headingThree" data-parent="#accordionExample" style="background-color: #FFFFFF">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <p>La actualización de arreglos consiste en agregar o borrar elementos de los mismos en una posición determinada, se realiza también utilizando estructuras repetitivas; teniendo en cuenta que la definición de arreglo como tal consiste en variables que permiten almacenar varios datos del mismo tipo en posiciones consecutivas de memoria, no es posible borrar un elemento del arreglo y dejar su posición vacía, por lo tanto, se hace necesario adecuar el programa para que rellene la posición del elemento borrado con un elemento existente, y de igual manera, cuando se agregan elementos en medio de otros, se deben mover los demás tantas posiciones como elementos hayan sido agregados, para que la estructura del arreglo no se altere.</p><br>
+                                                    <p>Lo anterior es más sencillo de comprender si se analiza gráficamente. En la siguiente figura se observa un arreglo de tipo <i>string </i>de diez elementos llamado materias, en dicho arreglo es requisito que sus elementos estén almacenados en orden alfabético:</p>
+                                                </div>
+                                                <div class="col-12 mb-3 text-center">
+                                                    <p class="mb-3"><b>Representación gráfica de un arreglo unidimensional</b></p><img class="img-fluid" src="assets/images/pages/img4.png" style="max-width: 20%">
+                                                </div>
+                                                <div class="col-12 mb-3">
+                                                    <p>A continuación se analizan los diferentes tipos de operaciones de actualización que se pueden realizar sobre el arreglo <i>materias</i></p>
+                                                </div>
+                                                <div class="col-12 mb-3 text-center"><img class="img-fluid" src="assets/images/pages/img5.png" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3 text-center"><img class="img-fluid" src="assets/images/pages/img6.png" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Los procesos antes mencionados se llevan a cabo utilizando estructuras repetitivas que realizan los respectivos desplazamientos cuando sean requeridos.</p><br>
+                                                    <p>A continuación se ejemplificará todo lo aborado en el apartado de arreglos Unidimensionales.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="header-ecored">
+                        <h3>2.1.1 Unidimensionales - Ejercicios</h3>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p class="mb-3">Para lograr una mejor comprensión en el manejo general de arreglos unidimensionales, es importante llevarlos a la práctica en la escritura de programas que resuelvan determinadas situaciones planteadas.</p>
+                            <p>Se recomienda al aprendiz abrir el programa Dev-C++ e ir digitando, compilando y ejecutando los ejercicios vistos a continuación, lo anterior le servirá para adquirir la práctica necesaria en el lenguaje e irse preparando con miras a la solución de las evidencias requeridas en la actividad de aprendizaje 2.</p>
+                        </div>
+                    </div><br>
+                    <div class="row recuadro4 justify-content-center mx-5">
+                        <div class="col-5 mt-4">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Unidimensionales_Ejercicio1.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 1</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Unidimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 mt-4">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Unidimensionales_Ejercicio2.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 2</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Unidimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Unidimensionales_Ejercicio3.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 3</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Unidimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Unidimensionales_Ejercicio4.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 4</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Unidimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Unidimensionales_Ejercicio5.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 5</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Unidimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Unidimensionales_Ejercicio6.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 6</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Unidimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div><br id="multidimensionales">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h2>2.2 Multidimensionales</h2>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 mb-3">
+                            <p class="mb-3">Tal como su nombre lo indica, los arreglos multidimensionales tienen varias dimensiones y también son conocidos como tablas o matrices.</p>
+                            <p>Están compuestos por otros arreglos, razón por la cual suele escucharse la expresión “arreglo de arreglos” o “vector de vectores”, porque al igual que en los unidimensionales, estos guardan un conjunto de datos del mismo tipo; la diferencia consiste en que un arreglo multidimensional puede tener <b><i>n </i></b>elementos que almacenan en su interior otros <b><i>n </i></b>elementos con <b><i>n </i></b>elementos dentro, etc.</p>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="row mx-0 recuadro2 align-items-center">
+                                <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img41.svg" style="max-width: 100%"></div>
+                                <div class="col-10 p-2">
+                                    <p class="m-0">Cada elemento de un arreglo multidimensional puede ser identificado por medio de sus índices; si es de dos dimensiones deben ser dos índices, si es de tres dimensiones deben ser tres índices, y así sucesivamente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <p class="mb-3">El manejo de arreglos multidimensionales es aplicable desde dos dimensiones en adelante; es decir, los procesos a efectuar son los mismos para dos dimensiones que para tres, cuatro, cinco, etc.</p>
+                            <p>Para comprender mejor lo anterior se puede pensar en un arreglo de dos dimensiones y usar el concepto de tabla, sabiendo que una tabla está compuesta por filas y columnas, de este modo el primer índice corresponde a la fila y el segundo a la columna para referirse a cada elemento del arreglo bidimensional.</p>
+                        </div>
+                        <div class="col-12 mb-3 text-center"><img class="img-fluid" src="assets/images/pages/img42.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mb-3">
+                            <p>Los índices comienzan en <i> <b>0 </b></i>hasta la cantidad de elementos menos 1 <i> <b>(n-1)</b></i>, como se tienen en cuenta filas y columnas entonces se repite, las filas van de <i><b>0 </b></i>hasta <i><b>n-1 </b></i>y las columnas van de <i><b>0 </b></i>hasta <i> <b>n-1</b></i>. En la siguiente figura se puede observar la representación gráfica de un arreglo bidimensional.</p>
+                        </div>
+                        <div class="col-12 mb-4 text-center">
+                            <p><b>Representación gráfica de un arreglo bidimensional</b></p><img class="img-fluid" src="assets/images/pages/img7.png" style="max-width: 20%">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <p>De acuerdo con la figura anterior, para identificar dentro del arreglo bidimensional graficado las letras O, Q y D se deben relacionar los dos índices que corresponden a cada uno, mencionando primero el de la fila y por último el de la columna; para efectos del ejemplo se supone que el arreglo se llama <b><i>letras </i></b>y la identificación de los datos mencionados sería así: </p>
+                        </div>
+                        <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img44.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mb-3">
+                            <p>Para cada uno de los tres datos se identifican el número de la fila y el número de la columna correspondientes.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon definicion">
+                            <p class="m-0 text-icon"><b>Definición</b></p>
+                        </div>
+                        <div class="col-12 my-3">
+                            <p>La sintaxis básica para definir un arreglo bidimensional en el lenguaje de programación C++ es la siguiente:</p>
+                        </div>
+                        <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img46.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mb-3">
+                            <p>De este modo, al declarar el arreglo visto a continuación se estaría guardando espacio en memoria para almacenar 24 datos de tipo carácter:</p>
+                        </div>
+                        <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img47.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mb-3">
+                            <p>Dichos datos pueden accederse de forma independiente a través de cada par de índices de la siguiente forma:</p>
+                        </div>
+                        <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img48.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mb-3">
+                            <div class="row mx-0 recuadro2 align-items-center">
+                                <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img49.svg" style="max-width: 100%"></div>
+                                <div class="col-10 p-2">
+                                    <p class="m-0">Con los arreglos multidimensionales se puede proceder de la misma manera que con los unidimensionales, esto en cuanto al tema de crear tipos de datos propios y de definir arreglos con todos los tipos de dato existentes; la sintaxis de creación y definición es la misma, teniendo en cuenta únicamente que se debe hacer referencia a la cantidad de índices según la cantidad de dimensiones que se esté trabajando.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon inicializacion">
+                            <p class="m-0 text-icon"><b>Inicialización</b></p>
+                        </div>
+                        <div class="col-12 my-3">
+                            <p>De la misma manera que se inicializan los arreglos unidimensionales en la declaración, también puede hacerse con los de varias dimensiones. La sintaxis de inicialización sería la siguiente:</p>
+                        </div>
+                        <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img50.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mb-3">
+                            <p>Con valores reales sería: arreglo de tipo entero llamado <i><b>edades </b></i>compuesto por <i><b>2 </b></i>filas y <i> <b>3 </b></i>columnas:</p>
+                        </div>
+                        <div class="col-12 mb-4"><img class="img-fluid" src="assets/images/pages/img51.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mb-3">
+                            <div class="row mx-0 recuadro2 align-items-center">
+                                <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img53.svg" style="max-width: 100%"></div>
+                                <div class="col-10 p-2">
+                                    <p class="m-0">Lo anterior es aplicable únicamente si se trata de un arreglo que no contenga demasiados elementos, puesto que no sería funcional tener que inicializar una gran cantidad de valores, pues para efectos de simplicidad del código, esto quedaría mejor efectuado haciendo uso de estructuras de repetición.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <p>A continuación un ejemplo de inicialización de un arreglo bidimensional donde se desean almacenar las notas de los tres parciales de dos estudiantes de un curso:</p>
+                        </div>
+                        <div class="col-12 mb-4"><img class="img-fluid" src="assets/images/pages/img52.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mb-3">
+                            <p>Las líneas de código anteriores indican que se define un arreglo de tipo <b><i>double</i></b>, nombre <b><i>notas </i></b>con los datos 2.5, 4.8 y 3.7 (columnas 0, 1 y 2) para el primer estudiante (fila 0) y 1.6, 5.0 y 4.2 (columnas 0, 1 y 2) para el segundo estudiante (fila 1).</p>
+                            <p class="mb-3">Si se desea visualizar en pantalla la segunda nota del primer estudiante, la referencia sería:</p>
+                        </div>
+                        <div class="col-12 mb-4"><img class="img-fluid" src="assets/images/pages/img54.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mb-3">
+                            <p class="mb-3">En donde el 0 corresponde a la primera fila y el 1 a la segunda columna.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon operaciones">
+                            <p class="m-0 text-icon"><b>Operaciones</b></p>
+                        </div>
+                        <div class="col-12 my-3">
+                            <p>Con las tablas o matrices pueden realizarse las operaciones de asignación, lectura-escritura y recorrido.</p>
+                        </div>
+                        <div class="col-12">
+                            <div class="accordion" id="accordionExample1">
+                                <div class="card">
+                                    <div class="card-header" id="headingFive" style="background-color: #33BDB0">
+                                        <p style="margin-top: 1rem"><button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                                <p class="mb-0" style="color: #FFFFFF; font-size: 20px">Asignación</p>
+                                            </button></p>
+                                    </div>
+                                    <div class="collapse show" id="collapseFive" aria-labelledby="headingFive" data-parent="#accordionExample1" style="background-color: #FFFFFF">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <p>Se puede asignar valores de manera individual a cada uno de los elementos del arreglo bidimensional, esto se realiza indicando el nombre del arreglo, las posiciones del elemento en cuanto a fila y columna y utilizando el operador de asignación (=) seguidor por el valor deseado, así:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img57.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Las líneas anteriores asignan a la matriz de nombre <b><i>valor </i></b>los datos enteros 15 y 40 en las posiciones [0][1] y [2][3], lo cual se vería gráficamente así:</p>
+                                                </div>
+                                                <div class="col-12 mb-3 text-center"><img class="img-fluid" src="assets/images/pages/img8.png" style="max-width: 40%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Si se desea efectuar una asignación masiva para todos los elementos de la matriz, por ejemplo, que todos contengan el valor 17, es necesario utilizar una estructura repetitiva como una instrucción <b><i>for </i></b>anidada, donde accediendo a todos los elementos del arreglo, se efectúe la respectiva asignación, así:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img59.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Se declara el arreglo, se utiliza un primer <b><i>for </i></b>para recorrer las filas de la matriz y un <b><i>for </i></b>anidado para recorrer las columnas; posteriormente, con una instrucción de asignación se indica que todos los elementos deben contener el valor 17. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingSix" style="background-color: #33BDB0">
+                                        <p style="margin-top: 1rem"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                <p class="mb-0" style="color: #FFFFFF; font-size: 20px">Lectura-escritura</p>
+                                            </button></p>
+                                    </div>
+                                    <div class="collapse" id="collapseSix" aria-labelledby="headingSix" data-parent="#accordionExample1" style="background-color: #FFFFFF">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <p class="mb-3">Esta operación significa leer la información contenida en la matriz o escribir la misma; en el caso de la escritura se está haciendo énfasis en lo mismo que se realiza con la asignación y en el caso de la lectura tiene que ver con el proceso por medio del cual se solicita al programa que muestre el contenido de la matriz.</p>
+                                                    <p class="mb-3">Dicho proceso puede llevarse a cabo elemento por elemento, indicando los respectivos índices o bien mostrando el total de elementos a través de una estructura repetitiva.</p>
+                                                    <p>De este modo, si se tiene declarada la siguiente matriz de nombre <i><b>empleados</b></i>, tipo <i><b>string</b></i>.</p>
+                                                </div>
+                                                <div class="col-12 mb-3 text-center"><img class="img-fluid" src="assets/images/pages/img9.png" style="max-width: 60%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Y se desea mostrar en pantalla su contenido, la estructura repetitiva a emplear puede ser un <i><b>for </b></i>y el código sería así:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img61.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Se declara la matriz, se utilizan los <b><i>for </i></b>anidados para recorrerla y se da la instrucción de mostrarla en pantalla; finalmente un <b><i>cout </i></b>que imprime un salto de línea para que cada fila se vea en un renglón diferente. El resultado devuelto por el código anterior estaría representado de la siguiente forma:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img62.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Si por el contrario, sólo desea leerse el nombre del tercer empleado, la sentencia sería así:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img63.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Y el resultado obtenido es:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img64.svg" style="max-width: 100%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingSeven" style="background-color: #33BDB0">
+                                        <p style="margin-top: 1rem"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                <p class="mb-0" style="color: #FFFFFF; font-size: 20px">Recorrido</p>
+                                            </button></p>
+                                    </div>
+                                    <div class="collapse" id="collapseSeven" aria-labelledby="headingSeven" data-parent="#accordionExample1" style="background-color: #FFFFFF">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <p class="mb-3">En el caso de los arreglos multidimensionales el recorrido puede ser efectuado secuencialmente por filas o por columnas; es decir, recorriendo primero unas o las otras.</p>
+                                                    <p class="mb-3">Como ya se vio, los arreglos de varias dimensiones se recorren con <b><i>for </i></b>anidados, el primer <b><i>for </i></b>recorre las filas y el segundo las columnas o viceversa, según como el programador lo desee.</p>
+                                                    <p class="mb-3">En las operaciones anteriores se vio ejemplificado el recorrido secuencial por filas. A continuación se ilustra de ambas maneras para apreciar la diferencia.</p>
+                                                    <p>Se tiene declarada una matriz de tipo entero, nombre y números, dos filas y 4 columnas inicializadas, así:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img65.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Gráficamente, la matriz anterior está representada de la siguiente forma:</p>
+                                                </div>
+                                                <div class="col-12 mb-3 text-center"><img class="img-fluid" src="assets/images/pages/img66.svg" style="max-width: 60%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>El código para recorrerla por filas es el siguiente:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img67.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Y genera el resultado visto a continuación:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img68.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Como se observa, el recorrido por filas muestra el resultado de acuerdo con la representación gráfica vista anteriormente, pintando en pantalla el contenido de la matriz según la distribución de sus filas:</p>
+                                                </div>
+                                                <div class="col-12 mb-3 text-center"><img class="img-fluid" src="assets/images/pages/img69.svg" style="max-width: 60%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>El código para recorrerla por columnas es el siguiente:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img70.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>En esta ocasión se invierte el orden de los <b><i>for</i></b>, escribiendo primero el de las columnas que corresponde a la variable <b><i>j </i></b>y usando como límite del for la cantidad de columnas y luego el <b><i>for </i></b>de las filas con el límite de la cantidad respectiva. Se genera el resultado visto a continuación:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img71.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Si se analiza con respecto a la representación gráfica de la matriz números, se observa pintado en pantalla el contenido según la distribución de sus columnas:</p>
+                                                </div>
+                                                <div class="col-12 mb-3 text-center"><img class="img-fluid" src="assets/images/pages/img72.svg" style="max-width: 60%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p class="mb-3">Dentro de los arreglos multidimensionales no sólo se habla de arreglos de dos dimensiones, sino que aquí están incluidos también los de tres o más dimensiones; la declaración, inicialización y operaciones funciona de la misma manera que se explicó anteriormente, con arreglos de dos dimensiones, existiendo claro está, la diferencia de que por cada dimensión debe existir un índice para poder identificar cada elemento en la matriz.</p>
+                                                    <p>Por ejemplo, un arreglo de tres dimensiones debería definirse así:</p>
+                                                </div>
+                                                <div class="col-12 mb-3"><img class="img-fluid" src="assets/images/pages/img73.svg" style="max-width: 100%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>Que si se quiere observar su representación gráfica sería así:</p>
+                                                </div>
+                                                <div class="col-12 mb-3 text-center"><img class="img-fluid" src="assets/images/pages/img11.png" style="max-width: 60%"></div>
+                                                <div class="col-12 py-3">
+                                                    <p>Para comprenderlo mejor se tendrían 4 tablas compuestas por 3 filas y 2 columnas:</p>
+                                                </div>
+                                                <div class="col-12 mb-3 text-center"><img class="img-fluid" src="assets/images/pages/img10.png" style="max-width: 40%"></div>
+                                                <div class="col-12 mb-3">
+                                                    <p>El concepto anterior se detallará con mayor claridad a través de un ejemplo real en la siguiente sección de este material.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-ecored">
+                        <h3>2.2.1 Multidimensionales - Ejercicios</h3>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p class="mb-3">Para lograr una mejor comprensión en el manejo general de arreglos multidimensionales, es importante llevarlos a la práctica en la escritura de programas que resuelvan determinadas situaciones planteadas.</p>
+                            <p>Se recomienda al aprendiz abrir el programa Dev-C++ e ir digitando, compilando y ejecutando los ejercicios vistos a continuación, lo anterior le servirá para adquirir la práctica necesaria en el lenguaje e irse preparando con miras a la solución de las evidencias requeridas en la actividad de aprendizaje 2.</p>
+                        </div>
+                    </div><br>
+                    <div class="row recuadro4 justify-content-center mx-5">
+                        <div class="col-5 mt-4">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Multidimensionales_Ejercicio7.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 7</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Multimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 mt-4">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Multidimensionales_Ejercicio8.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 8</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Multimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Multidimensionales_Ejercicio9.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 9</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Multimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Multidimensionales_Ejercicio10.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 10</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Multimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Multidimensionales_Ejercicio11.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 11</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Multimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF2_Multidimensionales_Ejercicio12.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 12</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Multimensionales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="evaluacion">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Actividad didáctica</h1>
+                    </div>
+                    <div class="row align-items-center justify-content-center my-5">
+                        <div class="col-8 col-md-5 col-xl-4 mb-5">
+                            <figure><img src="assets/images/pages/actividad/img_actividad.svg" alt=""></figure>
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <hr class="line-100 bg-orange">
+                            <div class="text-center p-2">
+                                <h2>¡Pon a prueba tu conocimiento! </h2>
+                                <p>La siguiente actividad tiene como propósito validar los conocimientos adquiridos sobre <strong>Arreglos en C++</strong></p><a class="btn btn-colour-Orange" href="media/actividad-1/story.html" target="_blank">Iniciar</a>
+                            </div>
+                            <hr class="line-100 bg-orange">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="glosario">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Glosario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <p><strong class="mr-2">Arreglo:</strong>conjunto de datos del mismo tipo que son almacenados en posiciones consecutivas de memoria.</p>
+                        <p><strong class="mr-2">Asignación:</strong>proceso mediante el cual se configura un valor para todas las posiciones del vector o matriz o para alguna en especial.</p>
+                        <p> <strong class="mr-2">Definición:</strong>proceso mediante el cual el arreglo empieza a existir en el programa al indicarle su tipo, nombre y tamaño.</p>
+                        <p> <strong class="mr-2">Estructura repetitiva:</strong>instrucción aportada por el lenguaje que permite ejecutar las mismas acciones un número determinado de veces.</p>
+                        <p><strong class="mr-2">Índice:</strong>cada uno de los indicadores de posición dentro de un arreglo o matriz.</p>
+                        <p> <strong class="mr-2">Inicialización:</strong>proceso mediante el cual se asignan valores para las posiciones del arreglo en su declaración.</p>
+                        <p> <strong class="mr-2">Matriz:</strong>Nombre que se da a los arreglos de dos o más dimensiones.</p>
+                        <p> <strong class="mr-2">Método:</strong>cada una de las funcionalidades o acciones que puede llevar a cabo un objeto.</p>
+                        <p> <strong class="mr-2">Recorrido:</strong>proceso que se lleva a cabo para efectuar alguna acción masiva sobre el arreglo o matriz.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="anexos">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Material complementario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center">Autor, (año del documento o material), Nombre del documento o material.</th>
+                                    <th class="text-center">Tipo de material ( Video, capítulo de libro, articulo, otro) </th>
+                                    <th class="text-center">Enlace del Recurso o Archivo del documento o material</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> <strong>Lenguaje C++ Arreglos unidimensionales y multidimensionales</strong></td>
+                                    <td>Capítulo de manual</td>
+                                    <td> <a href="media/documentos/MC_AA2_Lenguaje_Arreglos_unidimensionales_y_multidimensionales.pdf" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="referencias">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Referencias bibliográficas</h1>
+                    </div>
+                    <div class="jumbotron bg-white referencias">
+                        <p>Joyanes, L. (1996). Fundamentos de programación, algoritmos y estructuras de datos. Madrid, España: Mc Graw Hill.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="Creditos">
+            <div class="container">
+                <h1>Créditos </h1>
+                <div class="brand-line-primary"></div>
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <h3 class="footer-subtitulo mb-4">ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES </h3>
+                        <p class="footer-texto mb-2"><strong>Ingry Dayanna Bonilla Monzón </strong><br /> <span class="text-small">Líder del equipo</span></p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Contenido Instruccional
+                        </h4>
+                        <p class="footer-texto mb-2"><strong>Gloria Matilde Lee Mejía </strong><br /> <span class="text-small">Responsable del equipo</span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Comercio y Servicios</span><br><span class="text-small">Regional Tolima</span></p>
+                        <p class="footer-texto mb-2"><strong>Rafael Nelftalí Lizcano Reyes</strong><br /> <span class="text-small">Asesor pedagógico<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander </span></p>
+                        <p class="footer-texto mb-2"><strong>Lucero Montes Arenas</strong><br /><span class="text-small">Gestora de desarrollo de programas<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro para la Formación Cafetera - Regional Caldas</span></p>
+                        <p class="footer-texto mb-2"><strong>Julio Alexander Rodríguez del Castillo</strong><br /><span class="text-small">E-Pedagogo instruccional<br /></span><br><strong>Sandra Milena Henao Melchor</strong><br /> <span class="text-small">Evaluadora de contenidos<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Atención Sector Agropecuario – Regional Risaralda</span></p>
+                        <p class="footer-texto mb-2"><strong>Érika Alejandra Beltrán Cuesta</strong><br /> <span class="text-small">Evaluadora de calidad instruccional<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Atención Sector Agropecuario – Regional Risaralda</span></p>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Diseño y desarrollo de recursos educativos digitales
+                        </h4>
+                        <p class="footer-texto"><strong>Francisco José Lizcano Reyes </strong><br /> <span class="text-small">Responsable del equipo<br /></span></p>
+                        <p class="footer-texto"><strong>Leyson Fabián Castaño Pérez</strong><br /> <span class="text-small">Integración de recursos y pruebas<br /></span></p>
+                        <p class="footer-texto"> <strong>Eulises Orduz</strong><br />
+                            <strong>Luis Gabriel Urueta Alvarez</strong><br /><span class="text-small">Diseño Web & Producción Audiovisual<br /></span></p>
+                        <p class="footer-texto"><strong>Jhon Jairo Urueta Alvarez</strong><br> <span class="text-small">Desarrollo Front-End<br /></span></p>
+                        <p class="footer-texto"><strong>Luis Gabriel Urueta Álvarez</strong><br> <span class="text-small">Desarrollo de actividades didácticas<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander </span></p>
+                        <h4 class="footer-subtitulo-2 mt-5">
+                            <div class="fa fa-caret-right mr-2"></div>Gestores de repositorio
+                        </h4>
+                        <p class="footer-texto"><strong>Kely Alejandra Quiros Duarte </strong><br /> <span class="text-small">Administrador repositorio de contenidos y gestores de repositorio.<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de comercio y servicios </span><br><span class="text-small">Regional Tolima</span></p>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <div class="d-flex flex-column justify-content-center"><img src="assets/images/logos/senaLogo.svg" style="max-width:100px"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <section id="cc">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row"><span class="pr-3"><i class="icon cc"></i></span><span>Este material puede ser distribuido, copiado y exhibido por terceros si se muestra en los créditos. No se puede obtener ningún beneficio comercial y las obras derivadas tienen que estar bajo los mismos términos de la licencia que el trabajo original.</span></div>
+            </div>
+        </section><a class="scroll-to-top-btn">
+            <div class="fa fa-angle-up fa-2x"></div>
+        </a>
+        <script src="assets/js/vendor.js"></script>
+        <script src="js/local.js"></script>
+    </body>
+</html>

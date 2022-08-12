@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1022.19" height="360.67" viewBox="0 0 1022.19 360.67">
+  <g id="Grupo_11842" data-name="Grupo 11842" transform="translate(1322.295 -4361.53)">
+    <rect id="Rectángulo_4413" data-name="Rectángulo 4413" width="1022.19" height="5.122" transform="translate(-1322.295 4361.53)" fill="#a9c4e9"/>
+    <rect id="Rectángulo_4414" data-name="Rectángulo 4414" width="1022.19" height="355.548" transform="translate(-1322.295 4366.652)" fill="#4d4d4d"/>
+    <text id="_include_iostream_include_conio.h_using_namespace_std_int_main_system_pause_return_0_void_funcion1_int_par1_int_par2_instrucciones_de_la_función_1_" data-name="#include &lt;iostream&gt;
+#include &lt;conio.h&gt;
+using namespace std;
+
+int main()
+
+{
+          system(&quot;pause&quot;);
+          return 0;
+}
+
+void funcion1(int par1, int par2)
+{
+          //instrucciones de la función 1
+}" transform="translate(-1297.675 4375.076)" fill="#fff" font-size="18" font-family="OpenSans-Regular, Open Sans"><tspan x="0" y="19">#include &lt;iostream&gt;</tspan><tspan x="0" y="40.6">#include &lt;conio.h&gt;</tspan><tspan x="0" y="62.2">using namespace std;</tspan><tspan x="0" y="83.8"></tspan><tspan x="0" y="105.4">int main()</tspan><tspan x="0" y="127"></tspan><tspan x="0" y="148.6">{</tspan><tspan x="0" y="170.2" xml:space="preserve">          system(&quot;pause&quot;);</tspan><tspan x="0" y="191.8" xml:space="preserve">          return 0;</tspan><tspan x="0" y="213.4">}</tspan><tspan x="0" y="235"></tspan><tspan x="0" y="256.6">void funcion1(int par1, int par2)</tspan><tspan x="0" y="278.2">{</tspan><tspan x="0" y="299.8" xml:space="preserve">          //instrucciones de la función 1</tspan><tspan x="0" y="321.4">}</tspan></text>
+  </g>
+</svg>

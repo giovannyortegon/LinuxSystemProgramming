@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1022.19" height="246.545" viewBox="0 0 1022.19 246.545">
+  <g id="Grupo_10563" data-name="Grupo 10563" transform="translate(1303.788 -5715.746)">
+    <rect id="Rectángulo_4430" data-name="Rectángulo 4430" width="1022.19" height="5.122" transform="translate(-1303.788 5715.746)" fill="#a9c4e9"/>
+    <rect id="Rectángulo_4431" data-name="Rectángulo 4431" width="1022.19" height="239.044" transform="translate(-1303.788 5720.868)" fill="#4d4d4d"/>
+    <text id="string_empleados_4_4_for_int_i_0_i_4_i_for_int_j_0_j_4_j_cout_empleados_i_j_cout_n_" data-name="string empleados [4] [4];
+
+for (int i=0; i&lt;4; i++)     
+    {
+    for (int j=0 ; j&lt;4; j++) 
+        {
+            cout &lt;&lt; empleados[ i ] [ j ]; 
+        }
+        cout &lt;&lt; “\n”;
+    }
+" transform="translate(-1279.167 5730.291)" fill="#fff" font-size="18" font-family="OpenSans-Regular, Open Sans"><tspan x="0" y="19">string empleados [4] [4];</tspan><tspan x="0" y="40.6"></tspan><tspan x="0" y="62.2" xml:space="preserve">for (int i=0; i&lt;4; i++)     </tspan><tspan x="0" y="83.8" xml:space="preserve">    {</tspan><tspan x="0" y="105.4" xml:space="preserve">    for (int j=0 ; j&lt;4; j++) </tspan><tspan x="0" y="127" xml:space="preserve">        {</tspan><tspan x="0" y="148.6" xml:space="preserve">            cout &lt;&lt; empleados[ i ] [ j ]; </tspan><tspan x="0" y="170.2" xml:space="preserve">        }</tspan><tspan x="0" y="191.8" xml:space="preserve">        cout &lt;&lt; “\n”;</tspan><tspan x="0" y="213.4" xml:space="preserve">    }</tspan></text>
+  </g>
+</svg>

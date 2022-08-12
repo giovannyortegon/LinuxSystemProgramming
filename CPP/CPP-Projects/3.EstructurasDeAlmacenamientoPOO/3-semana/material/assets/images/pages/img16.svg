@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1022.19" height="314.546" viewBox="0 0 1022.19 314.546">
+  <g id="Grupo_11771" data-name="Grupo 11771" transform="translate(-1742.505 -5886.141)">
+    <rect id="Rectángulo_4346" data-name="Rectángulo 4346" width="1022.19" height="5.122" transform="translate(1742.505 5886.141)" fill="#a9c4e9"/>
+    <rect id="Rectángulo_4347" data-name="Rectángulo 4347" width="1022.19" height="306.93" transform="translate(1742.505 5891.263)" fill="#4d4d4d"/>
+    <text id="_include_iostream_include_conio.h_using_namespace_std_int_numero1_int_numero2_int_main_system_pause_return_0_" data-name="#include &lt;iostream&gt;
+#include &lt;conio.h&gt;
+using namespace std;
+
+int numero1;
+int numero2;
+
+int main()
+
+{
+          system(&quot;pause&quot;);
+          return 0;
+}
+" transform="translate(1767.125 5899.687)" fill="#fff" font-size="18" font-family="OpenSans-Regular, Open Sans"><tspan x="0" y="19">#include &lt;iostream&gt;</tspan><tspan x="0" y="40.6">#include &lt;conio.h&gt;</tspan><tspan x="0" y="62.2">using namespace std;</tspan><tspan x="0" y="83.8"></tspan><tspan x="0" y="105.4">int numero1;</tspan><tspan x="0" y="127">int numero2;</tspan><tspan x="0" y="148.6"></tspan><tspan x="0" y="170.2">int main()</tspan><tspan x="0" y="191.8"></tspan><tspan x="0" y="213.4">{</tspan><tspan x="0" y="235" xml:space="preserve">          system(&quot;pause&quot;);</tspan><tspan x="0" y="256.6" xml:space="preserve">          return 0;</tspan><tspan x="0" y="278.2">}</tspan></text>
+  </g>
+</svg>

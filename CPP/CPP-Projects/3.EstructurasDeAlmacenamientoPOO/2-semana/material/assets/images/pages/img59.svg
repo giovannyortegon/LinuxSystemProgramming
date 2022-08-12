@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1022.19" height="225.546" viewBox="0 0 1022.19 225.546">
+  <g id="Grupo_10571" data-name="Grupo 10571" transform="translate(1303.788 -4901.807)">
+    <rect id="Rectángulo_4446" data-name="Rectángulo 4446" width="1022.19" height="5.122" transform="translate(-1303.788 4901.807)" fill="#a9c4e9"/>
+    <rect id="Rectángulo_4447" data-name="Rectángulo 4447" width="1022.19" height="217.783" transform="translate(-1303.788 4906.929)" fill="#4d4d4d"/>
+    <text id="int_valores_5_4_for_int_i_0_i_5_i_este_for_recorre_las_filas_for_int_j_0_j_4_j_este_for_recorre_las_columnas_valores_i_j_17_esta_instrucción_asigna_el_valor_17_a_todas_las_posicio" data-name="int valores [5] [4];
+
+for (int i=0; i&lt;5; i++)     //este for recorre las filas
+    {
+    for (int j=0 ; j&lt;4; j++)     //este for recorre las columnas
+        {
+            valores[ i ] [ j ] = 17;   //esta instrucción asigna el valor 17 a todas las posicio" transform="translate(-1279.167 4915.353)" fill="#fff" font-size="18" font-family="OpenSans-Regular, Open Sans"><tspan x="0" y="19">int valores [5] [4];</tspan><tspan x="0" y="40.6"></tspan><tspan x="0" y="62.2" xml:space="preserve">for (int i=0; i&lt;5; i++)     //este for recorre las filas</tspan><tspan x="0" y="83.8" xml:space="preserve">    {</tspan><tspan x="0" y="105.4" xml:space="preserve">    for (int j=0 ; j&lt;4; j++)     //este for recorre las columnas</tspan><tspan x="0" y="127" xml:space="preserve">        {</tspan><tspan x="0" y="148.6" xml:space="preserve">            valores[ i ] [ j ] = 17;   //esta instrucción asigna el valor 17 a todas las posiciones </tspan><tspan x="0" y="170.2" xml:space="preserve">        }</tspan><tspan x="0" y="191.8" xml:space="preserve">    }</tspan></text>
+  </g>
+</svg>

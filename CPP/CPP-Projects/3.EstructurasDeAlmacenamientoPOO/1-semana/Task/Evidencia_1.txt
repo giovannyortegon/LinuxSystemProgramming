@@ -1,0 +1,66 @@
+comprar
+	idioma
+	codigo_barras
+	dinero_client
+	cambio;
+meotodo
+	buscar_producto
+
+	registrar producto
+	efectuar pago
+		pago en efectivo
+
+	confirmar pago
+		cambio
+		imprimime tiquete
+
+class Compra
+{
+	public:
+		id_producto;
+		total_pago;
+
+	private:
+		compra();
+		bool buscar_producto();
+		void registrar_producto();
+		Facturar(lista)
+		pago_efectivo(lista, recibir_efectivo);
+		Imprimir_factura
+
+};
+bool buscar_producto(id_producto)
+{
+	base_datos;
+
+	if id_producto in base_datos
+		return 1;
+	else
+		return 0;
+}
+lsita * registrar_producto(id_producto)
+{
+	bool existe = buscar_producto(id_producto)
+
+	if  existe
+		add = lista
+	else
+		return lista;
+
+	return lista;
+}
+string *  facturar(lista)
+{
+	if efectivo
+		cambio = pago_efectivo()
+		Imprimir_factura()
+	else
+		Imprimir_factura()
+}
+int pago_efectivo
+{
+	scan(dinero_client)
+
+	return total_pago - dinero_client
+
+}

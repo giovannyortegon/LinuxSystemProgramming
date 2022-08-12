@@ -1,0 +1,1 @@
+xterm -T / -e wine 

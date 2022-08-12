@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Uso y declaración de funciones</title>
+        <meta meta name="description" content="Módulos, estructura de almacenamiento y POO utilizando el lenguaje de programación C++ (Nivel II)">
+        <link rel="icon" type="image/svg+xml" href="assets/images/logos/senaLogo.svg">
+        <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.css">
+        <link href="assets/css/fancybox.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="theme-dark page-header-textura" id="page-home">
+        <header class="curso-presentacion page-header" id="CursoPresentacion">
+            <div class="page-textura">
+                <div class="container">
+                    <div class="curso-topbar justify-content-center justify-content-md-between"><a class="curso-topbar__logo"><svg xmlns="http://www.w3.org/2000/svg" width="168.273" height="164.177" viewBox="0 0 168.273 164.177">
+                                <path id="SENA_LOGO" data-name="SENA LOGO" d="M85.349,1a18.09,18.09,0,1,0,18.09,18.09h0A18.1,18.1,0,0,0,85.349,1ZM25.617,42.983a33.722,33.722,0,0,0-9.386,1.024,11.156,11.156,0,0,0-5.12,2.56A5.346,5.346,0,0,0,10.086,52.2c.683,1.707,2.56,2.9,4.608,3.584,4.437,1.536,9.386,1.877,13.994,2.731a5.1,5.1,0,0,1,2.389,1.024,1.369,1.369,0,0,1-.683,2.048,9.146,9.146,0,0,1-5.291.683A8.354,8.354,0,0,1,20.5,61.244a1.962,1.962,0,0,1-.853-2.389H9.233A7.663,7.663,0,0,0,10.6,63.463a7.59,7.59,0,0,0,4.267,2.389A28.541,28.541,0,0,0,23.4,66.876,52.426,52.426,0,0,0,35,66.023a11.043,11.043,0,0,0,5.8-2.9,5.358,5.358,0,0,0-1.365-8.533,21.267,21.267,0,0,0-5.8-2.048c-3.072-.683-5.973-1.024-9.045-1.536a9.114,9.114,0,0,1-3.072-.853,1.226,1.226,0,0,1,0-2.219,9.369,9.369,0,0,1,4.437-.683,10.554,10.554,0,0,1,4.608.853A1.877,1.877,0,0,1,31.59,49.81h9.9a5.669,5.669,0,0,0-1.195-3.584A8.875,8.875,0,0,0,35.515,43.5c-3.584-.341-6.827-.512-9.9-.512Zm21.333.683V67.217H75.792V62.1H57.531V57.489H73.744V52.54H57.531V48.786H75.109v-5.12Zm47.615,0H81.253V67.217H91.322V51.346l13.824,15.872h13.824V43.666H108.9v15.7Zm42.495,0L120.676,67.217h10.581l2.56-4.267H150.2l2.389,4.267h11.776l-15.53-23.551ZM142.35,49.3l5.12,8.533h-10.41ZM.7,74.044l.171,12.8L49,86.673c2.389.512,3.925,2.048,3.413,5.8l-29.7,51.711,9.557,9.045L78.01,74.044Zm91.646,0L137.4,152.89l9.9-8.874L117.433,92.3c-.512-3.584.853-5.291,3.413-5.8l48.127.171V74.044ZM84.837,87.185,42.512,159.546l11.264,5.461,28.159-47.615a4.283,4.283,0,0,1,2.9-1.195,4.681,4.681,0,0,1,3.072,1.195l28.159,47.786,11.605-5.973Z" transform="translate(-0.7 -1)" fill="#FF6B00" />
+                            </svg>
+                        </a><a class="curso-topbar__menubar collapsed btn-menu-responsive d-none" data-toggle="collapse" href="#curso-topbar__nav" aria-expanded="false"><span></span><span></span><span></span></a>
+                        <nav class="curso-topbar__nav collapse show d-none d-md-block" id="curso-topbar__nav">
+                            <ul class="curso-topbar__list">
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#ResultadosAprendizaje"><span class="text-white">Resultados de aprendizaje</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#IndiceTematico"><span class="text-white">Índice temático</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#Creditos"><span class="text-white">Créditos</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="curso-portada">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <h3 class="curso-subtitulo" id="curso-titulo-componente">Módulos, estructura de almacenamiento y POO utilizando el lenguaje de programación C++ (Nivel II)</h3>
+                                <h1 class="curso-titulo" id="curso-titulo-tema">Uso y declaración de funciones</h1>
+                                <div class="brand-line-primary"></div>
+                            </div>
+                            <div class="col-12 col-lg-6 text-center">
+                                <div class="d-none d-lg-block"><img class="curso-imagen" src="assets/images/header/header_media.svg" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="curso-resultados section bg-base-light" id="ResultadosAprendizaje">
+            <div class="container">
+                <h2> Resultados de <br>aprendizaje</h2>
+                <div class="brand-line-primary"></div>
+                <div class="card resultado-item">
+                    <div class="card-body">
+                        <ul class="bg-color-dark">
+                            <li> <span>Construir programas modulares mediante funciones, que involucren el manejo de las variables locales y globales, para dar solución a problemas computacionales.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curso-indice-tematico section" id="IndiceTematico">
+            <div class="container">
+                <h2>Desarrollo de <br>contenidos</h2>
+                <div class="brand-line-primary"></div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-10">
+                        <div class="card wow flipInX" data-wow-delay=".4s">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush list my-n3 nav-temas">
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-file-text-o"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#introduccion">Introducción</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#introduccion">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">1</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-1">Funciones</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-1">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">2</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-2">Variables</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-2">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">3</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-3">Ejercicios aplicando funciones</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-3">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-question"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#evaluacion">Actividad didáctica</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#evaluacion">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-sort-alpha-asc"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#glosario">Glosario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#glosario">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-folder-open"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#anexos">Material complementario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#anexos">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-book"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#referencias">Referencias bibliográficas</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#referencias">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mainContent">
+            <div id="introduccion">
+                <div class="container" id="introduccion">
+                    <div class="header-ecored">
+                        <h1>Introducción</h1>
+                    </div>
+                    <div class="row mx-0">
+                        <div class="card"><img class="img-fluid" src="assets/images/pages/img1.png">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <div class="row mx-0">
+                                        <div class="col-12">
+                                            <p>Las funciones en la programación juegan un papel de alta importancia dado que permiten subdividir un problema en pequeños módulos para que este pueda ser resuelto de un modo más elegante y estructural.</p><br>
+                                            <p>En la definición y utilización de funciones se manejan dos tipos de variables que son: variables globales y variables locales, las cuales permiten manipular la diferente información que se requiere para la realización específica de la tarea asignada.</p><br>
+                                            <p>En este material de formación se estudiará la utilización y sintaxis de las funciones y con ellas la construcción de programas que den solución a problemas computacionales, involucrando el empleo de variables globales y locales.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-1">
+                <div class="container" id="funciones">
+                    <div class="header-ecored">
+                        <h1>1. Funciones</h1>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Las funciones hacen posible que los programas en lenguaje C++ no sean escritos en su totalidad dentro de la función principal o main, sino que se realice una subdivisión en pequeños módulos que se encargan, cada uno, de ejecutar una acción diferente para dar solución al problema general planteado en la aplicación o programa a desarrollar.</p>
+                            <p>Cada una de las funciones creadas en un programa es independiente y debe ser llamada desde la función main en el orden correcto, de acuerdo con los requerimientos de la aplicación que se esté desarrollando.</p>
+                            <p>Las funciones se definen de diferentes tipos y dicho tipo dependerá siempre del dato que estas deban retornar.</p>
+                        </div>
+                        <div class="col-12 text-center"><img class="mt-5 img-fluid" src="assets/images/pages/img1.svg" style="max-width: 100%"></div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon utilidad">
+                            <p class="m-0 text-icon"><b>Utilidad</b></p>
+                        </div>
+                        <div class="col-12 py-3">
+                            <p>El uso principal que se da a las funciones consiste en una mejor estructuración del código, que permite a su vez efectuar un mantenimiento del sistema con mayor facilidad y reutilizar los módulos escritos en diferentes aplicaciones creadas.</p>
+                        </div>
+                        <div class="row mx-0 recuadro2 align-items-center mb-3">
+                            <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img3.svg" style="max-width: 100%"></div>
+                            <div class="col-10 p-2">
+                                <p class="m-0">La solución de un programa subdividido en funciones, que se encargan por separado de tareas específicas requeridas, hace de este una codificación más entendible y organizada.</p>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon sintaxis">
+                            <p class="m-0 text-icon"><b>Sintaxis</b></p>
+                        </div>
+                        <div class="col-12 py-3">
+                            <p>Para utilizar funciones es preciso llevar a cabo tres operaciones que consisten en declararlas, definirlas y llamarlas; la declaración se trata de algo que se denomina prototipo y es preciso realizarla antes de escribir el conjunto de sentencias que indican la tarea que la función debe ejecutar. Este prototipo se encuentra compuesto por el tipo de función, nombre de la función, tipo y nombre de parámetros y finalmente un punto y coma (;), es decir, que el prototipo consiste únicamente en una línea de código así:</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img5.svg" style="max-width: 100%"></div>
+                        <div class="col-12 py-3">
+                            <p>En la operación siguiente se trata de definir el conjunto de sentencias para la tarea específica que la función debe realizar. Dicha sintaxis se muestra a continuación:</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img6.svg" style="max-width: 100%"></div>
+                        <div class="row mx-0 recuadro2 align-items-center my-3">
+                            <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img7.svg" style="max-width: 100%"></div>
+                            <div class="col-10 p-2">
+                                <p class="m-0">El tipo está relacionado directamente con el valor que la función debe retornar. Si la función es de tipo entero, quiere decir que retorna un valor entero; si es de tipo flotante, significa que retorna un valor flotante y así sucesivamente; en cambio, si es de tipo void significa que no retorna ningún valor.</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p>Luego se definen los parámetros, que consisten en cierta información que requieren algunas funciones con el fin de ejecutar la tarea para la cual son creadas; dichos parámetros son en realidad variables utilizadas dentro de las instrucciones de la función.</p>
+                            <p>Posteriormente se encuentran las instrucciones que son las líneas de código donde se realiza todo lo necesario para que la función ejecute la tarea que le fue asignada.</p>
+                            <p>Finalmente estaría la operación de llamado (invocación), cuya sintaxis sería así:</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img8.svg" style="max-width: 100%"></div>
+                        <div class="col-12 pt-3">
+                            <p>En el llamado no es necesario indicar el tipo de dato de cada parámetro ni el de la función, basta con mencionar su nombre y las variables que contienen los argumentos respectivos, terminando la línea de código con un punto y coma (;).</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon invocacion">
+                            <p class="m-0 text-icon"><b>Invocación</b></p>
+                        </div>
+                        <div class="col-12 py-3">
+                            <p>La invocación consiste en la forma en que las funciones deben ser utilizadas dentro del programa, estas se declaran por separado y se llaman o invocan dentro de la función main, de acuerdo con las necesidades de la aplicación.</p>
+                        </div>
+                        <div class="row mx-0 recuadro2 align-items-center">
+                            <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img10.svg" style="max-width: 100%"></div>
+                            <div class="col-10 p-2">
+                                <p class="m-0">El llamado puede hacerse directamente, o bien dentro de una variable, dependiendo del tipo de función que haya sido declarada y la manera en que la información deba mostrarse al usuario.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-2">
+                <div class="container" id="variables">
+                    <div class="header-ecored">
+                        <h1>2. Variables</h1>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Las variables son espacios de memoria donde se almacena la información requerida en la ejecución de un programa, pueden ser de diferentes tipos según los requerimientos de la aplicación, tales como: <b><i>int, float, double, </i></b>etc.</p>
+                            <p>En el ámbito de las funciones se tiene en cuenta otra clasificación, que consiste en la parte del programa donde las variables son declaradas y utilizadas; dicha clasificación se observa a continuación:</p>
+                        </div>
+                        <div class="col-12 text-center"><img class="mt-5 img-fluid" src="assets/images/pages/img11.svg" style="max-width: 100%"></div>
+                    </div><br id="globales">
+                    <div class="header-ecored">
+                        <h2>2.1 Globales</h2>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p class="m-0">Las variables globales son aquellas que se declaran, por lo general, al comienzo del programa, y que por lo tanto son utilizadas y reconocidas en cualquier parte de este; pueden ser además modificadas sin importar desde qué zona del código se esté haciendo mención a ellas.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon definicion">
+                            <p class="m-0 text-icon"><b>Definición</b></p>
+                        </div>
+                        <div class="col-12 pt-3">
+                            <p>Las variables globales están definidas por fuera de cualquier función, normalmente después de las líneas que contienen las librerías y de este modo son reconocidas en cualquier ámbito del programa, es decir, por cualquier función que las quiera utilizar, ya sea para lectura o escritura o para cualquier tipo de operación que requiera la solución al problema computacional.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon utilidad">
+                            <p class="m-0 text-icon"><b>Utilidad</b></p>
+                        </div>
+                        <div class="col-12 py-3 text-center"><img class="img-fluid" src="assets/images/pages/img14.svg" style="max-width: 80%"></div>
+                        <div class="col-12">
+                            <p>Este tipo de variables presta al programador utilidad porque permite definir información que sea requerida por cualquiera de las funciones del programa; es decir, que sea común a estas y que teniendo en cuenta las tareas que se programarán, sean datos que deben emplearse en varias partes y de este modo se minimizan las líneas de código y se evita la redundancia al definir una variable que quizás almacenará la misma información en partes diferentes, ya que ello ocasionaría uso innecesario de memoria.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon ejemplo">
+                            <p class="m-0 text-icon"><b>Ejemplo</b></p>
+                        </div>
+                        <div class="col-12 py-4"><img class="img-fluid" src="assets/images/pages/img16.svg" style="max-width: 100%"></div>
+                        <div class="col-12">
+                            <p>En el código anterior, después de las librerías se declaran las variables de tipo entero numero1 y numero2, dichas variables no se encuentran dentro de ninguna función, por lo tanto, se trata de variables globales que son accesibles desde cualquier función en el programa.</p>
+                            <p>También sería posible encontrarse con un código similar al siguiente:</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img17.svg" style="max-width: 100%"></div>
+                        <div class="col-12 my-3"><img class="img-fluid" src="assets/images/pages/img18.svg" style="max-width: 100%"></div>
+                        <div class="col-12">
+                            <p>En el código anterior se tienen dos variables globales, llamadas numero1 y numero2, que son accesibles desde todas las funciones (main, funcion1, funcion2 y funcion3) y adicional a ello, se tiene otra variable global de tipo entero llamada cantidades. Esta únicamente es accesible por la función3 y sería accesible por las demás funciones que se encuentren declaradas debajo de esta.</p>
+                        </div>
+                        <div class="row mx-0 recuadro2 align-items-center my-3">
+                            <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img19.svg" style="max-width: 100%"></div>
+                            <div class="col-10 p-2">
+                                <p class="m-0">Una variable global entonces es accesible por cualquier función del programa, siempre y cuando se encuentre declarada antes de dicha función, por ello este tipo de variables suelen ser declaradas al comienzo del código, por lo general después de las librerías.</p>
+                            </div>
+                        </div>
+                    </div><br id="locales">
+                    <div class="header-ecored">
+                        <h2>2.2 Locales</h2>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Las variables locales son las que se definen y utilizan dentro del ámbito de una función; es decir, se declaran e inicializan específicamente para cada función y es únicamente dicha función la que las reconoce y tiene acceso a las mismas.</p>
+                            <p class="m-0">Si una variable local intenta ser utilizada en una función diferente a la que la declara por primera vez, el sistema genera un error, dado que, como su nombre lo indica, la variable hace parte de la función localmente, dicha función es su propietaria y sólo esta tiene permiso de accederla.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon definicion">
+                            <p class="m-0 text-icon"><b>Definición</b></p>
+                        </div>
+                        <div class="col-12 py-3">
+                            <p>Las variables locales se definen dentro de las funciones, usualmente en las primeras líneas antes de cualquier otra instrucción, o bien, en la línea previa a su utilización.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon utilidad">
+                            <p class="m-0 text-icon"><b>Utilidad</b></p>
+                        </div>
+                        <div class="col-12 py-3 text-center"><img class="img-fluid" src="assets/images/pages/img20.svg" style="max-width: 80%"></div>
+                        <div class="col-12">
+                            <p>El uso de variables locales en la definición de funciones es inminente, debido a que estas son las que permiten al programa almacenar la información que hace posible la ejecución de la tarea para la cual cada función es creada.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon ejemplo">
+                            <p class="m-0 text-icon"><b>Ejemplo</b></p>
+                        </div>
+                        <div class="col-12 py-3"><img class="img-fluid" src="assets/images/pages/img21.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mt-3"><img class="img-fluid" src="assets/images/pages/img22.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mt-3">
+                            <p>En el código anterior se tiene una variable local llamada val1, ya que esta se encuentra definida dentro de la funcion1 y por lo tanto dicha función es su propietaria, es la única que tiene acceso a ella y por ende la única que puede manipular su valor.</p>
+                            <p class="m-0">En cuanto a variables locales, se pueden encontrar en diferentes partes del código de una función; otra opción entonces sería la siguiente:</p>
+                        </div>
+                        <div class="col-12 mt-3"><img class="img-fluid" src="assets/images/pages/img23.svg" style="max-width: 100%"></div>
+                        <div class="row mx-0 recuadro2 align-items-center my-4">
+                            <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img24.svg" style="max-width: 100%"></div>
+                            <div class="col-10 p-2">
+                                <p class="m-0">En el código presentado se observa la declaración de las variables par1 y par2, estas son conocidas como los parámetros de dicha función y también se entienden como variables locales, porque solamente serán reconocidas dentro de la función que se están utilizando.</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p>Otra posibilidad está en las variables que se emplean dentro de los ciclos de repetición, estas también son variables locales; sin embargo, ya no son locales a la función como tal sino al ciclo de repetición; es decir, dentro del ciclo se crean y al finalizar del ciclo se rompen, es por ello que puede usarse la misma variable i en dos <b><i>for </i></b>diferentes, cuando por ejemplo se solicitan por teclado y posteriormente se muestran los elementos de un arreglo.</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img25.svg" style="max-width: 100%"></div>
+                        <div class="col-12 mt-3">
+                            <p>Como se ha mostrado, está el <i>for </i>con la variable <i>i </i>para solicitar al usuario los elementos del arreglo y después se observa el <i>for </i>también con la variable <i>i </i>para mostrar dichos elementos.</p>
+                        </div>
+                        <div class="row mx-0 recuadro2 align-items-center my-3">
+                            <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img26.svg" style="max-width: 100%"></div>
+                            <div class="col-10 p-2">
+                                <p class="m-0">Para concluir, una variable local solamente es conocida dentro de la función que la crea y totalmente inaccesible por el resto del programa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-3">
+                <div class="container" id="ejercicios">
+                    <div class="header-ecored">
+                        <h1>3. Ejercicios aplicando funciones</h1>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Hasta el momento se ha visto la parte teórica con respecto a la aplicación de las funciones; si bien se trata de un contenido de menor complejidad, la importancia real del tema se adquiere cuando se pone en práctica y de este modo es posible comprender por completo los conceptos presentados.</p>
+                            <p class="m-0">A continuación se ilustra la definición, declaración y el llamado de funciones con diferentes ejercicios que utilizan variables globales y locales.</p>
+                        </div>
+                        <div class="col-12 text-center"><img class="mt-5 img-fluid" src="assets/images/pages/img27.svg" style="max-width: 60%"></div>
+                        <div class="col-12 my-5">
+                            <p class="m-0">Se recomienda al aprendiz abrir el programa Dev-C++ e ir digitando, compilando y ejecutando los ejercicios vistos; lo anterior le servirá para adquirir la práctica necesaria en el lenguaje e irse preparando con miras a la solución de las evidencias requeridas en la actividad de aprendizaje 3.</p>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro4 justify-content-center">
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_01_Ambito_de_variables.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 1</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Ámbito de variables</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_02_Suma.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 2</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Suma</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_03_Cubo.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 3</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Cubo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_04_Mayor.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 4</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Mayor</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_05_Multiplos.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 5</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Múltiplos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_06_Arreglos.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 6</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Arreglos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_07_Operaciones.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 7</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Operaciones</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_08_Notas.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 8</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Notas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_09_Conversion.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 9</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Conversión</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_10_Potencia.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 10</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Potencia</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_11_Raiz.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 11</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Raíz</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF3_Ejemplo_12_Cubo_en_ciclo.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicios 12</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Cubo en ciclo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="evaluacion">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Actividad didáctica</h1>
+                    </div>
+                    <div class="row align-items-center justify-content-center my-5">
+                        <div class="col-8 col-md-5 col-xl-4 mb-5">
+                            <figure><img src="assets/images/pages/actividad/img_actividad.svg" alt=""></figure>
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <hr class="line-100 bg-orange">
+                            <div class="text-center p-2">
+                                <h2>¡Pon a prueba tu conocimiento! </h2>
+                                <p>La siguiente actividad tiene como propósito validar los conocimientos adquiridos sobre <strong>Uso y declaración de funciones</strong></p><a class="btn btn-colour-Orange" href="media/actividad-1/story.html" target="_blank">Iniciar</a>
+                            </div>
+                            <hr class="line-100 bg-orange">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="glosario">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Glosario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <p><strong class="mr-2">Declarar:</strong>escribir el prototipo de las funciones.</p>
+                        <p><strong class="mr-2">Definir:</strong>escribir el conjunto de instrucciones que deben ser ejecutadas por una función.</p>
+                        <p> <strong class="mr-2">Función:</strong>cada uno de los pequeños módulos en que puede ser dividido un programa.</p>
+                        <p> <strong class="mr-2">Invocar:</strong>sinónimo de llamar – acción realizada cuando se va a utilizar una función.</p>
+                        <p><strong class="mr-2">Llamar:</strong>hacer uso de una función que ha sido creada con anterioridad.</p>
+                        <p><strong class="mr-2">Parámetro:</strong>cada uno de los datos que es pasado a una función para procesar la información y ejecutar la tarea asignada.</p>
+                        <p> <strong class="mr-2">Prototipo:</strong>declaración de una función compuesta por una línea de código que contiene tipo, nombre y argumentos de la misma.</p>
+                        <p> <strong class="mr-2">Tipo:</strong>clase de dato que retorna una función.</p>
+                        <p><strong class="mr-2">Variable global:</strong>variable declarada por fuera de las funciones y que puede ser accedida por cualquier módulo del programa.</p>
+                        <p><strong class="mr-2">Variable local:</strong>variable declarada dentro de las funciones y/o en las instrucciones de repetición que pertenecen únicamente al lugar donde se declaran (función – estructura repetitiva).</p>
+                    </div>
+                </div>
+            </div>
+            <div id="anexos">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Material complementario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center">Autor, (año del documento o material), Nombre del documento o material.</th>
+                                    <th class="text-center">Tipo de material ( Video, capítulo de libro, articulo, otro) </th>
+                                    <th class="text-center">Enlace del Recurso o Archivo del documento o material</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> <strong>Funciones</strong></td>
+                                    <td>Capítulo de manual</td>
+                                    <td> <a href="media/documentos/MC_AA3_Tema5_funciones.pdf" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="referencias">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Referencias bibliográficas</h1>
+                    </div>
+                    <div class="jumbotron bg-white referencias">
+                        <p>Joyanes, L.; y Sánchez, L. (2006). Programación en C++: un enfoque práctico. España: Mc Graw Hill.</p>
+                        <hr>
+                        <p>Joyanes, L.; y Zahonero, I. (2007) Estructura de Datos en C++. España: Mc Graw Hill.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="Creditos">
+            <div class="container">
+                <h1>Créditos </h1>
+                <div class="brand-line-primary"></div>
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <h3 class="footer-subtitulo mb-4">ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES </h3>
+                        <p class="footer-texto mb-2"><strong>Ingry Dayanna Bonilla Monzón </strong><br /> <span class="text-small">Líder del equipo</span></p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Contenido Instruccional
+                        </h4>
+                        <p class="footer-texto mb-2"><strong>Gloria Matilde Lee Mejía </strong><br /> <span class="text-small">Responsable del equipo</span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Comercio y Servicios</span><br><span class="text-small">Regional Tolima</span></p>
+                        <p class="footer-texto mb-2"><strong>Rafael Nelftalí Lizcano Reyes</strong><br /> <span class="text-small">Asesor pedagógico<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander </span></p>
+                        <p class="footer-texto mb-2"><strong>Lucero Montes Arenas</strong><br /><span class="text-small">Gestora de desarrollo de programas<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro para la Formación Cafetera - Regional Caldas</span></p>
+                        <p class="footer-texto mb-2"><strong>Julio Alexander Rodríguez del Castillo</strong><br /><span class="text-small">E-Pedagogo instruccional<br /></span><br><strong>Sandra Milena Henao Melchor</strong><br /> <span class="text-small">Evaluadora de contenidos<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Atención Sector Agropecuario – Regional Risaralda</span></p>
+                        <p class="footer-texto mb-2"><strong>Érika Alejandra Beltrán Cuesta</strong><br /> <span class="text-small">Evaluadora de calidad instruccional<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Atención Sector Agropecuario – Regional Risaralda</span></p>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Diseño y desarrollo de recursos educativos digitales
+                        </h4>
+                        <p class="footer-texto"><strong>Francisco José Lizcano Reyes </strong><br /> <span class="text-small">Responsable del equipo<br /></span></p>
+                        <p class="footer-texto"><strong>Leyson Fabián Castaño Pérez</strong><br /> <span class="text-small">Integración de recursos y pruebas<br /></span></p>
+                        <p class="footer-texto"> <strong>Eulises Orduz</strong><br />
+                            <strong>Luis Gabriel Urueta Alvarez</strong><br /><span class="text-small">Diseño Web & Producción Audiovisual<br /></span></p>
+                        <p class="footer-texto"><strong>Jhon Jairo Urueta Alvarez</strong><br> <span class="text-small">Desarrollo Front-End<br /></span></p>
+                        <p class="footer-texto"><strong>Luis Gabriel Urueta Álvarez</strong><br> <span class="text-small">Desarrollo de actividades didácticas<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander </span></p>
+                        <h4 class="footer-subtitulo-2 mt-5">
+                            <div class="fa fa-caret-right mr-2"></div>Gestores de repositorio
+                        </h4>
+                        <p class="footer-texto"><strong>Kely Alejandra Quiros Duarte </strong><br /> <span class="text-small">Administrador repositorio de contenidos y gestores de repositorio.<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de comercio y servicios </span><br><span class="text-small">Regional Tolima</span></p>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <div class="d-flex flex-column justify-content-center"><img src="assets/images/logos/senaLogo.svg" style="max-width:100px"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <section id="cc">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row"><span class="pr-3"><i class="icon cc"></i></span><span>Este material puede ser distribuido, copiado y exhibido por terceros si se muestra en los créditos. No se puede obtener ningún beneficio comercial y las obras derivadas tienen que estar bajo los mismos términos de la licencia que el trabajo original.</span></div>
+            </div>
+        </section><a class="scroll-to-top-btn">
+            <div class="fa fa-angle-up fa-2x"></div>
+        </a>
+        <script src="assets/js/vendor.js"></script>
+        <script src="js/local.js"></script>
+    </body>
+</html>

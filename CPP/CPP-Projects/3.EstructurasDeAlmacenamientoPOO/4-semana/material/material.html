@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Funciones con parámetros</title>
+        <meta meta name="description" content="Módulos, estructura de almacenamiento y POO utilizando el lenguaje de programación C++ (Nivel II)">
+        <link rel="icon" type="image/svg+xml" href="assets/images/logos/senaLogo.svg">
+        <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.css">
+        <link href="assets/css/fancybox.css" rel="stylesheet">
+        <link href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body class="theme-dark page-header-textura" id="page-home">
+        <header class="curso-presentacion page-header" id="CursoPresentacion">
+            <div class="page-textura">
+                <div class="container">
+                    <div class="curso-topbar justify-content-center justify-content-md-between"><a class="curso-topbar__logo"><svg xmlns="http://www.w3.org/2000/svg" width="168.273" height="164.177" viewBox="0 0 168.273 164.177">
+                                <path id="SENA_LOGO" data-name="SENA LOGO" d="M85.349,1a18.09,18.09,0,1,0,18.09,18.09h0A18.1,18.1,0,0,0,85.349,1ZM25.617,42.983a33.722,33.722,0,0,0-9.386,1.024,11.156,11.156,0,0,0-5.12,2.56A5.346,5.346,0,0,0,10.086,52.2c.683,1.707,2.56,2.9,4.608,3.584,4.437,1.536,9.386,1.877,13.994,2.731a5.1,5.1,0,0,1,2.389,1.024,1.369,1.369,0,0,1-.683,2.048,9.146,9.146,0,0,1-5.291.683A8.354,8.354,0,0,1,20.5,61.244a1.962,1.962,0,0,1-.853-2.389H9.233A7.663,7.663,0,0,0,10.6,63.463a7.59,7.59,0,0,0,4.267,2.389A28.541,28.541,0,0,0,23.4,66.876,52.426,52.426,0,0,0,35,66.023a11.043,11.043,0,0,0,5.8-2.9,5.358,5.358,0,0,0-1.365-8.533,21.267,21.267,0,0,0-5.8-2.048c-3.072-.683-5.973-1.024-9.045-1.536a9.114,9.114,0,0,1-3.072-.853,1.226,1.226,0,0,1,0-2.219,9.369,9.369,0,0,1,4.437-.683,10.554,10.554,0,0,1,4.608.853A1.877,1.877,0,0,1,31.59,49.81h9.9a5.669,5.669,0,0,0-1.195-3.584A8.875,8.875,0,0,0,35.515,43.5c-3.584-.341-6.827-.512-9.9-.512Zm21.333.683V67.217H75.792V62.1H57.531V57.489H73.744V52.54H57.531V48.786H75.109v-5.12Zm47.615,0H81.253V67.217H91.322V51.346l13.824,15.872h13.824V43.666H108.9v15.7Zm42.495,0L120.676,67.217h10.581l2.56-4.267H150.2l2.389,4.267h11.776l-15.53-23.551ZM142.35,49.3l5.12,8.533h-10.41ZM.7,74.044l.171,12.8L49,86.673c2.389.512,3.925,2.048,3.413,5.8l-29.7,51.711,9.557,9.045L78.01,74.044Zm91.646,0L137.4,152.89l9.9-8.874L117.433,92.3c-.512-3.584.853-5.291,3.413-5.8l48.127.171V74.044ZM84.837,87.185,42.512,159.546l11.264,5.461,28.159-47.615a4.283,4.283,0,0,1,2.9-1.195,4.681,4.681,0,0,1,3.072,1.195l28.159,47.786,11.605-5.973Z" transform="translate(-0.7 -1)" fill="#FF6B00" />
+                            </svg>
+                        </a><a class="curso-topbar__menubar collapsed btn-menu-responsive d-none" data-toggle="collapse" href="#curso-topbar__nav" aria-expanded="false"><span></span><span></span><span></span></a>
+                        <nav class="curso-topbar__nav collapse show d-none d-md-block" id="curso-topbar__nav">
+                            <ul class="curso-topbar__list">
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#ResultadosAprendizaje"><span class="text-white">Resultados de aprendizaje</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#IndiceTematico"><span class="text-white">Índice temático</span></a></li>
+                                <li class="curso-topbar__item"><a class="curso-topbar__link" href="#Creditos"><span class="text-white">Créditos</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="curso-portada">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <h3 class="curso-subtitulo" id="curso-titulo-componente">Módulos, estructura de almacenamiento y POO utilizando el lenguaje de programación C++ (Nivel II)</h3>
+                                <h1 class="curso-titulo" id="curso-titulo-tema">Funciones con parámetros</h1>
+                                <div class="brand-line-primary"></div>
+                            </div>
+                            <div class="col-12 col-lg-6 text-center">
+                                <div class="d-none d-lg-block"><img class="curso-imagen" src="assets/images/header/header_media.svg" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="curso-resultados section bg-base-light" id="ResultadosAprendizaje">
+            <div class="container">
+                <h2> Resultados de <br>aprendizaje</h2>
+                <div class="brand-line-primary"></div>
+                <div class="card resultado-item">
+                    <div class="card-body">
+                        <ul class="bg-color-dark">
+                            <li> <span>Construir programas modulares mediante funciones con parámetros, que le permitan dar solución a problemas computacionales.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="curso-indice-tematico section" id="IndiceTematico">
+            <div class="container">
+                <h2>Desarrollo de <br>contenidos</h2>
+                <div class="brand-line-primary"></div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-10">
+                        <div class="card wow flipInX" data-wow-delay=".4s">
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush list my-n3 nav-temas">
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-file-text-o"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#introduccion">Introducción</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#introduccion">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">1</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-1">Funciones con parámetros</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-1">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">2</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-2">Tipos de parámetros</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-2">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold">3</span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#tema-3">Ejercicios de funciones con parámetros</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#tema-3">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-question"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#evaluacion">Actividad didáctica</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#evaluacion">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-sort-alpha-asc"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#glosario">Glosario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#glosario">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-folder-open"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#anexos">Material complementario</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#anexos">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item nav-tema-item">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <div class="avatar avatar-sm"><span class="nav-tema-item__icon avatar-title font-size-lg bg-secondary-soft rounded-circle text-primary font-weight-bold"> <i class="fa fa-book"></i></span></div>
+                                            </div>
+                                            <div class="col ml-n2"><span class="nav-tema-item__titulo"> <a href="#referencias">Referencias bibliográficas</a></span></div>
+                                            <div class="col-auto"> <a class="btn btn-light nav-tema-item__btn" href="#referencias">Ver más</a></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mainContent">
+            <div id="introduccion">
+                <div class="container" id="introduccion">
+                    <div class="header-ecored">
+                        <h1>Introducción</h1>
+                    </div>
+                    <div class="row mx-0">
+                        <div class="card"><img class="img-fluid" src="assets/images/pages/img1.png">
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <div class="row mx-0">
+                                        <div class="col-12">
+                                            <p>Continuando con la importancia de las funciones en la programación, se aborda ahora de manera específica lo que tiene que ver con los diferentes tipos de parámetros que las funciones pueden recibir.</p><br>
+                                            <p>Para que una función exista no es necesario que sea declarada con parámetros, bien puede hacerlo sin ellos; sin embargo, el hecho de que los contenga proporciona un amplio abanico de opciones al programador para el manejo de múltiple información.</p><br>
+                                            <p>Los parámetros que se manejan en las funciones son en realidad variables, y por lo tanto pueden ser de todos los tipos de datos que maneja el lenguaje, tales como: <i>int, float, double, array, </i>etc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-1">
+                <div class="container" id="funciones">
+                    <div class="header-ecored">
+                        <h1>1. Funciones con parámetros</h1>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Las funciones son pequeños módulos de un programa que se componen de diferentes líneas de código y están encargadas de ejecutar una tarea específica dentro de la solución informática.</p>
+                            <p>La declaración de una función está compuesta por varios elementos, tales como: tipo, nombre y parámetros. El tipo se trata del tipo de dato que la función va a retornar, el nombre es el identificador con que se conocerá la función dentro del programa y los parámetros son algunas de las variables que se necesitan para ejecutar la función.</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img1.svg" style="max-width: 100%"></div>
+                        <div class="row mx-3 recuadro2 align-items-center my-3">
+                            <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img2.svg" style="max-width: 100%"></div>
+                            <div class="col-10 p-2">
+                                <p class="m-0">Internamente las funciones pueden manejar otras variables que serían variables locales, estas se declaran dentro de las líneas de código que componen la función de acuerdo con los requerimientos del programador.</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p class="m-0">En el proceso de utilización de funciones, es necesario generar el prototipo de las mismas dentro del programa y se recomienda hacerlo posterior a las librerías. La sintaxis correcta para declarar dichos prototipos es la siguiente:</p>
+                        </div>
+                        <div class="col-12 py-4"><img class="img-fluid" src="assets/images/pages/img3.svg" style="max-width: 100%"></div>
+                        <div class="col-12">
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1 text-center"><img class="img-fluid" src="assets/images/pages/img4.svg" style="max-width: 60%"></div>
+                                <div class="col-11">
+                                    <p class="m-0"> <b>Tipo: </b>se trata del tipo de función y debe coincidir con el tipo dato que esta va a retornar.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 pt-3">
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1 text-center"><img class="img-fluid" src="assets/images/pages/img5.svg" style="max-width: 60%"></div>
+                                <div class="col-11">
+                                    <p class="m-0"> <b>Nombre: </b>consiste en el identificador por medio del cual la función será reconocida.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 pt-3">
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1 text-center"><img class="img-fluid" src="assets/images/pages/img6.svg" style="max-width: 60%"></div>
+                                <div class="col-11">
+                                    <p class="m-0"> <b>TipoP: </b>es el tipo de parámetro que la función recibirá; para cada parámetro enviado debe indicarse el respectivo tipo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 pt-3">
+                            <div class="row mx-0 align-items-center">
+                                <div class="col-1 text-center"><img class="img-fluid" src="assets/images/pages/img7.svg" style="max-width: 60%"></div>
+                                <div class="col-11">
+                                    <p class="m-0"> <b>parametro1: </b>consiste en el nombre dado a cada uno de los parámetros.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <p>Cada línea utilizada como el prototipo de una función debe terminar con el signo punto y coma (;).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-2">
+                <div class="container" id="tipos">
+                    <div class="header-ecored">
+                        <h1>2. Tipos de parámetros</h1>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Las funciones, una vez se encuentran declaradas, pueden ser invocadas con el fin de que ejecuten la tarea para lo que fueron creadas, y cuando son declaradas con parámetros, deben invocarse incluyendo estos que se encargan de pasar información requerida para la ejecución de cada tarea; dicho paso de información puede realizarse de dos maneras: por valor y por referencia.</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img8.svg" style="max-width: 100%"></div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon valor">
+                            <p class="m-0 text-icon"><b>Por valor</b></p>
+                        </div>
+                        <div class="col-12 py-3">
+                            <p>Cuando se hace un llamado a una función con parámetros por valor, dicha función recibe una copia del valor enviado en el parámetro y utiliza dicho valor para efectuar con este las operaciones que le correspondan; de ningún modo el valor original del parámetro podrá ser modificado, y por lo tanto, siempre se mantendrá igual.</p>
+                            <p>En la función a la que se le envía el parámetro se realizan operaciones con este sin modificarlo, y de igual manera, tampoco se modifica en la función que hace el llamado.</p>
+                            <p>Para comprender mejor lo anterior, se ilustra a continuación con un ejemplo:</p>
+                        </div>
+                        <div class="col-12">
+                            <div class="row justify-content-center">
+                                <div class="col-4">
+                                    <div class="card mt-3"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_1_Por_valor.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                            <div class="media-link-title">
+                                                <div class="row">
+                                                    <div class="col-12 p-0">
+                                                        <p class="txt-btn"><strong>Ejemplo 1</strong> </p>
+                                                    </div>
+                                                    <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                        <p class="txt-btn">Por valor</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12 icon referencia">
+                            <p class="m-0 text-icon"><b>Por referencia</b></p>
+                        </div>
+                        <div class="col-12 pt-3">
+                            <p>Cuando se hace un llamado a una función con parámetros por referencia, dicha función recibe la dirección en memoria de la variable enviada en el parámetro y utiliza dicho valor para efectuar con este las operaciones que le correspondan, teniendo además la propiedad de modificar el valor original; por lo tanto, cuando se requiere que una función modifique el valor que reciba y lo regrese modificado, este es el método de paso de parámetros que debe utilizarse.</p>
+                        </div>
+                        <div class="row mx-3 recuadro2 align-items-center my-3">
+                            <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img11.svg" style="max-width: 100%"></div>
+                            <div class="col-10 p-2">
+                                <p class="m-0">Esta forma de paso de parámetros en las funciones, permite además, que ellas puedan retornar múltiples valores; en cambio, con el paso de parámetros por valor, cada función está en capacidad únicamente de retornar un valor.</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p>En la función a la que se le envía el parámetro por referencia, se realizan operaciones con este, y al retornar al punto del programa donde la función se llamó, el parámetro contiene el valor según las modificaciones que hayan sido efectuadas en la función a la que se le ha enviado. </p>
+                            <p>Para comprender mejor lo anterior e identificar la diferencia, se ilustra a continuación el mismo ejemplo visto con parámetros por valor, modificado ahora para parámetros por referencia: </p>
+                        </div>
+                        <div class="col-12">
+                            <div class="row justify-content-center">
+                                <div class="col-4">
+                                    <div class="card mt-3"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_2_Por_referencia.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                            <div class="media-link-title">
+                                                <div class="row">
+                                                    <div class="col-12 p-0">
+                                                        <p class="txt-btn"><strong>Ejemplo 2</strong> </p>
+                                                    </div>
+                                                    <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                        <p class="txt-btn">Por referencia</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mx-3 recuadro2 align-items-center my-3 justify-content-center">
+                            <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img12.svg" style="max-width: 100%"></div>
+                            <div class="col-10 p-2">
+                                <p class="m-0">El procedimiento ilustrado anteriormente puede realizarse con un solo parámetro o con varios, además de ello, los tipos de parámetros pueden mezclarse en la misma función; es decir, si una función se declara con parámetros por referencia, no significa que no pueda contener parámetros por valor; perfectamente puede tener ambos, uno o varios.</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p>Como ya se mencionó, el paso de parámetros por valor permite que las funciones retornen más de un valor. A continuación se ejemplifica dicha situación con el fin de que se entienda cómo funciona.</p>
+                        </div>
+                        <div class="col-12 my-4 text-center"><img class="img-fluid" src="assets/images/pages/img2.png" style="max-width: 100%"></div>
+                        <div class="col-12">
+                            <div class="row justify-content-center">
+                                <div class="col-4">
+                                    <div class="card mt-3"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_3_Por_valor_y_referencia.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                            <div class="media-link-title">
+                                                <div class="row">
+                                                    <div class="col-12 p-0">
+                                                        <p class="txt-btn"><strong>Ejemplo 3</strong> </p>
+                                                    </div>
+                                                    <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                        <p class="txt-btn">Por valor y referencia</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <p>Otra situación importante que puede presentarse en la utilización de funciones con parámetros consiste en la definición de estos por defecto; es decir, una función en la cual el llamado a esta no necesariamente tenga que contener todos los valores, sino que algunos de los parámetros se encuentren predefinidos para que ese valor predefinido sea utilizado en caso de que el llamado no contenga otro dato.</p>
+                            <p>Para comprender mejor lo anterior, se ilustra a continuación con un ejemplo:</p>
+                        </div>
+                        <div class="col-12">
+                            <div class="row justify-content-center">
+                                <div class="col-4">
+                                    <div class="card mt-3"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_4_Funciones_con_parametros.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                            <div class="media-link-title">
+                                                <div class="row">
+                                                    <div class="col-12 p-0">
+                                                        <p class="txt-btn"><strong>Ejemplo 4</strong> </p>
+                                                    </div>
+                                                    <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                        <p class="txt-btn">Funciones con parámetros</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tema-3">
+                <div class="container" id="ejercicios">
+                    <div class="header-ecored">
+                        <h1>3. Ejercicios de funciones con parámetros</h1>
+                    </div>
+                    <div class="row mx-0 recuadro1">
+                        <div class="col-12">
+                            <p>Para una mejor comprensión de toda la conceptualización presentada respecto a las funciones con parámetros y la aplicación de parámetros por valor y por referencia, es importante llevarlo a la práctica realizando ejercicios aplicados donde se crea la necesidad de analizar qué parámetros utilizar para resolver cada caso específico.</p>
+                            <p>A continuación, se ilustra la definición, declaración y el llamado de funciones con parámetros por valor y/o por referencia, aplicados en diferentes ejercicios.</p>
+                        </div>
+                        <div class="col-12"><img class="img-fluid" src="assets/images/pages/img14.svg" style="max-width: 100%"></div>
+                        <div class="row mx-3 recuadro2 align-items-center my-3">
+                            <div class="col-2 text-center p-2"><img class="img-fluid" src="assets/images/pages/img15.svg" style="max-width: 100%"></div>
+                            <div class="col-10 p-2">
+                                <p class="m-0">Se recomienda al aprendiz abrir el programa Dev-C++ e ir digitando, compilando y ejecutando los ejercicios vistos, lo anterior le servirá para adquirir la práctica necesaria en el lenguaje e irse preparando con miras a la solución de las evidencias requeridas en la actividad de aprendizaje 4.</p>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="row mx-0 recuadro4 justify-content-center mx-5">
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_5_Parametro_por_defecto.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 1</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Parámetro por defecto</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_6_Mostrar_por_valor.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 2</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Mostrar por valor</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_7_Mostrar_por_referencia.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 3</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Mostrar por referencia</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_8_Dias_y_meses.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 4</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Días y meses</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_9_Conversion.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 5</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Conversión</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_10_Suma_de_un_vector.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 6</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Suma de un vector</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_11_Costo_llamada.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 7</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Costo llamada</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                        <div class="col-5 col-lg-3">
+                            <div class="card"><a class="btn media-link" href="media/documentos/MF4_Ejemplo_12_Compra_con_descuento.pdf" target="_blank"> <img class="media-link-icon" src="assets/images/pages/img76.svg" alt="">
+                                    <div class="media-link-title">
+                                        <div class="row">
+                                            <div class="col-12 p-0">
+                                                <p class="txt-btn"><strong>Ejercicio 8</strong> </p>
+                                            </div>
+                                            <div class="col-12 d-none d-sm-none d-md-none d-lg-block p-0">
+                                                <p class="txt-btn">Compra con descuento</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="evaluacion">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Actividad didáctica</h1>
+                    </div>
+                    <div class="row align-items-center justify-content-center my-5">
+                        <div class="col-8 col-md-5 col-xl-4 mb-5">
+                            <figure><img src="assets/images/pages/actividad/img_actividad.svg" alt=""></figure>
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <hr class="line-100 bg-orange">
+                            <div class="text-center p-2">
+                                <h2>¡Pon a prueba tu conocimiento! </h2>
+                                <p>La siguiente actividad tiene como propósito validar los conocimientos adquiridos sobre <strong>Funciones con parámetros</strong></p><a class="btn btn-colour-Orange" href="media/actividad-1/story.html" target="_blank">Iniciar</a>
+                            </div>
+                            <hr class="line-100 bg-orange">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="glosario">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Glosario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <p><strong class="mr-2">Declarar:</strong>escribir el prototipo de las funciones.</p>
+                        <p><strong class="mr-2">Definir:</strong>escribir el conjunto de instrucciones que deben ser ejecutadas por una función.</p>
+                        <p> <strong class="mr-2">Función:</strong>cada uno de los pequeños módulos en que puede ser dividido un programa.</p>
+                        <p> <strong class="mr-2">Invocar:</strong>sinónimo de llamar – acción realizada cuando se va a utilizar una función.</p>
+                        <p><strong class="mr-2">Llamar:</strong>hacer uso de una función que ha sido creada con anterioridad.</p>
+                        <p><strong class="mr-2">Parámetro:</strong>cada uno de los datos que es pasado a una función para procesar la información y ejecutar la tarea asignada.</p>
+                        <p> <strong class="mr-2">Prototipo:</strong>declaración de una función compuesta por una línea de código que contiene tipo, nombre y argumentos de la misma.</p>
+                        <p> <strong class="mr-2">Tipo:</strong>clase de dato que retorna una función.</p>
+                        <p><strong class="mr-2">Variable global:</strong>variable declarada por fuera de las funciones y que puede ser accedida por cualquier módulo del programa.</p>
+                        <p><strong class="mr-2">Variable local:</strong>variable declarada dentro de las funciones y/o en las instrucciones de repetición que pertenecen únicamente al lugar donde se declaran (función – estructura repetitiva).</p>
+                    </div>
+                </div>
+            </div>
+            <div id="anexos">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Material complementario</h1>
+                    </div>
+                    <div class="jumbotron bg-white">
+                        <table class="table table-bordered table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center">Autor, (año del documento o material), Nombre del documento o material.</th>
+                                    <th class="text-center">Tipo de material ( Video, capítulo de libro, articulo, otro) </th>
+                                    <th class="text-center">Enlace del Recurso o Archivo del documento o material</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> <strong>Funciones</strong></td>
+                                    <td>Capítulo de manual</td>
+                                    <td> <a href="media/documentos/MC_AA4_Tema5_Funciones.pdf" target="_blank"><span class="fa fa-download" aria-hidden="true"></span> Descargar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="referencias">
+                <div class="container">
+                    <div class="header-ecored">
+                        <h1>Referencias bibliográficas</h1>
+                    </div>
+                    <div class="jumbotron bg-white referencias">
+                        <p>Joyanes, L.; y Sánchez, L. (2006). Programación en C++: un enfoque práctico. España: Mc Graw Hill.</p>
+                        <hr>
+                        <p>Joyanes, L.; y Zahonero, I. (2007) Estructura de Datos en C++. España: Mc Graw Hill.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer" id="Creditos">
+            <div class="container">
+                <h1>Créditos </h1>
+                <div class="brand-line-primary"></div>
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <h3 class="footer-subtitulo mb-4">ECOSISTEMA DE RECURSOS EDUCATIVOS DIGITALES </h3>
+                        <p class="footer-texto mb-2"><strong>Ingry Dayanna Bonilla Monzón </strong><br /> <span class="text-small">Líder del equipo</span></p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Contenido Instruccional
+                        </h4>
+                        <p class="footer-texto mb-2"><strong>Gloria Matilde Lee Mejía </strong><br /> <span class="text-small">Responsable del equipo</span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Comercio y Servicios</span><br><span class="text-small">Regional Tolima</span></p>
+                        <p class="footer-texto mb-2"><strong>Rafael Nelftalí Lizcano Reyes</strong><br /> <span class="text-small">Asesor pedagógico<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander </span></p>
+                        <p class="footer-texto mb-2"><strong>Lucero Montes Arenas</strong><br /><span class="text-small">Gestora de desarrollo de programas<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro para la Formación Cafetera - Regional Caldas</span></p>
+                        <p class="footer-texto mb-2"><strong>Julio Alexander Rodríguez del Castillo</strong><br /><span class="text-small">E-Pedagogo instruccional<br /></span><br><strong>Sandra Milena Henao Melchor</strong><br /> <span class="text-small">Evaluadora de contenidos<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Atención Sector Agropecuario – Regional Risaralda</span></p>
+                        <p class="footer-texto mb-2"><strong>Érika Alejandra Beltrán Cuesta</strong><br /> <span class="text-small">Evaluadora de calidad instruccional<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de Atención Sector Agropecuario – Regional Risaralda</span></p>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <h4 class="footer-subtitulo-2 mt-0">
+                            <div class="fa fa-caret-right mr-2"></div>Diseño y desarrollo de recursos educativos digitales
+                        </h4>
+                        <p class="footer-texto"><strong>Francisco José Lizcano Reyes </strong><br /> <span class="text-small">Responsable del equipo<br /></span></p>
+                        <p class="footer-texto"><strong>Leyson Fabián Castaño Pérez</strong><br /> <span class="text-small">Integración de recursos y pruebas<br /></span></p>
+                        <p class="footer-texto"> <strong>Eulises Orduz</strong><br />
+                            <strong>Luis Gabriel Urueta Alvarez</strong><br /><span class="text-small">Diseño Web & Producción Audiovisual<br /></span></p>
+                        <p class="footer-texto"><strong>Jhon Jairo Urueta Alvarez</strong><br> <span class="text-small">Desarrollo Front-End<br /></span></p>
+                        <p class="footer-texto"><strong>Luis Gabriel Urueta Álvarez</strong><br> <span class="text-small">Desarrollo de actividades didácticas<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">CENTRO INDUSTRIAL DEL DISEÑO Y LA MANUFACTURA </span><br><span class="text-small">Regional Santander </span></p>
+                        <h4 class="footer-subtitulo-2 mt-5">
+                            <div class="fa fa-caret-right mr-2"></div>Gestores de repositorio
+                        </h4>
+                        <p class="footer-texto"><strong>Kely Alejandra Quiros Duarte </strong><br /> <span class="text-small">Administrador repositorio de contenidos y gestores de repositorio.<br /></span></p>
+                        <p class="footer-texto"><span class="text-small text-uppercase">Centro de comercio y servicios </span><br><span class="text-small">Regional Tolima</span></p>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <div class="d-flex flex-column justify-content-center"><img src="assets/images/logos/senaLogo.svg" style="max-width:100px"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <section id="cc">
+            <div class="container">
+                <div class="d-flex flex-column flex-sm-row"><span class="pr-3"><i class="icon cc"></i></span><span>Este material puede ser distribuido, copiado y exhibido por terceros si se muestra en los créditos. No se puede obtener ningún beneficio comercial y las obras derivadas tienen que estar bajo los mismos términos de la licencia que el trabajo original.</span></div>
+            </div>
+        </section><a class="scroll-to-top-btn">
+            <div class="fa fa-angle-up fa-2x"></div>
+        </a>
+        <script src="assets/js/vendor.js"></script>
+        <script src="js/local.js"></script>
+    </body>
+</html>

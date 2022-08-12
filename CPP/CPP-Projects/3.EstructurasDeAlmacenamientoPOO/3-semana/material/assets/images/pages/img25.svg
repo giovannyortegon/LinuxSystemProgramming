@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1022.19" height="383.547" viewBox="0 0 1022.19 383.547">
+  <g id="Grupo_12636" data-name="Grupo 12636" transform="translate(1322.295 -5029.967)">
+    <rect id="Rectángulo_4415" data-name="Rectángulo 4415" width="1022.19" height="5.122" transform="translate(-1322.295 5029.967)" fill="#a9c4e9"/>
+    <rect id="Rectángulo_4416" data-name="Rectángulo 4416" width="1022.19" height="370.311" transform="translate(-1322.295 5035.089)" fill="#4d4d4d"/>
+    <text id="_include_iostream_include_conio.h_using_namespace_std_int_main_int_valores_5_for_int_i_0_i_5_i_cout_Digite_el_elemento_numero_i_1_del_arreglo:_cin_va" data-name="#include &lt;iostream&gt;
+#include &lt;conio.h&gt;
+using namespace std;
+
+int main()
+{
+          int valores[5];
+
+          for (int i=0;i&lt;5;i++)
+
+           {
+                     cout&lt;&lt;&quot;Digite el elemento numero &quot;&lt;&lt; i+1&lt;&lt;&quot; del arreglo: &quot;;
+                     cin&gt;&gt;va" transform="translate(-1297.675 5043.514)" fill="#fff" font-size="18" font-family="OpenSans-Regular, Open Sans"><tspan x="0" y="19">#include &lt;iostream&gt;</tspan><tspan x="0" y="40.6">#include &lt;conio.h&gt;</tspan><tspan x="0" y="62.2">using namespace std;</tspan><tspan x="0" y="83.8"></tspan><tspan x="0" y="105.4">int main()</tspan><tspan x="0" y="127">{</tspan><tspan x="0" y="148.6" xml:space="preserve">          int valores[5];</tspan><tspan x="0" y="170.2"></tspan><tspan x="0" y="191.8" xml:space="preserve">          for (int i=0;i&lt;5;i++)</tspan><tspan x="0" y="213.4"></tspan><tspan x="0" y="235" xml:space="preserve">           {</tspan><tspan x="0" y="256.6" xml:space="preserve">                     cout&lt;&lt;&quot;Digite el elemento numero &quot;&lt;&lt; i+1&lt;&lt;&quot; del arreglo: &quot;;</tspan><tspan x="0" y="278.2" xml:space="preserve">                     cin&gt;&gt;valores[i];</tspan><tspan x="0" y="299.8" xml:space="preserve">            }	</tspan><tspan x="0" y="321.4">	</tspan><tspan x="0" y="343" xml:space="preserve">          cout&lt;&lt;&quot;Los indices y los elementos contenidos en el arreglo son:&quot;&lt;&lt;endl;</tspan></text>
+  </g>
+</svg>
