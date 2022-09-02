@@ -31,6 +31,14 @@ class LinkList {
         void InsertAtFront(Item *);
         LinkListElement * RemoveAtFront();
         void DeleteAtFront();
+
+        void InsertBeforeItem(Item *, Item *);
+        LinkListElement * RemoveSpecificItem(Item *);
+        void DeleteSpecificItem(Item *);
+        void InsertAtEnd(Item *);
+        LinkListElement * RemoveAtEnd();
+        void DeleteAtEnd();
+
         int IsEmpty() { return head == 0; }
         void Print();
 };
@@ -83,47 +91,64 @@ LinkList::~LinkList() {
     while (!IsEmpty())
         DeleteAtFront();
 }
-// Create a second linked list, add some items and print
+
+class Queue: protected LinkList {
+    private:
+
+
+    public:
+        Queue(): LinkList() {}
+        virtual ~Queue() {}         // we'll discuss virtual in Chp 7
+        //public interface of Queue
+        void Enqueue(Item *i) { InsertAtEnd(i); }
+        Item * Dequeue();
+        int IsEmpty() { return LinkList::IsEmpty(); }
+        void Print() { LinkList::Print(); }
+};
+
+Item * Queue::Dequeue() {
+    LinkListElement * temp;
+    temp = RemoveAtFront();
+    Item * item = new Item(*((Item *)temp->GetData()));
+    delete temp;
+    
+    return (item);
+}
+
+class PriorityQueue: public Queue {
+    private:
+        /* data */
+    public:
+        PriorityQueue():Queue() { }
+        virtual ~PriorityQueue() { }        // we'll see virtual in Chp 7
+        void PriorityEnqueue(Item * i1, Item * i2) { InsertBeforeItem(i1, i2); }
+
+};
 int main() {
-    // Create a few items, to be data for LinkListElements
-    Item * item1 = new Item;
-    * item1 = 100;
-    Item * item2 = new Item(200);
+    Queue q1;
 
-    // create an element for the Linked List
-    LinkListElement * element1 = new LinkListElement(item1);
+    q1.Enqueue(new Item(50));
+    q1.Enqueue(new Item(67));
+    q1.Enqueue(new Item(80));
+    q1.Print();
 
-    // create a linked list and initialize with one element
-    LinkList list1(element1);
-
-    // Add some new items to the list and print
-    list1.InsertAtFront(item2);
-    list1.InsertAtFront(new Item(50));
-    cout <<"List 1: ";
-    list1.Print();
-
-    // delete elements from list, one by one
-    while (!(list1.IsEmpty())) {
-        list1.DeleteAtFront();
-        cout <<"List 1 after removing an item: ";
-        list1.Print();
+    while (!(q1.IsEmpty())) {
+        q1.Dequeue();
+        q1.Print();
     }
 
-    // create a second linked list, add some items and print
-    LinkList list2;
+    PriorityQueue q2;
+    Item * item = new Item(167);
+    q2.Enqueue(new Item(67));
+    q2.Enqueue(item);
+    q2.Enqueue(new Item(80));
+    q2.PriorityEnqueue(new Item(100), item);
+    q2.Print();
 
-    list2.InsertAtFront(new Item(3000));
-    list2.InsertAtFront(new Item(600));
-    list2.InsertAtFront(new Item(475));
-
-    cout <<"List 2: ";
-    list2.Print();
-
-    // delete elements from list, one by one
-    while(!(list2.IsEmpty())) {
-        list2.DeleteAtFront();
-        cout <<"List 2 after removing an item: ";
-        list2.Print();
+    while (!(q2.IsEmpty())) {
+        q2.Dequeue();
+        q2.Print();
     }
+    
     return (0);
 }

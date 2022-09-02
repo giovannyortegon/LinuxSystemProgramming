@@ -1,0 +1,4 @@
+\hola a todos
+como esta
+esta es una pruba de escritura
+usando gets y fputs
