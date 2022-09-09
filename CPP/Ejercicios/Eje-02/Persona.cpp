@@ -36,5 +36,5 @@ void Persona::setDireccion(std::string dir) {
     this->direccion = dir;
 }
 std::string Persona::Print() const {
-    return "Persona: { nombre: " + this->nombre + " Genero: " + this->genero + " Edad: " +  std::to_string(this->edad) + " Direccion: " + this->direccion + " } ";
+    return "Persona: { nombre: " + this->nombre + " Genero: " + this->genero + " Edad: " +  std::to_string(this->edad) + " Direccion: " + this->direccion + " }";
 }

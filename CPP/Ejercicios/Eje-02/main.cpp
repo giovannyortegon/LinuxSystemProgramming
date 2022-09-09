@@ -1,5 +1,6 @@
 #include "Persona.h"
 #include "Empleado.h"
+#include "Cliente.h"
 
 int main() {
 
@@ -16,6 +17,13 @@ int main() {
     std::cout <<e3->Print() <<std::endl;
 
     delete e3;
+
+    Cliente c1("Jose", 'M', 27, "Av 32", true);
+    std::cout <<c1.Print() <<std::endl;
+    
+    Cliente c2("Esteban", 'M', 23, "Cl 34", false);
+    std::cout <<c2.Print() <<std::endl;
+
 
     return (0);
 }

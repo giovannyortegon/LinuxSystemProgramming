@@ -5,19 +5,17 @@
 
 class Cliente :Persona {
 private:
-    /* data */
+    int idCliente;
+    std::string date;
+    bool vip;
+
 public:
-    Cliente(/* args */);
+    static int constador;
+    Cliente();
+    Cliente(std::string nom, char gen, int ed, std::string dir, bool vip);
+    Cliente(const Cliente &c);
     ~Cliente();
+    std::string Print();
 };
-
-Cliente::Cliente(/* args */)
-{
-}
-
-Cliente::~Cliente()
-{
-}
-
 
 #endif /* __CLIENTE_H__ */
