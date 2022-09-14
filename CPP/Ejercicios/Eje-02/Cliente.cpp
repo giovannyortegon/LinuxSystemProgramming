@@ -4,12 +4,18 @@
 time_t now = time(0);
 int Cliente::constador = 0;
 
-Cliente::Cliente() {}
-Cliente::Cliente(const Cliente &c) {}
+Cliente::Cliente() {
+    this->idCliente = ++Cliente::constador;
+    this->date = ctime(&now);
+}
+Cliente::Cliente(const Cliente &c) {
+    this->idCliente = ++Cliente::constador;
+    this->date = ctime(&now);
+}
 Cliente::Cliente(std::string nom, char gen, int ed, std::string dir, bool vip)
 : Persona(nom, gen, ed, dir) {
-    this->date = ctime(&now);
     this->idCliente = ++Cliente::constador;
+    this->date = ctime(&now);
     this->vip = vip;
 }
 std::string Cliente::Print() {

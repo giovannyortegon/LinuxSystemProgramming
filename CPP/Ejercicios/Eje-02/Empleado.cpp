@@ -3,8 +3,12 @@
 
 int Empleado::contador = 0;
 
-Empleado::Empleado() {}
-Empleado::Empleado(const Empleado &e) {}
+Empleado::Empleado() {
+    this->idEmpleado= ++Empleado::contador;
+}
+Empleado::Empleado(const Empleado &e) {
+    this->idEmpleado= ++Empleado::contador;
+}
 Empleado::Empleado(std::string nom, char gen, int ed, std::string dir, int sueldo)
 :Persona(nom, gen, ed, dir) {
     this->idEmpleado= ++Empleado::contador;
