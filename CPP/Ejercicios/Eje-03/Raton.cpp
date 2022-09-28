@@ -1,17 +1,16 @@
 #include "Raton.h"
 #include "DispositivosEntrada.h"
 
-int Raton::cont = 0;
+int Raton::cont = 1;
 
 Raton::Raton() {
 }
 Raton::Raton(std::string tipoEntrada, std::string marca):DispositivoEntrada(tipoEntrada, marca) {
-    Raton::counter();
-    this->idRaton = cont;
+    this->idRaton = Raton::counter();
 }
 Raton::~Raton() {}
-void Raton::counter() {
-    Raton::cont++;
+int Raton::counter() {
+    return Raton::cont++;
 }
 void Raton::Print() {
     std::cout <<"Id: " <<idRaton <<" Tipo de Entrada: " <<getTipoEntrada() <<" Marca: "<<getMarca();

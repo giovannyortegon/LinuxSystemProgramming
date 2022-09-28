@@ -1,5 +1,7 @@
 #include"DispositivosEntrada.h"
 #include"Raton.h"
+#include"Teclado.h"
+#include"Monitor.h"
 
 
 int main() {
@@ -8,17 +10,19 @@ int main() {
     // std::cout <<d1.getTipoEntrada() <<std::endl;
     // d1.Print();
 
-    Raton r1("Raton", "Genius");
-    Raton r2("Raton", "Genius");
-    Raton r3("Raton", "Genius");
-    Raton r4("Raton", "Genius");
-    r1.Print();
-    r2.Print();
-    r3.Print();
-    r4.Print();
+    // Raton r1("Raton", "Genius");
+    // Raton r2("Raton", "Genius");
+    // Raton r3("Raton", "Genius");
+    // Raton r4("Raton", "Genius");
+    // r1.Print();
+    // r2.Print();
+    // r3.Print();
+    // r4.Print();
 
-
-
+    // Teclado t1("Teclado", "Genius");
+    // t1.Print();
+    Monitor m1("LG", 22);
+    m1.Print();
 
     return (0);
 }

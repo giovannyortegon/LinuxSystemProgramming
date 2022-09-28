@@ -5,6 +5,7 @@ DispositivoEntrada::DispositivoEntrada(std::string tipo, std::string ma)
 :tipoEntrada(tipo), marca(ma) {
 }
 DispositivoEntrada::~DispositivoEntrada() { }
+
 std::string DispositivoEntrada::getMarca() const {
     return this->marca;
 }

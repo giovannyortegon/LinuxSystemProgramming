@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"strconv"
+	"encoding/binary"
 )
 
 var MAX int = 10
@@ -19,7 +20,26 @@ func main() {
 	}
 
 	LENGTH, _ := strconv.ParseInt(os.Args[1], 10, 64)
-	f, _ := os.Open()
+	f, _ := os.Open("/dev/random")
+	var seed int64
+	binary.Read(f, binary.LittleEndian, &seed)
+	rand.Seed(seed)
+	f.Close()
+	fmt.Println("Seed: ", seed)
+
+	startChar := "!"
+	var i int64
+
+	for i = 0; i < LENGTH; i++ {
+		anInt := int(random(MIN, MAX))
+		newChar := string(startChar[0] + byte(anInt))
+		if newChar == " " {
+			i = i - i
+			continue
+		}
+		fmt.Print(newChar)
+	}
+	fmt.Println()
 }
 
 func random(min int, max int) int {

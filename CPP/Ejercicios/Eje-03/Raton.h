@@ -13,7 +13,7 @@ class Raton: protected DispositivoEntrada {
         ~Raton();
 
         static int cont;
-        static void counter();
+        static int counter();
 
         void Print();
 };
