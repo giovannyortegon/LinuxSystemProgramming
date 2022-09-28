@@ -3,7 +3,7 @@ package main
 import "fmt"
 import "moduls/mensajes/Saludo"
 import "moduls/mensajes/Despedida"
-
+import "moduls/mensajes/Mensaje"
 
 func main() {
 	var nombre string
@@ -12,5 +12,6 @@ func main() {
 	fmt.Scanln(&nombre)
 
 	fmt.Println(hola.Saludo(nombre))
+	mensaje.Mensaje()
 	despedida.Adios(nombre)
 }
