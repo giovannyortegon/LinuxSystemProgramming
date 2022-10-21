@@ -11,30 +11,97 @@ bool ConstruirMatriz(matriz2d &m);
 void DestruirMatriz(matriz2d &m);
 void LeerMatriz(matriz2d &m);
 void MostrarMatriz(matriz2d m);
+int CrearMenu(const char * opMenu[], int num_opciones);
 
 int main() {
-    int * ptrint = new int;
-    matriz2d m;
-    do {
-        std::cout <<"Ingrese numero de filas: "; std::cin >>m.filas;
-    } while(m.filas < 1);
+    int opcion = 0;
+
+    static const char * opciones[] = {
+        "Construir matriz",
+        "Leer matriz",
+        "Mostrar matriz",
+        "Destruir matriz",
+        "Finalizar"
+    };
+
+    const int num_opciones = sizeof(opciones)/ sizeof(char *);
+
+    matriz2d m {nullptr, 0, 0};
 
     do {
-        std::cout <<"Ingrese numero de columnas: "; std::cin >>m.cols;
-    } while(m.cols < 1);
-    
-    if (!ConstruirMatriz(m)) {
-        std::cout <<"No se pudo construir la matriz" <<std::endl;
-        return (-1);
-    }
-    LeerMatriz(m);
-    MostrarMatriz(m);
-    DestruirMatriz(m);
+        opcion = CrearMenu(opciones, num_opciones);
+        enum op { Construir = 1, Leer, Mostrar, Destruir, Finalizar };
+
+        switch (opcion) {
+            case Construir:
+                if (m.p != nullptr) {
+                    std::cout <<"Ya existe una matriz. Destruyala para crear otra.\n" <<std::endl;
+                    break;
+                } 
+                do {
+                    std::cout <<"Ingrese numero de filas: "; std::cin >>m.filas;
+                } while(m.filas < 1);
+
+                do {
+                    std::cout <<"Ingrese numero de columnas: "; std::cin >>m.cols;
+                } while(m.cols < 1);
+                
+                if (!ConstruirMatriz(m)) {
+                    std::cout <<"No se pudo construir la matriz" <<std::endl;
+                    return (-1);
+                }
+                std::cout <<"\nMatriz construida.\n" <<std::endl;
+                break;
+            case Leer:
+                if (m.p == nullptr)
+                    std::cout <<"No existe una matriz.\n";
+                else
+                    LeerMatriz(m);
+                break;
+            case Mostrar:
+                if (m.p == nullptr)
+                    std::cout <<"No existe una matriz.\n";
+                else
+                    MostrarMatriz(m);
+                break;
+            case Destruir:
+                if (m.p == nullptr)
+                    std::cout <<"No existe una matriz.\n";
+                else {
+                    DestruirMatriz(m);
+                    std::cout <<"Matriz destruida.\n" <<std::endl;
+                }
+                break;
+
+            case Finalizar:
+                if (m.p != nullptr) DestruirMatriz(m);
+                break;
+        }
+    } while (opcion != num_opciones);
+
     std::cout <<std::endl;
 
-    delete ptrint;
-
+    return (0);
 }
+
+int CrearMenu(const char * opMenu[], int num_opciones) {
+    int opcion;
+
+    std::cout <<"\nElija una opcion:\n" <<std::endl;
+    for (int i = 0; i < num_opciones; i++) {
+        std::cout <<"\t" << i + 1 <<". " <<opMenu[i] <<std::endl;
+    }
+
+    // elegir una opcion
+    std::cout <<">> "; std::cin >>opcion;
+
+    if (opcion < 1 || opcion > num_opciones) {
+        std::cout <<"Opcion incorrecta\n";
+    }
+
+    return opcion;
+}
+
 bool ConstruirMatriz(matriz2d &m) {
 
     m.p = (double **) new (std::nothrow) double * [m.filas];
