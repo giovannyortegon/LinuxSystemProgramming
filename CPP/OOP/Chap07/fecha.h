@@ -6,19 +6,20 @@
 
 class CFecha {
     private:
-        int dia, mes;
-        long anyo;
+        int dia, mes, anyo;
 
     protected:
-        bool anyoBisiesto(long aaaa);
-        bool fechaValida(int dd, int mm, long aaaa);
+        bool anyoBisiesto(int aaaa);
+        bool fechaValida(int dd, int mm, int aaaa);
 
     public:
+        // CFecha();
         bool asignarFecha();
         bool asignarFecha(int dd);
         bool asignarFecha(int dd, int mm);
-        bool asignarFecha(int dd, int mm, long aaaa);
-        void obtenerFecha(int &dd, int &mm, long &aaaa);
+        bool asignarFecha(int dd, int mm, int aaaa);
+        void obtenerFecha(int & dd, int & mm, int & aaaa);
+        void obtenerFechaActual(int &dd, int &mm, int &aaaa);
 
 };
 

@@ -1,4 +1,5 @@
 #include<iostream>
+#include<ctime>
 #include"fecha.h"
 
 using namespace std;
@@ -15,8 +16,7 @@ bool CFecha::asignarFecha() {
     fh = localtime(&segundos);
 
     dia = fh->tm_mday;
-    mes = fh->tm_mon;
-    // anyo = fh->tm_year;
+    mes = fh->tm_mon + 1;
     anyo = fh->tm_year + 1900;
 
     return true;
@@ -50,20 +50,25 @@ bool CFecha::asignarFecha(int dd, int mm) {
     return true;
 }
 
-bool CFecha::asignarFecha(int dd, int mm, long aaaa) {
-    if (!fechaValida(dd, mm, aaaa)) {
-        cout <<"Fecha incorrecta. Se asigna 01/01/2001.\n";
-        dia = 1; mes = 1; anyo = 2001;
+// bool CFecha::asignarFecha(int dd, int mm, long aaaa) {
+//     if (!fechaValida(dd, mm, aaaa)) {
+//         cout <<"Fecha incorrecta. Se asigna 01/01/2001.\n";
+//         dia = 1; mes = 1; anyo = 2001;
 
-        return false; 
-    }
+//         return false; 
+//     }
 
-    dia = dd; mes = mm; anyo = aaaa;
-    return true;
+//     dia = dd; mes = mm; anyo = aaaa;
+//     return true;
+// }
+
+void CFecha::obtenerFecha(int & dd, int & mm, int & aaaa) {
+    dd = dia; mm = mes; aaaa = anyo;
 }
+void CFecha::obtenerFechaActual(int &dd, int &mm, int &aaaa) {
+    asignarFecha();
 
-void CFecha::obtenerFecha(int &dd, int &mm, long &aaaa) {
-    dd = dia; mm = mes; anyo = aaaa;
+    dd = dia; mm = mes; aaaa = anyo;
 }
 
 bool CFecha::fechaValida(int dd, int mm, int aaaa) {
@@ -90,4 +95,28 @@ bool CFecha::fechaValida(int dd, int mm, int aaaa) {
     }
 
     return diaCorrecto && mesCorrecto && anyoCorrecto;
+}
+
+bool CFecha::asignarFecha(int dd, int mm, int aaaa) {
+    struct tm * fh;
+    time_t segundos;
+
+    time(&segundos);
+    fh = localtime(&segundos);
+
+    if (aaaa == 0 && mm == 0 && dd == 0)
+        dd = fh->tm_mday;
+    if (aaaa == 0 && mm == 0)
+        mm = fh->tm_mon + 1;
+    if (aaaa == 0)
+        aaaa = fh->tm_year + 1900;
+
+    if (!fechaValida(dd, mm, aaaa)){
+        std::cout <<"Fecha incorrecta. Se asigna 01/01/1901.\n";
+        return false;
+    }
+
+    dia = dd; mes = mm; anyo = aaaa;
+
+    return true;
 }

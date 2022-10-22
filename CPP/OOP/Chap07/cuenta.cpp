@@ -3,13 +3,29 @@
 
 using namespace std;
 
-CCuenta::CCuenta(string nom = "sin nombre", string cue = "0000", double sal = 0.0, double tipo = 0.0) {
+// CCuenta::CCuenta(){}
+CCuenta::CCuenta(string nom, string cue, double sal, double tipo) {
     // validar datos asignados
     if (!asignarNombre(nom) || !asignarCuenta(cue) || !ingreso(sal) || !asignarTipoDeInteres(tipo)) {
         throw "Datos incorrectos";
     }
 }
 CCuenta::~CCuenta(){}
+CCuenta::CCuenta(const CCuenta &cc) {
+    this->nombre = cc.nombre;
+    this->cuenta = cc.cuenta;
+    this->saldo = cc.saldo;
+    this->tipoDeInteres = cc.tipoDeInteres;
+}
+CCuenta &CCuenta::operator=(const CCuenta &cc) {
+    if (this != &cc) {
+        this->nombre = cc.nombre;
+        this->cuenta = cc.cuenta;
+        this->saldo = cc.saldo;
+        this->tipoDeInteres = cc.tipoDeInteres;
+    }
+    return (*this);
+}
 bool CCuenta::asignarNombre(string nom) {
     if (nom.length() != 0) {
         nombre = nom;

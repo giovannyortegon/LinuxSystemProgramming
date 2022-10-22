@@ -15,9 +15,12 @@ class CCuenta
         double tipoDeInteres;
 
     public:
+        // CCuenta();
         CCuenta(std::string nom = "sin nombre", std::string cue = "0000",
                 double sal = 0.0, double tipo = 0.0);
         ~CCuenta();
+        CCuenta(const CCuenta &cc);
+        CCuenta &operator=(const CCuenta &ca);
         bool asignarNombre(std::string nom);
         std::string obtenerNombre() const;
         bool asignarCuenta(std::string cue);
