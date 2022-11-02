@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+</head>
+<body>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Content }}</p>
+    <div>{{ .Date }}</div>
+    <div id="comments">
+        <form action="/api/comments" method="POST">
+            <input type="hidden" name="guid" value="{{Guid}}">
+            <div>
+                <input type="text" name="name" placeholder="Your Name">
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="Your Email">
+            </div>
+            <div>
+                <textarea name="comments" placeholder="Your Comments"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Add Comments">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
