@@ -19,9 +19,12 @@ class List: public Node {
     public:
         List();
         ~List();
-        Node * heap;    
+        Node * head;    
         Node * tail;
         void Inset_Head(int data);
+        void Inset_End(int data);
+        void Inset_Before(int index, int data);
+        void Inset_After(int index, int data);
         int Count();
         void Print_list();
         void RemoveAll();
