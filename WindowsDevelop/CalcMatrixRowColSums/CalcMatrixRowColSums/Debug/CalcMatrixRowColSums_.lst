@@ -1,0 +1,113 @@
+Microsoft (R) Macro Assembler Version 14.16.27048.0	    07/29/22 13:07:45
+CalcMatrixRowColSums_.asm				     Page 1 - 1
+
+
+					.model flat, c
+ 00000000				.code
+				; extern "C" int CalcMatrixRowColSums_(const int * x, int nrows, int ncols, int * row_sums, int * col_sums);
+ 00000000			CalcMatrixRowColSums_ proc
+ 00000000  55				push ebp
+ 00000001  8B EC			mov ebp, esp
+
+ 00000003  53				push ebx
+ 00000004  56				push esi
+ 00000005  57				push edi
+
+				; Make sure "nrow" and "ncols" ara valid
+ 00000006  33 C0			xor eax, eax				; error return
+ 00000008  83 7D 0C 00			cmp dword ptr [ebp + 12], 0	; [ebp+12] = 'nrows'
+ 0000000C  7E 4A			jle InvalidArg				; jump if nrow <= 0
+ 0000000E  8B 4D 10			mov ecx, [ebp + 16]			; ecx = 'ncols'
+ 00000011  83 F9 00			cmp ecx, 0
+ 00000014  7E 42			jle InvalidArg				; jump if ncols <= 0
+
+				; Invalide elements of 'cols_sums' array to zero
+ 00000016  8B 7D 18			mov edi, [ebp + 24]			; cols_sums
+ 00000019  33 C0			xor eax, eax				; eax is fill value (0)
+ 0000001B  F3/ AB			rep stosd					; fill arrat with zeros
+
+				; Initialize outer loop variables
+ 0000001D  8B 5D 08			mov ebx, [ebp + 8]			; ebx = 'x'
+ 00000020  33 F6			xor esi, esi				; i = 0
+
+				; Outer loop
+ 00000022			Lp1:
+ 00000022  8B 7D 14			mov edi, [ebp + 20]					; edi = 'row_sums'
+ 00000025  C7 04 B7			mov dword ptr [edi + esi * 4], 0	; row_sums[i] = 0
+	   00000000
+
+ 0000002C  33 FF			xor edi, edi				; j = 0
+ 0000002E  8B D6			mov edx, esi				; edx = i
+ 00000030  0F AF 55 10			imul edx, [ebp + 16]		; edx = i * ncols
+
+				; Inner loop
+ 00000034			Lp2:
+ 00000034  8B CA			mov ecx, edx				; ecx = i * ncols
+ 00000036  03 CF			add ecx, edi				; ecx = i * ncols + j
+ 00000038  8B 04 8B			mov eax, [ebx + ecx * 4]	; eax = x[i * ncols + j]
+ 0000003B  8B 4D 14			mov ecx, [ebp + 20]			; ecx = 'row_sums'
+ 0000003E  01 04 B1			add [ecx + esi * 4], eax	; row_sums[i] += eax
+ 00000041  8B 4D 18			mov ecx, [ebp + 24]			; ecx = 'col_sums'
+ 00000044  01 04 B9			add [ecx + edi * 4], eax	; col_sums[j] += eax
+
+				; Is inner loop finished?
+ 00000047  47				inc edi						; j++
+ 00000048  3B 7D 10			cmp edi, [ebp + 16]
+ 0000004B  7C E7			jl Lp2						; jmp if j < ncols
+
+				; Is outer loop finished?
+ 0000004D  46				inc esi						; i++
+ 0000004E  3B 75 0C			cmp esi, [ebp + 12]
+ 00000051  7C CF			jl Lp1						; jump is i < nrows
+ 00000053  B8 00000001			mov eax, 1					; set success return code
+
+ 00000058			InvalidArg:
+ 00000058  5F				pop edi
+ 00000059  5E				pop esi
+ 0000005A  5B				pop ebx
+ 0000005B  5D				pop ebp
+ 0000005C  C3				ret
+
+ 0000005D			CalcMatrixRowColSums_ endp
+					end
+Microsoft (R) Macro Assembler Version 14.16.27048.0	    07/29/22 13:07:45
+CalcMatrixRowColSums_.asm				     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000000 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 0000005D Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+CalcMatrixRowColSums_  . . . . .	P Near	 00000000 _TEXT	Length= 0000005D Public C
+  Lp1  . . . . . . . . . . . . .	L Near	 00000022 _TEXT	
+  Lp2  . . . . . . . . . . . . .	L Near	 00000034 _TEXT	
+  InvalidArg . . . . . . . . . .	L Near	 00000058 _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000001h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+
+	   0 Warnings
+	   0 Errors

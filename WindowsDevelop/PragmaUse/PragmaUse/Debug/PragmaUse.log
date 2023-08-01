@@ -1,0 +1,8 @@
+﻿  PragmaUse.cpp
+c:\users\pentester\source\repos\pragmause\pragmause\pragmause.cpp(20): warning C4068: unknown pragma
+c:\users\pentester\source\repos\pragmause\pragmause\pragmause.cpp(20): error C3873: '0x2013': this character is not allowed as a first character of an identifier
+c:\users\pentester\source\repos\pragmause\pragmause\pragmause.cpp(21): warning C4068: unknown pragma
+c:\users\pentester\source\repos\pragmause\pragmause\pragmause.cpp(21): error C3873: '0x2013': this character is not allowed as a first character of an identifier
+c:\users\pentester\source\repos\pragmause\pragmause\pragmause.cpp(22): warning C4068: unknown pragma
+c:\users\pentester\source\repos\pragmause\pragmause\pragmause.cpp(22): error C3873: '0x2013': this character is not allowed as a first character of an identifier
+c:\users\pentester\source\repos\pragmause\pragmause\pragmause.cpp(39): warning C4326: return type of 'main' should be 'int' instead of 'void'

@@ -1,0 +1,85 @@
+Microsoft (R) Macro Assembler Version 14.16.27048.0	    07/26/22 15:36:29
+CalcArraySquares_.asm					     Page 1 - 1
+
+
+					.model flat, c
+ 00000000				.code
+
+ 00000000			CalcArraySquares_ proc
+ 00000000  55				push ebp
+ 00000001  8B EC			mov ebp, esp
+
+ 00000003  53				push ebx
+ 00000004  56				push esi
+ 00000005  57				push edi
+
+				; Load arguments
+ 00000006  8B 7D 08			mov edi, [ebp + 8]					; y array empty
+ 00000009  8B 75 0C			mov esi, [ebp + 12]					; x array
+ 0000000C  8B 4D 10			mov ecx, [ebp + 16]					; n
+
+				; Initialize array sum registers, calculate size of array in bytes
+ 0000000F  33 C0			xor eax, eax
+ 00000011  83 F9 00			cmp ecx, 0
+ 00000014  7E 17			jle EmptyArray
+ 00000016  C1 E1 02			shl ecx, 2							; ecx = size of array in bytes
+ 00000019  33 DB			xor ebx, ebx
+
+				; Reapet loop until finished
+ 0000001B			@@:
+ 0000001B  8B 14 1E			mov edx, [esi+ebx]					; x array
+ 0000001E  0F AF D2			imul edx, edx						; square x
+ 00000021  89 14 1F			mov [edi + ebx], edx				; save square x in y
+ 00000024  03 C2			add eax, edx						; sum array
+ 00000026  83 C3 04			add ebx, 4							; add to index for next element
+ 00000029  3B D9			cmp ebx, ecx
+ 0000002B  7C EE			jl @B								; jump if not finished
+
+ 0000002D			EmptyArray:
+ 0000002D  5F				pop edi
+ 0000002E  5E				pop esi
+ 0000002F  5B				pop ebx
+ 00000030  5D				pop ebp
+ 00000031  C3				ret
+
+ 00000032			CalcArraySquares_ endp
+					end
+Microsoft (R) Macro Assembler Version 14.16.27048.0	    07/26/22 15:36:29
+CalcArraySquares_.asm					     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000000 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000032 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+CalcArraySquares_  . . . . . . .	P Near	 00000000 _TEXT	Length= 00000032 Public C
+  EmptyArray . . . . . . . . . .	L Near	 0000002D _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000001h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+
+	   0 Warnings
+	   0 Errors

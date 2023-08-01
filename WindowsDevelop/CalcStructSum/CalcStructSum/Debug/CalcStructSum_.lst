@@ -1,0 +1,105 @@
+Microsoft (R) Macro Assembler Version 14.16.27048.0	    08/03/22 16:30:39
+CalcStructSum_.asm					     Page 1 - 1
+
+
+					.model flat, c
+					include TestStruct_.inc
+ 00000010		      C TestStruct struct
+ 00000000  00		      C 	val8 byte ?
+ 00000001  00		      C 	Pad8 byte ?
+ 00000002  0000		      C 	Val16 word ?
+ 00000004  00000000	      C 	Val32 dword ?
+ 00000008  0000000000000000   C 	Val64 qword ?
+			      C TestStruct ends
+			      C 
+ 00000000				.code
+				; extern "C" __int64 CalcStructSum_(const TestStruct * ts);
+				; Decription:	This function sums the members of a TestStruct.
+				; Return:		Sum of "ts" members as a 64 bit integer.
+ 00000000			CalcStructSum_	proc
+ 00000000  55				push ebp
+ 00000001  8B EC			mov ebp, esp
+
+ 00000003  53				push ebx
+ 00000004  56				push esi
+
+				; Compute ts->Val8 + ts->Val16, note sign extension to 32 bits
+ 00000005  8B 75 08			mov esi, [ebp + 8]
+ 00000008  0F BE 06			movsx eax, byte ptr [esi + TestStruct.Val8 ]
+ 0000000B  0F BF 4E 02			movsx ecx, word ptr [esi + TestStruct.Val16]
+ 0000000F  03 C1			add eax, ecx
+
+				; Sign extend previous sum to 64 bits, save result to ebx:ecx 
+ 00000011  99				cdq
+ 00000012  8B D8			mov ebx, eax
+ 00000014  8B CA			mov ecx, edx
+
+				; Add ts->Val32 to Sum
+ 00000016  8B 46 04			mov eax, [esi + TestStruct.Val32]
+					;mov eax, [esi + TestStruct.Val32]
+ 00000019  99				cdq
+ 0000001A  03 C3			add eax, ebx
+ 0000001C  13 D1			adc edx, ecx
+
+				; Add ts->Val64 tos Sum
+ 0000001E  03 46 08			add eax, dword ptr [esi + TestStruct.Val64]
+ 00000021  13 56 0C			adc edx, dword ptr [esi + TestStruct.Val64 + 4]
+
+ 00000024  5E				pop esi
+ 00000025  5B				pop ebx
+ 00000026  5D				pop ebp
+ 00000027  C3				ret 
+
+ 00000028			CalcStructSum_ endp
+					end
+Microsoft (R) Macro Assembler Version 14.16.27048.0	    08/03/22 16:30:39
+CalcStructSum_.asm					     Symbols 2 - 1
+
+
+
+
+Structures and Unions:
+
+                N a m e                  Size
+                                         Offset      Type
+
+TestStruct . . . . . . . . . . .	 00000010
+  val8 . . . . . . . . . . . . .	 00000000	 Byte
+  Pad8 . . . . . . . . . . . . .	 00000001	 Byte
+  Val16  . . . . . . . . . . . .	 00000002	 Word
+  Val32  . . . . . . . . . . . .	 00000004	 DWord
+  Val64  . . . . . . . . . . . .	 00000008	 QWord
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000000 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000028 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+CalcStructSum_ . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000028 Public C
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000001h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+
+	   0 Warnings
+	   0 Errors

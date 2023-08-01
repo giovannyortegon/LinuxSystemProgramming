@@ -1,0 +1,137 @@
+Microsoft (R) Macro Assembler Version 14.16.27048.0	    08/30/22 15:38:52
+ConcatStrings_.asm					     Page 1 - 1
+
+
+					.model flat, c
+ 00000000				.code
+				; extern "C" int ConcatStrings_(wchar_t *, int, const wchar_t * const *, int);
+				;
+				; Description:	This function perfomrs string concatenation using
+				;				multiple input strings.
+				;
+				; Returns:		-1		Invalid 'des_size'
+				;				n >= 0	Length of concatenated string
+				; 
+				; Locals vars:	[ebp - 4] = des_index
+				;				[ebp - 8] = input
+ 00000000			ConcatStrings_ proc
+ 00000000  55				push ebp
+ 00000001  8B EC			mov ebp, esp
+ 00000003  83 EC 08			sub esp, 8
+
+ 00000006  53				push ebx
+ 00000007  56				push esi
+ 00000008  57				push edi
+
+				; Make sure 'des_size' is valid
+ 00000009  B8 FFFFFFFF			mov eax, -1
+ 0000000E  8B 4D 0C			mov ecx, [ebp + 12]				; ecx = 'des_size'
+ 00000011  83 F9 00			cmp ecx, 0
+ 00000014  7E 55			jle Error
+
+				; Perfomrs required initializations
+ 00000016  33 C0			xor eax, eax
+ 00000018  8B 5D 08			mov ebx, [ebp + 8]				; ebx = 'des'
+ 0000001B  66| 89 03			mov [ebx], ax					; * des = '\0'
+ 0000001E  8B F3			mov esi, ebx
+ 00000020  8B FB			mov edi, ebx 
+ 00000022  FC				cld
+ 00000023  66| AD			lodsw
+ 00000025  F3/ 66| AB			rep stosw
+ 00000028  89 45 FC			mov [ebp - 4], eax				; des_index = 0
+ 0000002B  89 45 F8			mov [ebp - 8], eax				; i = 0
+
+				; Repeat loop until concatenation is finished
+ 0000002E			Lp1:
+ 0000002E  8B 45 10			mov eax, [ebp + 16]				; eax = 'src'
+ 00000031  8B 55 F8			mov edx, [ebp - 8]				; edx = i 
+ 00000034  8B 3C 90			mov edi, [eax + edx * 4]		; edi = src[i]
+ 00000037  8B F7			mov esi, edi					; esi = src[i]
+
+				; Compute Length of s[i]
+ 00000039  33 C0			xor eax, eax
+ 0000003B  B9 FFFFFFFF			mov ecx, -1
+ 00000040  F2/ 66| AF			repne scasw						; find '\0'
+ 00000043  F7 D1			not ecx
+ 00000045  49				dec ecx							; ecx = len(src[i])
+
+				; Compute des_index + src_len
+ 00000046  8B 45 FC			mov eax, [ebp - 4]				; eax = des_index
+ 00000049  8B D0			mov edx, eax					; edx = des_index_temp
+ 0000004B  03 C1			add eax, ecx					; des_index + len(src[i])
+
+				; Is des_index + src_len >= des_size?
+ 0000004D  3B 45 0C			cmp eax, [ebp + 12]
+ 00000050  7D 16			jge Done
+
+				; Update des_index
+ 00000052  01 4D FC			add [ebp - 4], ecx				; des_index += len(src[i])
+
+				; Copy src[i] to &des[des_index] (esi already constains src[i])
+ 00000055  41				inc ecx							; ecx = len(src[i])
+ 00000056  8D 3C 53			lea edi, [ebx + edx * 2]		; edi = &des[des_index] + 1
+ 00000059  F3/ 66| A5			rep movsw						; Perfomrs string move
+
+				; Update i and repeat if not Done
+ 0000005C  8B 45 F8			mov eax, [ebp - 8]
+ 0000005F  40				inc eax
+ 00000060  89 45 F8			mov [ebp - 8], eax				; i++
+ 00000063  3B 45 14			cmp eax, [ebp + 20]
+ 00000066  7C C6			jl Lp1							; jump if i < src_n
+
+				; Return Length of concatenated sting
+ 00000068			Done:
+ 00000068  8B 45 FC			mov eax, [ebp - 4]				; eax = des_index
+
+ 0000006B			Error:
+ 0000006B  5F				pop edi
+ 0000006C  5F				pop edi
+ 0000006D  5B				pop ebx
+
+ 0000006E  8B E5			mov esp, ebp
+ 00000070  5D				pop ebp
+ 00000071  C3				ret 
+
+ 00000072			ConcatStrings_ endp
+					end
+Microsoft (R) Macro Assembler Version 14.16.27048.0	    08/30/22 15:38:52
+ConcatStrings_.asm					     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000000 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000072 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ConcatStrings_ . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000072 Public C
+  Lp1  . . . . . . . . . . . . .	L Near	 0000002E _TEXT	
+  Done . . . . . . . . . . . . .	L Near	 00000068 _TEXT	
+  Error  . . . . . . . . . . . .	L Near	 0000006B _TEXT	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000001h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+
+	   0 Warnings
+	   0 Errors
